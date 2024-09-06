@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .theLine::after{
+      content: "";
+      height: 3px;
+      width: 3rem;
+      background-color: antiquewhite;
+      position: absolute;
+      bottom: 0.7rem;
+      left: 0rem;
+      border-radius: 15px;
+  }
+}
