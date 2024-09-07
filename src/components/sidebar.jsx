@@ -28,9 +28,9 @@ export default function SideBar() {
     },
   ];
   return (
-    <div className="h-full basis-3/12">
-      <div className="h-full bg-gray-700 rounded-xl">
-        <div className="flex flex-col justify-center items-center pt-10">
+    <div className="h-full w-1/4 fixed left-5">
+      <div className="bg-gray-700 rounded-xl py-10">
+        <div className="flex flex-col justify-center items-center">
           <img src="./images/profile.png" className="rounded-full w-1/2" />
           <h1 className="text-3xl mt-5 mb-4 font-semibold text-slate-400">
             Your Name

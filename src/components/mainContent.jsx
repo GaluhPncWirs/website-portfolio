@@ -1,15 +1,18 @@
 import Navbar from "./navbar";
+import Testimoni from "./tesimonial";
 
 export default function MainContent() {
   return (
-    <div className="basis-2/3 bg-gray-700 rounded-xl">
-      <div className="ml-10">
-        <div className="flex justify-between">
-          <div className="relative top-8">
-            <div className="text-2xl text-slate-200 theLine">About Me</div>
+    <div className="w-[73%] bg-gray-700 rounded-xl pb-10">
+      <div className="flex justify-end relative">
+        <div className="absolute left-10 top-8">
+          <div className="text-2xl text-slate-200 theLine font-bold">
+            About Me
           </div>
-          <Navbar />
         </div>
+        <Navbar />
+      </div>
+      <div className="flex flex-col items-center">
         <div className="max-w-3xl">
           <div className="mt-11 text-slate-200">
             <div className="text-justify">
@@ -35,30 +38,95 @@ export default function MainContent() {
             <h1 className="font-semibold text-slate-200 text-2xl">
               What I`m Doing
             </h1>
-            <div className="flex items-center mt-4 justify-between">
-              <div className="max-w-[23rem] bg-slate-300 min-h-36 rounded-xl">
-                <img src="" alt="" />
-                <div>
-                  <h1>Web Desain</h1>
-                  <p className="text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsa dolor eaque excepturi commodi facere quidem est
-                    architecto
-                  </p>
+            <div className="flex items-center flex-wrap mt-4 gap-5">
+              <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
+                <div className="flex items-start p-5 gap-5">
+                  <img src="./images/icon-webDev.png" alt="" className="mt-3" />
+                  <div className="flex flex-col justify-center text-slate-200">
+                    <h1 className="font-bold text-lg tracking-wide">
+                      Web Desain
+                    </h1>
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa dolor eaque Lorem ipsum
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="max-w-[23rem] bg-slate-300 min-h-36 rounded-xl">
-                <img src="" alt="" />
-                <div>
-                  <h1>Web Desain</h1>
-                  <p className="text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsa dolor eaque excepturi commodi facere quidem est
-                    architecto
-                  </p>
+              <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
+                <div className="flex items-start p-5 gap-5">
+                  <img src="./images/icon-webDev.png" alt="" className="mt-3" />
+                  <div className="flex flex-col justify-center text-slate-200">
+                    <h1 className="font-bold text-lg tracking-wide">
+                      Web Desain
+                    </h1>
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa dolor eaque Lorem ipsum dolor sit
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
+                <div className="flex items-start p-5 gap-5">
+                  <img src="./images/icon-webDev.png" alt="" className="mt-3" />
+                  <div className="flex flex-col justify-center text-slate-200">
+                    <h1 className="font-bold text-lg tracking-wide">
+                      Web Desain
+                    </h1>
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa dolor eaque Lorem ipsum dolor sit
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
+                <div className="flex items-start p-5 gap-5">
+                  <img src="./images/icon-webDev.png" alt="" className="mt-3" />
+                  <div className="flex flex-col justify-center text-slate-200">
+                    <h1 className="font-bold text-lg tracking-wide">
+                      Web Desain
+                    </h1>
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa dolor eaque Lorem ipsum dolor sit
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
+                <div className="flex items-start p-5 gap-5">
+                  <img src="./images/icon-webDev.png" alt="" className="mt-3" />
+                  <div className="flex flex-col justify-center text-slate-200">
+                    <h1 className="font-bold text-lg tracking-wide">
+                      Web Desain
+                    </h1>
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa dolor eaque Lorem ipsum dolor sit
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
+                <div className="flex items-start p-5 gap-5">
+                  <img src="./images/icon-webDev.png" alt="" className="mt-3" />
+                  <div className="flex flex-col justify-center text-slate-200">
+                    <h1 className="font-bold text-lg tracking-wide">
+                      Web Desain
+                    </h1>
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa dolor eaque Lorem ipsum dolor sit
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mt-10">
+            <Testimoni />
           </div>
         </div>
       </div>

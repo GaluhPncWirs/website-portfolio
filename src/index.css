@@ -7,10 +7,10 @@
   .theLine::after{
       content: "";
       height: 3px;
-      width: 3rem;
+      width: 4rem;
       background-color: antiquewhite;
       position: absolute;
-      bottom: 0.7rem;
+      bottom: -0.5rem;
       left: 0rem;
       border-radius: 15px;
   }
