@@ -1,5 +1,6 @@
-import Navbar from "./navbar";
-import Testimoni from "./tesimonial";
+import Client from "../components/client";
+import Navbar from "../components/navbar";
+import Testimoni from "../components/tesimonial";
 
 export default function MainContent() {
   return (
@@ -14,7 +15,7 @@ export default function MainContent() {
       </div>
       <div className="flex flex-col items-center">
         <div className="max-w-3xl">
-          <div className="mt-11 text-slate-200">
+          <div className="mt-10 text-slate-200">
             <div className="text-justify">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At
@@ -34,11 +35,11 @@ export default function MainContent() {
               </p>
             </div>
           </div>
-          <div className="mt-5">
+          <div className="mt-10">
             <h1 className="font-semibold text-slate-200 text-2xl">
               What I`m Doing
             </h1>
-            <div className="flex items-center flex-wrap mt-4 gap-5">
+            <div className="flex items-center flex-wrap mt-4 gap-5 justify-center">
               <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
                 <div className="flex items-start p-5 gap-5">
                   <img src="./images/icon-webDev.png" alt="" className="mt-3" />
@@ -127,6 +128,9 @@ export default function MainContent() {
           </div>
           <div className="mt-10">
             <Testimoni />
+          </div>
+          <div className="mt-10">
+            <Client />
           </div>
         </div>
       </div>

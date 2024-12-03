@@ -28,12 +28,12 @@ export default function SideBar() {
     },
   ];
   return (
-    <div className="h-full w-1/4 fixed left-5">
+    <div className="h-full w-1/4 fixed left-5 pt-5">
       <div className="bg-gray-700 rounded-xl py-10">
         <div className="flex flex-col justify-center items-center">
           <img src="./images/profile.png" className="rounded-full w-1/2" />
-          <h1 className="text-3xl mt-5 mb-4 font-semibold text-slate-400">
-            Your Name
+          <h1 className="text-2xl mt-5 mb-4 font-semibold text-slate-400">
+            Galuh Panca Wirasa
           </h1>
           <div className="bg-slate-600 w-1/2 rounded-md">
             <h2 className="text-slate-300 font-bold text-center py-1">

@@ -1,13 +1,22 @@
-import MainContent from "./components/mainContent";
-import SideBar from "./components/sidebar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainContent from "./About_Me/mainContent";
+import SideBar from "./SideBar/sidebar";
+import Resume from "./resume/education";
 
 export default function App() {
   return (
-    <div className="bg-slate-800">
-      <div className="flex justify-end p-5 font-quickSand">
-        <SideBar />
-        <MainContent />
+    <BrowserRouter>
+      <div>
+        <div className="flex">
+          <SideBar />
+          <div className="flex w-full justify-end p-5 font-quickSand bg-black">
+            <Routes>
+              <Route path="/" element={<MainContent />} />
+              <Route path="/resume" element={<Resume />} />
+            </Routes>
+          </div>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
