@@ -9,7 +9,7 @@ export default function App() {
       <div>
         <div className="flex">
           <SideBar />
-          <div className="flex w-full justify-end p-5 font-quickSand bg-black">
+          <div className="flex w-full justify-end p-5 font-quickSand bg-slate-800">
             <Routes>
               <Route path="/" element={<MainContent />} />
               <Route path="/resume" element={<Resume />} />

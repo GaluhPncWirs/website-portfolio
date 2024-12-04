@@ -10,7 +10,7 @@ export default function Navbar() {
         <li>
           <Link to={"resume"}>Resume</Link>
         </li>
-        <li>Portfolio</li>
+        <li>Project</li>
         <li>Contact</li>
       </ul>
     </div>
