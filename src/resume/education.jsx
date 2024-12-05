@@ -101,7 +101,7 @@ export default function Resume() {
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold text-slate-200">My Skill</h1>
           <div className="text-slate-200 flex mt-8 justify-evenly">
-            <div className="bg-slate-500 basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-700">
+            <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500">
               <h1 className="text-xl font-semibold mb-2">Soft Skills</h1>
               <ul className="list-disc list-inside leading-loose flex flex-col flex-wrap ml-3 max-h-60">
                 <li>Teamwork</li>
@@ -111,7 +111,7 @@ export default function Resume() {
                 <li>Responsible</li>
               </ul>
             </div>
-            <div className="bg-slate-600 basis-1/2 rounded-xl p-5">
+            <div className="basis-1/2 rounded-xl p-5 shadow-lg shadow-slate-500">
               <h1 className="text-xl font-semibold mb-2">Hard Skills</h1>
               <ul className="list-disc list-inside ml-3 leading-loose flex flex-col flex-wrap max-h-60">
                 <li>HTML</li>
@@ -126,6 +126,7 @@ export default function Resume() {
                 <li>FireBase</li>
                 <li>Vs Code</li>
                 <li>Microsoft Excel</li>
+                <li>Microsoft Word</li>
               </ul>
             </div>
           </div>
