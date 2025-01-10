@@ -6,6 +6,7 @@ import SideBar from "./SideBar/sidebar.jsx";
 import Resume from "./resume/education.jsx";
 import MainContent from "./About_Me/mainContent.jsx";
 import MyProject from "./Project/myProject.jsx";
+import ContactMe from "./contact/my_contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/project",
     element: <MyProject />,
+  },
+  {
+    path: "/contact",
+    element: <ContactMe />,
   },
 ]);
 

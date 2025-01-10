@@ -15,7 +15,7 @@ export default function Resume() {
         <div className="flex mt-14 mx-8">
           <div className="basis-1/6 flex flex-col items-center">
             <img src="./images/book_icon.png" alt="book" className="w-1/4" />
-            <div className="w-0.5 h-52 mt-2 bg-white rounded-t-lg flex flex-col items-center">
+            <div className="w-0.5 h-52 mt-2 bg-white rounded-t-lg rounded-b-lg flex flex-col items-center">
               <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-8"></div>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function Resume() {
                 alt="experience"
                 className="w-1/4"
               />
-              <div className="w-0.5 h-80 mt-2 bg-white rounded-t-lg flex flex-col items-center">
+              <div className="w-0.5 h-80 mt-2 bg-white rounded-t-lg rounded-b-lg flex flex-col items-center">
                 <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-8"></div>
               </div>
             </div>

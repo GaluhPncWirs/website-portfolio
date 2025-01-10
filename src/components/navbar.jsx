@@ -13,7 +13,9 @@ export default function Navbar() {
         <li className="hover:text-slate-300">
           <Link to={"/project"}>Project</Link>
         </li>
-        <li className="hover:text-slate-300">Contact</li>
+        <li className="hover:text-slate-300">
+          <Link to={"/contact"}>Contact</Link>
+        </li>
       </ul>
     </div>
   );
