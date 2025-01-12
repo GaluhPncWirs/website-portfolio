@@ -1,6 +1,88 @@
+import { useId } from "react";
 import Navbar from "../components/navbar";
 
 export default function Resume() {
+  let id = useId();
+  const dataHardSkills = [
+    {
+      id: id,
+      nama: "HTML",
+      imgLogos: "./images/logo/html.png",
+      altImg: "html_logo",
+    },
+    {
+      id: id,
+      nama: "CSS",
+      imgLogos: "./images/logo/css.png",
+      altImg: "CSS_logo",
+    },
+    {
+      id: id,
+      nama: "Javascript",
+      imgLogos: "./images/logo/js.png",
+      altImg: "Javascript_logo",
+    },
+    {
+      id: id,
+      nama: "Tailwind CSS",
+      imgLogos: "./images/logo/tailwindcss.png",
+      altImg: "Tailwind CSS_logo",
+    },
+    {
+      id: id,
+      nama: "React JS",
+      imgLogos: "./images/logo/react.png",
+      altImg: "React JS_logo",
+    },
+    {
+      id: id,
+      nama: "Python",
+      imgLogos: "./images/logo/python.png",
+      altImg: "Python_logo",
+    },
+    {
+      id: id,
+      nama: "Next JS",
+      imgLogos: "./images/logo/nextjs.png",
+      altImg: "Next JS_logo",
+    },
+    {
+      id: id,
+      nama: "Typescript",
+      imgLogos: "./images/logo/typescript.png",
+      altImg: "Typescript_logo",
+    },
+    {
+      id: id,
+      nama: "Github",
+      imgLogos: "./images/logo/github.png",
+      altImg: "Github_logo",
+    },
+    {
+      id: id,
+      nama: "Firebase",
+      imgLogos: "./images/logo/firebase.png",
+      altImg: "Firebase_logo",
+    },
+    {
+      id: id,
+      nama: "Vs Code",
+      imgLogos: "./images/logo/vscode.png",
+      altImg: "Vs Code_logo",
+    },
+    {
+      id: id,
+      nama: "Microsoft Excel",
+      imgLogos: "./images/logo/microsoft-excel.png",
+      altImg: "Microsoft Excel_logo",
+    },
+    {
+      id: id,
+      nama: "Microsoft Word",
+      imgLogos: "./images/logo/microsoft-word.png",
+      altImg: "Microsoft Word_logo",
+    },
+  ];
   return (
     <div className="w-[73%] bg-gray-700 rounded-xl pb-10">
       <div className="flex justify-end relative">
@@ -42,7 +124,6 @@ export default function Resume() {
             </div>
           </div>
         </div>
-
         <div>
           <div className="flex mt-14 mx-8">
             <div className="basis-1/6 flex flex-col items-center">
@@ -103,7 +184,7 @@ export default function Resume() {
           <div className="text-slate-200 flex mt-8 justify-evenly">
             <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500">
               <h1 className="text-xl font-semibold mb-2">Soft Skills</h1>
-              <ul className="list-disc list-inside leading-loose flex flex-col flex-wrap ml-3 max-h-60">
+              <ul className="list-disc list-inside leading-loose flex flex-col flex-wrap ml-3">
                 <li>Teamwork</li>
                 <li>Time management</li>
                 <li>Perseverance</li>
@@ -112,21 +193,17 @@ export default function Resume() {
               </ul>
             </div>
             <div className="basis-1/2 rounded-xl p-5 shadow-lg shadow-slate-500">
-              <h1 className="text-xl font-semibold mb-2">Hard Skills</h1>
-              <ul className="list-disc list-inside ml-3 leading-loose flex flex-col flex-wrap max-h-60">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Tailwind CSS</li>
-                <li>React JS</li>
-                <li>Python</li>
-                <li>Next JS</li>
-                <li>Typescript</li>
-                <li>GitHub</li>
-                <li>FireBase</li>
-                <li>Vs Code</li>
-                <li>Microsoft Excel</li>
-                <li>Microsoft Word</li>
+              <h1 className="text-xl font-semibold mb-3">Hard Skills</h1>
+              <ul className="ml-2 flex flex-col flex-wrap max-h-64">
+                {dataHardSkills.map((data) => (
+                  <li
+                    className="flex w-5 h-[1.25rem] gap-2 items-center mb-4"
+                    key={data.id}
+                  >
+                    <img src={data.imgLogos} alt={data.altImg} />
+                    <span className="min-w-32">{data.nama}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
