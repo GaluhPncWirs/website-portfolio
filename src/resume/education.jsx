@@ -1,5 +1,5 @@
 import { useId } from "react";
-import Navbar from "../components/navbar";
+import MainLayout from "../layout/main-layout";
 
 export default function Resume() {
   let id = useId();
@@ -84,15 +84,7 @@ export default function Resume() {
     },
   ];
   return (
-    <div className="w-[73%] bg-gray-700 rounded-xl pb-10">
-      <div className="flex justify-end relative">
-        <div className="absolute left-10 top-8">
-          <div className="text-2xl text-slate-200 theLine font-bold">
-            Resume
-          </div>
-        </div>
-        <Navbar />
-      </div>
+    <MainLayout propsTitle="Resume">
       <div>
         <div className="flex mt-14 mx-8">
           <div className="basis-1/6 flex flex-col items-center">
@@ -209,6 +201,6 @@ export default function Resume() {
           </div>
         </div>
       </div>
-    </div>
+    </MainLayout>
   );
 }

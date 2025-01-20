@@ -1,18 +1,9 @@
 import Client from "../components/client";
-import Navbar from "../components/navbar";
 import Testimoni from "../components/tesimonial";
 
 export default function MainContent() {
   return (
-    <div className="w-[73%] bg-gray-700 rounded-xl pb-10">
-      <div className="flex justify-end relative">
-        <div className="absolute left-10 top-8">
-          <div className="text-2xl text-slate-200 theLine font-bold">
-            About Me
-          </div>
-        </div>
-        <Navbar />
-      </div>
+    <MainContent propsTitle="About Me">
       <div className="flex flex-col items-center">
         <div className="max-w-3xl">
           <div className="mt-10 text-slate-200">
@@ -134,6 +125,6 @@ export default function MainContent() {
           </div>
         </div>
       </div>
-    </div>
+    </MainContent>
   );
 }
