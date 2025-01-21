@@ -1,9 +1,10 @@
 import Client from "../components/client";
 import Testimoni from "../components/tesimonial";
+import MainLayout from "../layout/main-layout";
 
 export default function MainContent() {
   return (
-    <MainContent propsTitle="About Me">
+    <MainLayout propsTitle="About Me">
       <div className="flex flex-col items-center">
         <div className="max-w-3xl">
           <div className="mt-10 text-slate-200">
@@ -125,6 +126,6 @@ export default function MainContent() {
           </div>
         </div>
       </div>
-    </MainContent>
+    </MainLayout>
   );
 }

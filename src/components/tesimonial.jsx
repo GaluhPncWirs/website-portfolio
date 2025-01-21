@@ -26,16 +26,20 @@ export default function Testimoni() {
             id="kiri"
             onClick={moveTo}
           >
-            <span className="w-5 h-1 bg-white absolute left-0 -rotate-45"></span>
-            <span className="w-5 h-1 bg-white absolute left-0 top-3 rotate-45"></span>
+            <div className="absolute top-1.5">
+              <span className="w-5 h-1 bg-white absolute left-0 -rotate-45 rounded-r-lg"></span>
+              <span className="w-5 h-1 bg-white absolute left-0 top-3 rotate-45 rounded-r-lg"></span>
+            </div>
           </div>
           <div
             className="absolute -right-5 top-1/3 w-5 h-7 cursor-pointer"
             id="kanan"
             onClick={moveTo}
           >
-            <span className="w-5 h-1 bg-white absolute left-0 rotate-45"></span>
-            <span className="w-5 h-1 bg-white absolute left-0 top-3 -rotate-45"></span>
+            <div className="absolute top-1.5">
+              <span className="w-5 h-1 bg-white absolute left-0 rotate-45 rounded-l-lg"></span>
+              <span className="w-5 h-1 bg-white absolute left-0 top-3 -rotate-45 rounded-l-lg"></span>
+            </div>
           </div>
           <div className="flex gap-5 justify-center">
             {slider === true ? (

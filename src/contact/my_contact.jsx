@@ -1,6 +1,35 @@
 import MainLayout from "../layout/main-layout";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function ContactMe() {
+  // const [inputFieldData, setInputFieldData] = useState({
+  //   user_name: "",
+  //   user_email: "",
+  //   message: "",
+  // });
+
+  const valueInput = useRef();
+
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm("service_522znnn", "template_f7en2h9", valueInput.current, {
+        publicKey: "XsovXgWru8IkDVyb0",
+      })
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          valueInput.current.reset();
+          alert("Pesan Telah Brehasil Dikirim!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Terjadi kesalahan, coba lagi.");
+        }
+      );
+  }
+
   return (
     <MainLayout propsTitle="Contact">
       <div className="max-w-3xl mt-10 mx-auto text-slate-200">
@@ -13,42 +42,55 @@ export default function ContactMe() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full"
+            className="w-full rounded-xl"
           ></iframe>
         </div>
         <div className="mt-10">
-          <h1 className="font-bold text-2xl mb-5">Contact Form</h1>
-          <form action="" className="flex flex-wrap justify-around">
-            <div className="basis-5/12">
-              <label htmlFor="" className="font-semibold text-lg mb-2 block">
-                Full Name
-              </label>
-              <input
-                type="text"
-                className="w-full rounded-md h-10 px-3 text-black font-medium"
-                placeholder="Jhon Doe"
-              />
+          <h1 className="font-bold text-2xl mb-7">Contact Form</h1>
+          <form ref={valueInput} onSubmit={sendEmail}>
+            <div className="flex flex-wrap justify-around">
+              <div className="basis-5/12">
+                <label htmlFor="" className="font-semibold text-lg mb-2 block">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
+                  placeholder="Jhon Doe"
+                  name="user_name"
+                  required
+                />
+              </div>
+              <div className="basis-5/12">
+                <label htmlFor="" className="font-semibold text-lg mb-2 block">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
+                  placeholder="jhonDoe544@gmail.com"
+                  name="user_email"
+                  required
+                />
+              </div>
+              <div className="basis-2/3 mt-5">
+                <label htmlFor="" className="font-semibold text-lg mb-2 block">
+                  Your Message
+                </label>
+                <textarea
+                  name="message"
+                  className="w-full h-32 rounded-md p-3 text-slate-200 font-medium bg-slate-600"
+                  placeholder="Message"
+                  required
+                />
+              </div>
             </div>
-            <div className="basis-5/12">
-              <label htmlFor="" className="font-semibold text-lg mb-2 block">
-                Email Address
-              </label>
-              <input
-                type="email"
-                className="w-full rounded-md h-10 px-3 text-black font-medium"
-                placeholder="jhonDoe544@gmail.com"
-              />
-            </div>
-            <div className="basis-2/3 mt-5">
-              <label htmlFor="" className="font-semibold text-lg mb-2 block">
-                Your Message
-              </label>
-              <textarea
-                name="message"
-                className="w-full h-32 rounded-md p-3 text-black font-medium"
-                placeholder="Message"
-              />
-            </div>
+            <button
+              className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-5"
+              type="submit"
+            >
+              Kirim
+            </button>
           </form>
         </div>
       </div>
