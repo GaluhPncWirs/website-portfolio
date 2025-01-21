@@ -1,13 +1,22 @@
 import MainLayout from "../layout/main-layout";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function ContactMe() {
-  // const [inputFieldData, setInputFieldData] = useState({
-  //   user_name: "",
-  //   user_email: "",
-  //   message: "",
-  // });
+  const [inputFieldData, setInputFieldData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+
+  function handleFillInput(e) {
+    const { name, value } = e.target;
+    return setInputFieldData({ ...inputFieldData, [name]: value });
+  }
+
+  function formIsFilled() {
+    return Object.values(inputFieldData).every((str) => str !== "");
+  }
 
   const valueInput = useRef();
 
@@ -58,6 +67,7 @@ export default function ContactMe() {
                   className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
                   placeholder="Jhon Doe"
                   name="user_name"
+                  onChange={handleFillInput}
                   required
                 />
               </div>
@@ -70,6 +80,7 @@ export default function ContactMe() {
                   className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
                   placeholder="jhonDoe544@gmail.com"
                   name="user_email"
+                  onChange={handleFillInput}
                   required
                 />
               </div>
@@ -81,13 +92,15 @@ export default function ContactMe() {
                   name="message"
                   className="w-full h-32 rounded-md p-3 text-slate-200 font-medium bg-slate-600"
                   placeholder="Message"
+                  onChange={handleFillInput}
                   required
                 />
               </div>
             </div>
             <button
-              className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-5"
+              className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-5 disabled:cursor-not-allowed"
               type="submit"
+              disabled={!formIsFilled()}
             >
               Kirim
             </button>
