@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import SideBar from "./SideBar/sidebar.jsx";
+import SideBar from "./personalDataBar/sidebar.jsx";
 import Resume from "./resume/education.jsx";
 import MainContent from "./About_Me/mainContent.jsx";
 import MyProject from "./Project/myProject.jsx";
