@@ -1,32 +1,6 @@
-import { useId } from "react";
+import { textSideBar } from "../dataMapping/data";
 
 export default function SideBar() {
-  const textSideBar = [
-    {
-      id: useId(),
-      icon: "./images/email.png",
-      nameAttr: "Email",
-      attribute: "galuhpanca33@gmail.com",
-    },
-    {
-      id: useId(),
-      icon: "./images/no-handphone.png",
-      nameAttr: "Phone",
-      attribute: "(+62) 8989134276",
-    },
-    {
-      id: useId(),
-      icon: "./images/calendar.png",
-      nameAttr: "Brithday",
-      attribute: "October 29, 2003",
-    },
-    {
-      id: useId(),
-      icon: "./images/location.png",
-      nameAttr: "Location",
-      attribute: "Bogor, Jawa Barat",
-    },
-  ];
   return (
     <div className="h-full w-1/4 fixed left-5 my-5 max-[640px]:hidden">
       <div className="bg-gray-700 rounded-xl py-5">

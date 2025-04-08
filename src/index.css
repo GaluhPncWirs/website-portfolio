@@ -15,6 +15,12 @@
       border-radius: 15px;
   }
 
+  /* scrollbar */
+
+  .scrollBarDesign{
+    @apply [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-slate-500 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#CDB46D]
+  }
+
   /* hamburger menu */
 
   .menu span:nth-child(2){

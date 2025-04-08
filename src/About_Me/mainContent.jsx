@@ -1,12 +1,12 @@
 // import Client from "../components/client";
-import Testimoni from "../components/tesimonial";
+// import Testimoni from "../components/tesimonial";
 import MainLayout from "../layout/main-layout";
 
 export default function MainContent() {
   return (
     <MainLayout propsTitle="About Me">
       <div className="flex flex-col items-center">
-        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:px-5 mt-10">
+        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-14">
           <div className="text-slate-200">
             <div className="text-justify flex flex-col gap-3">
               <p>
@@ -40,7 +40,7 @@ export default function MainContent() {
             <h1 className="font-semibold text-slate-200 text-2xl">
               What I`m Doing
             </h1>
-            <div className="flex items-center flex-wrap mt-4 gap-5 justify-center">
+            <div className="flex items-center flex-wrap mt-4 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign">
               <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
                 <div className="flex items-start p-5 gap-5">
                   <img src="./images/icon-webDev.png" alt="" className="mt-3" />
@@ -99,9 +99,9 @@ export default function MainContent() {
               </div>
             </div>
           </div>
-          <div className="mt-10 max-[640px]:mt-6">
+          {/* <div className="mt-10 max-[640px]:mt-6">
             <Testimoni />
-          </div>
+          </div> */}
           {/* <div className="mt-10">
             <Client />
           </div> */}
