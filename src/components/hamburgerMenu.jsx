@@ -39,7 +39,7 @@ export default function HamburgerMenu() {
     <div>
       <div
         className={`z-[9999] transition-all top-16 w-full rounded-r-xl py-7 duration-300 absolute bg-gray-800 text-slate-300 ${
-          isCheked ? "-translate-x-8" : "-translate-x-full"
+          isCheked ? "-translate-x-7" : "-translate-x-full"
         }`}
         ref={clickOutsidePath}
       >

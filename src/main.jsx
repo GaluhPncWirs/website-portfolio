@@ -29,12 +29,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div>
-      <div className="flex">
-        <SideBar />
-        <div className="flex w-full justify-end p-5 font-quickSand bg-slate-800">
-          <RouterProvider router={router} />
-        </div>
+    <div className="flex sm:flex-col md:flex-row">
+      <SideBar />
+      <div className="flex w-full justify-end p-5 font-quickSand bg-slate-800">
+        <RouterProvider router={router} />
       </div>
     </div>
   </StrictMode>

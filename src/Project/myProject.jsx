@@ -3,8 +3,8 @@ import MainLayout from "../layout/main-layout";
 export default function MyProject() {
   return (
     <MainLayout propsTitle="My Project">
-      <div className="mt-16 mx-10">
-        <div className="flex items-center justify-evenly flex-wrap gap-y-10">
+      <div className="mt-16 mx-10 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5">
+        <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col">
           <div className="basis-2/5">
             <img
               src="./images/project_me1.jpg"

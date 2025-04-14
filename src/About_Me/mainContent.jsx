@@ -6,7 +6,7 @@ export default function MainContent() {
   return (
     <MainLayout propsTitle="About Me">
       <div className="flex flex-col items-center">
-        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-14">
+        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11">
           <div className="text-slate-200">
             <div className="text-justify flex flex-col gap-3">
               <p>

@@ -41,7 +41,7 @@ export default function ContactMe() {
 
   return (
     <MainLayout propsTitle="Contact">
-      <div className="max-w-3xl mt-10 mx-auto text-slate-200">
+      <div className="max-w-3xl mt-10 mx-auto text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5">
         <div>
           <h1 className="font-bold text-2xl mb-5">Location</h1>
           <iframe
@@ -57,7 +57,7 @@ export default function ContactMe() {
         <div className="mt-10">
           <h1 className="font-bold text-2xl mb-7">Contact Form</h1>
           <form ref={valueInput} onSubmit={sendEmail}>
-            <div className="flex flex-wrap justify-around">
+            <div className="flex flex-wrap justify-around max-[640px]:flex-col max-[640px]:gap-y-4">
               <div className="basis-5/12">
                 <label htmlFor="" className="font-semibold text-lg mb-2 block">
                   Full Name
@@ -84,7 +84,7 @@ export default function ContactMe() {
                   required
                 />
               </div>
-              <div className="basis-2/3 mt-5">
+              <div className="basis-2/3 mt-5 max-[640px]:mt-0">
                 <label htmlFor="" className="font-semibold text-lg mb-2 block">
                   Your Message
                 </label>
