@@ -6,41 +6,38 @@ export default function MainContent() {
   return (
     <MainLayout propsTitle="About Me">
       <div className="flex flex-col items-center">
-        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11">
-          <div className="text-slate-200">
-            <div className="text-justify flex flex-col gap-3">
-              <p>
-                I am a Front-End Web Developer experienced in building modern,
-                responsive, and (UI/UX) oriented user interfaces. With expertise
-                in Javascript and TypeScript programming languages, as well as
-                frameworks like React.js, Tailwind CSS, and Next.js, I help
-                create fast, functional, and visually appealing web
-                applications.
-              </p>
-              <p>
-                My main focus is performance, accessibility, and user-friendly
-                design. I have the ability to integrate the latest technologies
-                with efficient design principles to create digital solutions
-                that meet user and business needs.
-              </p>
-              <p>
-                In addition to technical skills, I am also used to working in
-                cross-functional teams and have good communication to ensure
-                projects are on target. I am always eager to learn new
-                technologies and face challenges that push me to improve.
-              </p>
-              <p>
-                I am open to opportunities to collaborate or discuss about web
-                development and technology. Feel free to contact me via email!
-                that has been provided.
-              </p>
-            </div>
+        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5">
+          <div className="text-justify flex flex-col gap-3 text-slate-200">
+            <p>
+              I am a Front-End Web Developer experienced in building modern,
+              responsive, and (UI/UX) oriented user interfaces. With expertise
+              in Javascript and TypeScript programming languages, as well as
+              frameworks like React.js, Tailwind CSS, and Next.js, I help create
+              fast, functional, and visually appealing web applications.
+            </p>
+            <p>
+              My main focus is performance, accessibility, and user-friendly
+              design. I have the ability to integrate the latest technologies
+              with efficient design principles to create digital solutions that
+              meet user and business needs.
+            </p>
+            <p>
+              In addition to technical skills, I am also used to working in
+              cross-functional teams and have good communication to ensure
+              projects are on target. I am always eager to learn new
+              technologies and face challenges that push me to improve.
+            </p>
+            <p>
+              I am open to opportunities to collaborate or discuss about web
+              development and technology. Feel free to contact me via email!
+              that has been provided.
+            </p>
           </div>
-          <div className="mt-10 max-[640px]:mt-6">
+          <div className="mt-10 max-[640px]:mt-6 sm:mt-6 md:mt-10">
             <h1 className="font-semibold text-slate-200 text-2xl">
               What I`m Doing
             </h1>
-            <div className="flex items-center flex-wrap mt-4 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign">
+            <div className="flex items-center flex-wrap mt-4 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign sm:mt-6 sm:gap-3">
               <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
                 <div className="flex items-start p-5 gap-5">
                   <img src="./images/icon-webDev.png" alt="" className="mt-3" />

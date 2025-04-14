@@ -41,7 +41,7 @@ export default function ContactMe() {
 
   return (
     <MainLayout propsTitle="Contact">
-      <div className="max-w-3xl mt-10 mx-auto text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5">
+      <div className="max-w-3xl mt-10 mx-auto text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10">
         <div>
           <h1 className="font-bold text-2xl mb-5">Location</h1>
           <iframe

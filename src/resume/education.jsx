@@ -211,7 +211,7 @@ export default function Resume() {
       {/* skills */}
       <div className="mt-10 mx-10 max-[640px]:ml-7 max-[640px]:mx-0 max-[640px]:pr-5">
         <h1 className="text-2xl font-bold text-slate-200">My Skills</h1>
-        <div className="text-slate-200 flex mt-5 justify-evenly max-[640px]:flex-col max-[640px]:gap-y-5">
+        <div className="text-slate-200 flex mt-5 justify-evenly max-[640px]:flex-col max-[640px]:gap-y-5 sm:flex-col md:flex-row">
           <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500">
             <h1 className="text-xl font-semibold mb-2">Soft Skills</h1>
             <ul className="list-disc list-inside leading-loose flex flex-col flex-wrap ml-3">
