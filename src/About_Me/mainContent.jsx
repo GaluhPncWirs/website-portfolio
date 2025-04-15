@@ -6,7 +6,7 @@ export default function MainContent() {
   return (
     <MainLayout propsTitle="About Me">
       <div className="flex flex-col items-center">
-        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5">
+        <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5 lg:mx-10">
           <div className="text-justify flex flex-col gap-3 text-slate-200">
             <p>
               I am a Front-End Web Developer experienced in building modern,
@@ -33,11 +33,11 @@ export default function MainContent() {
               that has been provided.
             </p>
           </div>
-          <div className="mt-10 max-[640px]:mt-6 sm:mt-6 md:mt-10">
+          <div className="mt-10 max-[640px]:mt-6 sm:mt-6 md:mt-7">
             <h1 className="font-semibold text-slate-200 text-2xl">
               What I`m Doing
             </h1>
-            <div className="flex items-center flex-wrap mt-4 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign sm:mt-6 sm:gap-3">
+            <div className="flex items-center flex-wrap mt-6 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign sm:overflow-y-auto sm:max-h-80 sm:scrollBarDesign lg:max-h-none lg:scrollBarDesign">
               <div className="max-w-[23rem] bg-slate-600 min-h-36 rounded-xl max-h-24">
                 <div className="flex items-start p-5 gap-5">
                   <img src="./images/icon-webDev.png" alt="" className="mt-3" />
