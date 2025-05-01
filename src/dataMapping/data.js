@@ -24,3 +24,34 @@ export const textSideBar = [
     attribute: "Bogor, Jawa Barat",
   },
 ];
+
+export const project = [
+  {
+    id: "1",
+    sourceImage: "./images/project_me1.jpg",
+    alt: "project_1",
+    titleProject: "Project 1",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,minima debitis rem hic, voluptatibus quasi accusamus quidem corporis",
+  },
+  {
+    id: "2",
+    sourceImage: "./images/project_me1.jpg",
+    alt: "project_2",
+    titleProject: "Project 2",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,minima debitis rem hic, voluptatibus quasi accusamus quidem corporis",
+  },
+  {
+    id: "3",
+    sourceImage: "./images/project_me1.jpg",
+    alt: "project_3",
+    titleProject: "Project 3",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,minima debitis rem hic, voluptatibus quasi accusamus quidem corporis",
+  },
+  {
+    id: "4",
+    sourceImage: "./images/project_me1.jpg",
+    alt: "project_4",
+    titleProject: "Project 4",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est,minima debitis rem hic, voluptatibus quasi accusamus quidem corporis",
+  },
+];

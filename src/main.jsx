@@ -7,6 +7,7 @@ import Resume from "./resume/education.jsx";
 import MainContent from "./About_Me/mainContent.jsx";
 import MyProject from "./Project/myProject.jsx";
 import ContactMe from "./contact/my_contact.jsx";
+import DetailProject from "./Project/detailProject/detail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/project",
     element: <MyProject />,
+  },
+  {
+    path: "/produk/:id",
+    element: <DetailProject />,
   },
   {
     path: "/contact",

@@ -37,7 +37,7 @@ export default function Resume() {
     {
       id: id,
       nama: "React JS",
-      imgLogos: "./images/logo/react.png",
+      imgLogos: "./images/logo/react-logo.png",
       altImg: "React JS_logo",
     },
     {
@@ -57,12 +57,6 @@ export default function Resume() {
       nama: "Typescript",
       imgLogos: "./images/logo/typescript.png",
       altImg: "Typescript_logo",
-    },
-    {
-      id: id,
-      nama: "Github",
-      imgLogos: "./images/logo/github.png",
-      altImg: "Github_logo",
     },
     {
       id: id,
