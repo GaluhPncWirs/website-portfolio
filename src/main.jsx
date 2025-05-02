@@ -19,11 +19,11 @@ const router = createBrowserRouter([
     element: <Resume />,
   },
   {
-    path: "/project",
+    path: "/Project",
     element: <MyProject />,
   },
   {
-    path: "/produk/:id",
+    path: "/Project/detailProject/:id",
     element: <DetailProject />,
   },
   {

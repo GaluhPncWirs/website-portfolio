@@ -1,11 +1,8 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MainLayout from "../layout/main-layout";
 import { project } from "../dataMapping/data";
 
 export default function MyProject() {
-  const tes = useParams();
-
-  console.log(tes.id);
   return (
     <MainLayout propsTitle="My Project">
       <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10">
@@ -13,7 +10,7 @@ export default function MyProject() {
           {project.map((item) => (
             <Link
               className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
-              to={`/detailproject/${item.id}`}
+              to={`/Project/detailProject/${item.id}`}
               key={item.id}
             >
               <img
