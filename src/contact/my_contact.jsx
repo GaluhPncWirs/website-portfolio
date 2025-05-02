@@ -102,7 +102,7 @@ export default function ContactMe() {
               type="submit"
               disabled={!formIsFilled()}
             >
-              Kirim
+              Send
             </button>
           </form>
         </div>

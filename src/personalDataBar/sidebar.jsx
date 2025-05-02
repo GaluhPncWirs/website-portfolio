@@ -6,7 +6,7 @@ export default function SideBar() {
       <div className="bg-gray-700 rounded-xl sm:absolute sm:p-3 sm:mx-3 sm:flex sm:gap-x-3 sm:mt-5 sm:h-1/3 md:static md:p-0 md:mx-0 md:flex-col md:gap-x-0 md:mt-0 md:h-full md:py-3">
         <div className="flex flex-col justify-center items-center sm:w-1/3 md:w-full md:gap-y-1">
           <img
-            src="../../public/images/profile.png"
+            src="/images/profile.png"
             className="rounded-full w-1/2 sm:w-3/5"
           />
           <h1 className="mt-5 mb-4 font-semibold text-slate-400 sm:my-3 sm:text-lg md:text-xl">
@@ -42,7 +42,7 @@ export default function SideBar() {
               href="https://web.facebook.com/galuh.panca.79"
             >
               <img
-                src="../../public/images/icon-facebook.png"
+                src="/images/icon-facebook.png"
                 className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
               />
             </a>
@@ -51,13 +51,13 @@ export default function SideBar() {
               href="https://www.instagram.com/galuhpncwirasa_/"
             >
               <img
-                src="../../public/images/icon-instagram.png"
+                src="/images/icon-instagram.png"
                 className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
               />
             </a>
             <a className="flex justify-center" href="https://www.linkedin.com/">
               <img
-                src="../../public/images/icon-linkedin.png"
+                src="/images/icon-linkedin.png"
                 className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
               />
             </a>
@@ -67,8 +67,8 @@ export default function SideBar() {
               target="_blank"
             >
               <img
-                src="../../public/images/github-mark-white.png"
-                className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
+                src="/images/github-mark-white.png"
+                className="w-1/2 grayscale hover:grayscale-0 cursor-pointer"
               />
             </a>
           </div>
@@ -80,7 +80,7 @@ export default function SideBar() {
             target="_blank"
           >
             <img
-              src="../../public/images/icon-facebook.png"
+              src="/images/icon-facebook.png"
               className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
             />
           </a>
@@ -90,7 +90,7 @@ export default function SideBar() {
             target="_blank"
           >
             <img
-              src="../../public/images/icon-instagram.png"
+              src="/images/icon-instagram.png"
               className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
             />
           </a>
@@ -100,7 +100,7 @@ export default function SideBar() {
             target="_blank"
           >
             <img
-              src="../../public/images/icon-linkedin.png"
+              src="/images/icon-linkedin.png"
               className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
             />
           </a>
@@ -110,8 +110,8 @@ export default function SideBar() {
             target="_blank"
           >
             <img
-              src="../../public/images/github-mark-white.png"
-              className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
+              src="/images/github-mark-white.png"
+              className="w-1/2 grayscale hover:grayscale-0 cursor-pointer"
             />
           </a>
         </div>
