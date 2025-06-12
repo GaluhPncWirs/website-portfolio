@@ -76,7 +76,7 @@ export default function DetailProject() {
           className="bg-slate-500 py-1.5 px-6 rounded-lg hover:bg-slate-600 text-white"
           to="/Project"
         >
-          Kembali
+          Back
         </Link>
       </div>
     </MainLayout>
