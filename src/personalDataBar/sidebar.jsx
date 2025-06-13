@@ -20,7 +20,7 @@ export default function SideBar() {
           </div>
         </div>
         <hr className="border-slate-500 border w-5/6 mx-auto mt-10 sm:hidden md:block md:my-4" />
-        <div className="flex flex-col items-center sm:basis-2/3 sm:justify-center sm:flex-wrap sm:gap-3 md:flex-nowrap md:w-full md:gap-3 lg:gap-4">
+        <div className="flex flex-col md:items-center sm:basis-2/3 sm:justify-around sm:flex-wrap sm:gap-3 md:flex-nowrap md:w-full md:gap-5 md:justify-center lg:gap-4 xl:gap-5">
           {textSideBar.map((item) => (
             <div
               className="flex items-center lg:max-w-56 sm:max-w-52 sm:gap-x-3"
@@ -31,7 +31,7 @@ export default function SideBar() {
                 <h1 className="text-slate-400 font-semibold">
                   {item.nameAttr}
                 </h1>
-                <p className="text-slate-300 font-medium sm:text-sm md:text-base">
+                <p className="text-slate-300 font-medium sm:text-sm lg:text-base xl:text-lg">
                   {item.attribute}
                 </p>
               </div>

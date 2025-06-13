@@ -139,7 +139,7 @@ export default function ContactMe() {
             </form>
           </div>
 
-          <div className="flex justify-evenly mt-[43px] items-center max-[640px]:flex-col max-[640px]:gap-y-7">
+          <div className="flex justify-evenly mt-[43px] items-center flex-col gap-y-7">
             <h1 className="font-bold text-2xl text-center">Find Me On</h1>
             <div className="flex justify-around items-center w-10/12">
               <a

@@ -8,7 +8,7 @@ export default function MainLayout({ propsTitle, children }) {
         <div className="basis-2/12 flex justify-center items-center sm:hidden">
           <HamburgerMenu />
         </div>
-        <div className="absolute left-10 top-8 max-[640px]:top-20 max-[640px]:left-11">
+        <div className="absolute left-8 top-8 max-[640px]:top-20 max-[640px]:left-11">
           <h1 className="text-2xl text-slate-200 theLine font-bold">
             {propsTitle}
           </h1>

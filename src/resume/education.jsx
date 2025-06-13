@@ -48,6 +48,12 @@ export default function Resume() {
     },
     {
       id: id,
+      nama: "Node JS",
+      imgLogos: "./images/logo/nodejs.png",
+      altImg: "NodeJs_logo",
+    },
+    {
+      id: id,
       nama: "Next JS",
       imgLogos: "./images/logo/nextjs.png",
       altImg: "Next JS_logo",
@@ -66,9 +72,9 @@ export default function Resume() {
     },
     {
       id: id,
-      nama: "Vs Code",
-      imgLogos: "./images/logo/vscode.png",
-      altImg: "Vs Code_logo",
+      nama: "Supabase",
+      imgLogos: "./images/logo/supabase.png",
+      altImg: "Supabase_Logo",
     },
     {
       id: id,
@@ -108,7 +114,7 @@ export default function Resume() {
       <MainLayout propsTitle="Resume">
         <div>
           {/* educations */}
-          <div className="flex mt-14 mx-8 max-[640px]:ml-5 max-[640px]:mx-0 max-[640px]:pr-5 max-[640px]:mt-24">
+          <div className="flex mt-14 mx-10 max-[640px]:ml-5 max-[640px]:mx-0 max-[640px]:pr-5 max-[640px]:mt-24">
             <div className="basis-1/6 flex flex-col items-center">
               <img src="./images/book_icon.png" alt="book" className="w-1/4" />
               <div className="w-0.5 h-full mt-2 bg-white rounded-t-lg rounded-b-lg flex flex-col items-center">
@@ -141,7 +147,7 @@ export default function Resume() {
           </div>
 
           {/* experience */}
-          <div className="flex mt-14 mx-8 max-[640px]:ml-5 max-[640px]:mx-0 max-[640px]:pr-5">
+          <div className="flex mt-14 mx-10 max-[640px]:ml-5 max-[640px]:mx-0 max-[640px]:pr-5">
             <div className="basis-1/6 flex flex-col items-center">
               <img
                 src="./images/experience.png"

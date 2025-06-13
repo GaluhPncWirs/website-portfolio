@@ -26,7 +26,7 @@ export default function MainContent() {
       </head>
       <MainLayout propsTitle="About Me">
         <div className="flex flex-col items-center">
-          <div className="max-w-3xl max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5">
+          <div className="max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5 sm:max-w-3xl xl:max-w-4xl">
             <div className="text-justify flex flex-col gap-3 text-slate-200">
               <p>
                 I am a Front-End Web Developer experienced in building modern,
