@@ -86,14 +86,17 @@ export default function Resume() {
   return (
     <>
       <head>
-        <title>Resume | Web Developer Portfolio</title>
+        <title>Resume | Portfolio Galuh Panca Wirasa</title>
         <meta
           name="description"
           content="Lihat resume lengkap saya sebagai pengembang web, mencakup pengalaman kerja, keahlian teknis dan nonteknis, dan pendidikan"
         />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Resume | Web Developer Portfolio" />
+        <meta
+          property="og:title"
+          content="Resume | Portfolio Galuh Panca Wirasa"
+        />
         <meta
           property="og:description"
           content="Dapatkan gambaran lengkap tentang latar belakang profesional saya sebagai web developer — mulai dari pengalaman kerja, teknologi yang dikuasai, hingga proyek-proyek nyata."

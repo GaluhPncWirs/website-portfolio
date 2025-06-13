@@ -14,7 +14,7 @@ export default function MainContent() {
         {/* open graph */}
         <meta
           property="og:title"
-          content="Tentang Saya | Web Developer Portfolio"
+          content="Tentang Saya | Portfolio Galuh Panca Wirasa"
         />
         <meta
           property="og:description"

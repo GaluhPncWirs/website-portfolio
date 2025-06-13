@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { textSideBar } from "../dataMapping/data";
+import Copyright from "./copyright";
 
 export default function HamburgerMenu() {
   const [isCheked, setIsCheked] = useState(false);
@@ -69,32 +70,7 @@ export default function HamburgerMenu() {
             </div>
           ))}
         </div>
-        <div className="flex mt-7 justify-center gap-3 items-center">
-          <a
-            className="flex justify-center"
-            href="https://web.facebook.com/galuh.panca.79"
-          >
-            <img
-              src="./images/icon-facebook.png"
-              className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
-            />
-          </a>
-          <a
-            className="flex justify-center"
-            href="https://www.instagram.com/galuhpncwirasa_/"
-          >
-            <img
-              src="./images/icon-instagram.png"
-              className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
-            />
-          </a>
-          <a className="flex justify-center" href="https://www.linkedin.com/">
-            <img
-              src="./images/icon-linkedin.png"
-              className="w-3/5 grayscale hover:grayscale-0 cursor-pointer"
-            />
-          </a>
-        </div>
+        <Copyright />
       </div>
       <div className="menu flex flex-col h-5 justify-between">
         <input

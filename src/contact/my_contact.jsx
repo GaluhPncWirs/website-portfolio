@@ -42,14 +42,17 @@ export default function ContactMe() {
   return (
     <>
       <head>
-        <title>Contact | Portofolio Web Developer</title>
+        <title>Contact | Portfolio Galuh Panca Wirasa</title>
         <meta
           name="description"
           content="Hubungi saya untuk kerja sama proyek, freelance, atau peluang kerja di bidang pengembangan web. Saya siap membantu Anda membangun solusi digital yang efektif."
         />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Kontak | Portofolio Web Developer" />
+        <meta
+          property="og:title"
+          content="Kontak | Portfolio Galuh Panca Wirasa"
+        />
         <meta
           property="og:description"
           content="Tertarik bekerja sama? Kirim pesan langsung untuk diskusi proyek website, aplikasi, atau pengembangan digital lainnya."
@@ -60,7 +63,7 @@ export default function ContactMe() {
       </head>
       <MainLayout propsTitle="Contact">
         <div className="mt-10 text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10">
-          <div>
+          {/* <div>
             <h1 className="font-bold text-2xl mb-5">Location</h1>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.957053941108!2d106.95862307434643!3d-6.399535693591068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699540600a786b%3A0xf238a808d2e40179!2spenjahit%20galuh!5e0!3m2!1sid!2sid!4v1737379001599!5m2!1sid!2sid"
@@ -71,9 +74,11 @@ export default function ContactMe() {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full rounded-xl"
             ></iframe>
-          </div>
-          <div className="mt-10">
-            <h1 className="font-bold text-2xl mb-7">Contact Form</h1>
+          </div> */}
+          <div className="mt-14">
+            <h1 className="font-bold text-2xl mb-10 text-center">
+              Contact Form
+            </h1>
             <form ref={valueInput} onSubmit={sendEmail}>
               <div className="flex flex-wrap justify-around max-[640px]:flex-col max-[640px]:gap-y-4">
                 <div className="basis-5/12">
@@ -132,6 +137,49 @@ export default function ContactMe() {
                 Send
               </button>
             </form>
+          </div>
+
+          <div className="flex justify-evenly mt-[43px] items-center max-[640px]:flex-col max-[640px]:gap-y-7">
+            <h1 className="font-bold text-2xl text-center">Find Me On</h1>
+            <div className="flex justify-around items-center w-10/12">
+              <a
+                className="flex justify-center"
+                href="https://web.facebook.com/galuh.panca.79"
+              >
+                <img
+                  src="/images/icon-facebook.png"
+                  className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
+                />
+              </a>
+              <a
+                className="flex justify-center"
+                href="https://www.instagram.com/galuhpncwirasa_/"
+              >
+                <img
+                  src="/images/icon-instagram.png"
+                  className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
+                />
+              </a>
+              <a
+                className="flex justify-center"
+                href="https://www.linkedin.com/"
+              >
+                <img
+                  src="/images/icon-linkedin.png"
+                  className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
+                />
+              </a>
+              <a
+                className="flex justify-center"
+                href="https://github.com/GaluhPncWirs"
+                target="_blank"
+              >
+                <img
+                  src="/images/github-mark-white.png"
+                  className="w-4/6 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/5"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </MainLayout>
