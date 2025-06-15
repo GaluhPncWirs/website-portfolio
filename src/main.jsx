@@ -8,6 +8,7 @@ import MainContent from "./About_Me/mainContent.jsx";
 import MyProject from "./Project/myProject.jsx";
 import ContactMe from "./contact/my_contact.jsx";
 import DetailProject from "./Project/detailProject/detail.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -34,11 +35,13 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="flex sm:flex-col md:flex-row font-quickSand">
-      <SideBar />
-      <div className="flex w-full justify-end p-3 bg-slate-800">
-        <RouterProvider router={router} />
+    <HelmetProvider>
+      <div className="flex sm:flex-col md:flex-row font-quickSand">
+        <SideBar />
+        <div className="flex w-full justify-end p-3 bg-slate-800">
+          <RouterProvider router={router} />
+        </div>
       </div>
-    </div>
+    </HelmetProvider>
   </StrictMode>
 );

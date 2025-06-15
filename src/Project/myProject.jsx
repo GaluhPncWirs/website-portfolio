@@ -1,11 +1,31 @@
 import { Link } from "react-router-dom";
 import MainLayout from "../layout/main-layout";
-import { project } from "../dataMapping/data";
+import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase/dataSupabase";
+import { Helmet } from "react-helmet-async";
 
 export default function MyProject() {
+  const [dataProject, setDataProject] = useState([]);
+
+  async function getDataProject() {
+    const { data, error } = await supabase
+      .from("for_Portfolio_myProject")
+      .select("*");
+
+    if (error) {
+      console.error("Error fetching data:", error);
+      return;
+    }
+    setDataProject(data);
+  }
+
+  useEffect(() => {
+    getDataProject();
+  }, []);
+
   return (
     <>
-      <head>
+      <Helmet>
         <title>Project | Portfolio Galuh Panca Wirasa</title>
         <meta
           name="description"
@@ -24,18 +44,18 @@ export default function MyProject() {
         <meta property="og:image" content="" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="website" />
-      </head>
+      </Helmet>
       <MainLayout propsTitle="My Project">
-        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10">
+        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10 h-screen">
           <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col">
-            {project.map((item) => (
+            {dataProject.map((item) => (
               <Link
                 className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
                 to={`/Project/detailProject/${item.id}`}
                 key={item.id}
               >
                 <img
-                  src={item.sourceImage}
+                  src={item.source_image}
                   alt={item.alt}
                   className="w-full bg-cover rounded-t-xl"
                 />
@@ -44,8 +64,9 @@ export default function MyProject() {
                     {item.titleProject}
                   </h1>
                   <p className="text-slate-300 font-medium mt-2 text-justify">
-                    {item.desc}
+                    {item.desc_project.substring(0, 100)}
                   </p>
+                  {/* {item.link_website} */}
                 </div>
               </Link>
             ))}

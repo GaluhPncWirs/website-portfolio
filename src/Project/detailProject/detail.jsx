@@ -1,14 +1,32 @@
 import { useParams } from "react-router-dom";
 import MainLayout from "../../layout/main-layout";
-import { project } from "../../dataMapping/data";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { supabase } from "../../lib/supabase/dataSupabase";
 
 export default function DetailProject() {
   const { id } = useParams();
+  const [detailProject, setDetailProject] = useState([]);
 
-  const detail = project.find((p) => p.id === id);
+  async function getSingelDataProject() {
+    const { data, error } = await supabase
+      .from("for_Portfolio_myProject")
+      .select("*")
+      .eq("id", id)
+      .single();
 
-  if (!detail) return <h1>tidak ditemukan</h1>;
+    if (error) {
+      console.error("Error fetching data:", error);
+      return;
+    }
+    setDetailProject(data);
+  }
+
+  useEffect(() => {
+    getSingelDataProject();
+  }, [id]);
+
+  console.log(detailProject);
 
   return (
     <MainLayout propsTitle="My Project">

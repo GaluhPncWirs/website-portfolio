@@ -1,5 +1,6 @@
 import { useId } from "react";
 import MainLayout from "../layout/main-layout";
+import { Helmet } from "react-helmet-async";
 
 export default function Resume() {
   let id = useId();
@@ -91,7 +92,7 @@ export default function Resume() {
   ];
   return (
     <>
-      <head>
+      <Helmet>
         <title>Resume | Portfolio Galuh Panca Wirasa</title>
         <meta
           name="description"
@@ -110,7 +111,7 @@ export default function Resume() {
         <meta property="og:image" content="" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="profile" />
-      </head>
+      </Helmet>
       <MainLayout propsTitle="Resume">
         <div>
           {/* educations */}

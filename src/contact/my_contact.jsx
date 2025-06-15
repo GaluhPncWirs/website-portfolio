@@ -1,6 +1,7 @@
 import MainLayout from "../layout/main-layout";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactMe() {
   const [inputFieldData, setInputFieldData] = useState({
@@ -41,7 +42,7 @@ export default function ContactMe() {
 
   return (
     <>
-      <head>
+      <Helmet>
         <title>Contact | Portfolio Galuh Panca Wirasa</title>
         <meta
           name="description"
@@ -60,7 +61,7 @@ export default function ContactMe() {
         <meta property="og:image" content="" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="website" />
-      </head>
+      </Helmet>
       <MainLayout propsTitle="Contact">
         <div className="mt-10 text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10">
           {/* <div>
