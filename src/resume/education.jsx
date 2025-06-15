@@ -1,90 +1,88 @@
-import { useId } from "react";
 import MainLayout from "../layout/main-layout";
 import { Helmet } from "react-helmet-async";
 
 export default function Resume() {
-  let id = useId();
   const dataHardSkills = [
     {
-      id: id,
+      id: 1,
       nama: "HTML",
       imgLogos: "./images/logo/html.png",
       altImg: "html_logo",
     },
     {
-      id: id,
+      id: 2,
       nama: "CSS",
       imgLogos: "./images/logo/css.png",
       altImg: "CSS_logo",
     },
     {
-      id: id,
+      id: 3,
       nama: "Javascript",
       imgLogos: "./images/logo/js.png",
       altImg: "Javascript_logo",
     },
     {
-      id: id,
+      id: 4,
       nama: "Tailwind CSS",
       imgLogos: "./images/logo/tailwindcss.png",
       altImg: "Tailwind CSS_logo",
     },
     {
-      id: id,
+      id: 5,
       nama: "Schdn-ui",
       imgLogos: "./images/logo/schdn-ui.png",
       altImg: "Schdn-ui_logo",
     },
     {
-      id: id,
+      id: 6,
       nama: "React JS",
       imgLogos: "./images/logo/react-logo.png",
       altImg: "React JS_logo",
     },
     {
-      id: id,
+      id: 7,
       nama: "Python",
       imgLogos: "./images/logo/python.png",
       altImg: "Python_logo",
     },
     {
-      id: id,
+      id: 8,
       nama: "Node JS",
       imgLogos: "./images/logo/nodejs.png",
       altImg: "NodeJs_logo",
     },
     {
-      id: id,
+      id: 9,
       nama: "Next JS",
       imgLogos: "./images/logo/nextjs.png",
       altImg: "Next JS_logo",
     },
     {
-      id: id,
+      id: 10,
       nama: "Typescript",
       imgLogos: "./images/logo/typescript.png",
       altImg: "Typescript_logo",
     },
     {
-      id: id,
+      id: 11,
       nama: "Firebase",
       imgLogos: "./images/logo/firebase.png",
       altImg: "Firebase_logo",
     },
     {
-      id: id,
+      id: 12,
       nama: "Supabase",
       imgLogos: "./images/logo/supabase.png",
       altImg: "Supabase_Logo",
     },
     {
-      id: id,
+      id: 13,
       nama: "Microsoft Excel",
       imgLogos: "./images/logo/microsoft-excel.png",
       altImg: "Microsoft Excel_logo",
     },
     {
-      id: id,
+      id: 14,
       nama: "Microsoft Word",
       imgLogos: "./images/logo/microsoft-word.png",
       altImg: "Microsoft Word_logo",
