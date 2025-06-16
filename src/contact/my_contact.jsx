@@ -2,6 +2,7 @@ import MainLayout from "../layout/main-layout";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function ContactMe() {
   const [inputFieldData, setInputFieldData] = useState({
@@ -143,43 +144,46 @@ export default function ContactMe() {
           <div className="flex justify-evenly mt-[43px] items-center flex-col gap-y-7">
             <h1 className="font-bold text-2xl text-center">Find Me On</h1>
             <div className="flex justify-around items-center w-10/12">
-              <a
+              <Link
                 className="flex justify-center"
-                href="https://web.facebook.com/galuh.panca.79"
+                to="https://web.facebook.com/galuh.panca.79"
+                target="_blank"
               >
                 <img
                   src="/images/icon-facebook.png"
                   className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 className="flex justify-center"
-                href="https://www.instagram.com/galuhpncwirasa_/"
+                to="https://www.instagram.com/galuhpncwirasa_/"
+                target="_blank"
               >
                 <img
                   src="/images/icon-instagram.png"
                   className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 className="flex justify-center"
-                href="https://www.linkedin.com/"
+                to="https://www.linkedin.com/in/galuh-panca/"
+                target="_blank"
               >
                 <img
                   src="/images/icon-linkedin.png"
                   className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
                 />
-              </a>
-              <a
+              </Link>
+              <Link
                 className="flex justify-center"
-                href="https://github.com/GaluhPncWirs"
+                to="https://github.com/GaluhPncWirs"
                 target="_blank"
               >
                 <img
                   src="/images/github-mark-white.png"
                   className="w-4/6 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/5"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

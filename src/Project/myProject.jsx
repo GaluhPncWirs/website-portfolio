@@ -45,7 +45,7 @@ export default function MyProject() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="My Project">
-        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10 md:h-[29rem]">
+        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10 md:h-[29rem] lg:h-[31rem]">
           <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col">
             {dataProject.length > 0
               ? dataProject.map((item) => (
