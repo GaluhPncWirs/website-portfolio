@@ -30,12 +30,12 @@ export default function MainContent() {
           <div className="max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5 sm:max-w-3xl xl:max-w-4xl">
             <div className="text-justify flex flex-col gap-3 text-slate-200">
               <p>
-                I am a Front-End and Semi Back-End Web Developer experienced in
-                building modern, responsive, and (UI/UX) oriented user
-                interfaces. With expertise in Javascript and TypeScript
-                programming languages, as well as frameworks like React.js,
-                Tailwind CSS, and Next.js, I help create fast, functional, and
-                visually appealing web applications.
+                I am a Web Developer experienced in building modern, responsive,
+                and (UI/UX) oriented user interfaces. With expertise in
+                Javascript and TypeScript programming languages, as well as
+                frameworks like React.js, Tailwind CSS, and Next.js, I help
+                create fast, functional, and visually appealing web
+                applications.
               </p>
               <p>
                 My main focus is performance, accessibility, and user-friendly
@@ -60,15 +60,15 @@ export default function MainContent() {
                 What Can I Do ?{/* What I`m Doing */}
               </h1>
               <div className="flex items-center flex-wrap mt-6 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign sm:overflow-y-auto sm:max-h-80 sm:scrollBarDesign lg:max-h-80">
-                <div className="w-3/4 bg-slate-600 min-h-36 rounded-xl max-h-24">
-                  <div className="flex items-start p-5 gap-5">
+                <div className="w-3/4 bg-slate-600 rounded-xl">
+                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
                     <img
                       src="./images/icon-webDev.png"
                       alt="Web Dev"
-                      className="mt-3 w-1/5"
+                      className="mt-3 w-1/5 max-[640px]:mt-0"
                     />
                     <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide">
+                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
                         Web Development
                       </h1>
                       <p className="text-justify">
@@ -79,15 +79,15 @@ export default function MainContent() {
                     </div>
                   </div>
                 </div>
-                <div className="w-3/4 bg-slate-600 min-h-36 rounded-xl max-h-24">
-                  <div className="flex items-start p-5 gap-5">
+                <div className="w-3/4 bg-slate-600 rounded-xl">
+                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
                     <img
                       src="./images/webDesign.png"
                       alt="Web Design"
-                      className="mt-3 w-1/5"
+                      className="mt-3 w-1/5 max-[640px]:mt-0"
                     />
                     <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide">
+                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
                         Web Design
                       </h1>
                       <p className="text-justify">
@@ -99,15 +99,15 @@ export default function MainContent() {
                     </div>
                   </div>
                 </div>
-                <div className="w-3/4 bg-slate-600 min-h-36 rounded-xl max-h-24">
-                  <div className="flex items-start p-5 gap-5">
+                <div className="w-3/4 bg-slate-600 rounded-xl">
+                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
                     <img
                       src="./images/aiChatting.png"
                       alt="Promt AI"
-                      className="mt-3 w-1/5"
+                      className="mt-3 w-1/5 max-[640px]:mt-0"
                     />
                     <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide">
+                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
                         Promt AI
                       </h1>
                       <p className="text-justify">
@@ -118,15 +118,15 @@ export default function MainContent() {
                     </div>
                   </div>
                 </div>
-                <div className="w-3/4 bg-slate-600 min-h-36 rounded-xl max-h-24">
-                  <div className="flex items-start p-5 gap-5">
+                <div className="w-3/4 bg-slate-600 rounded-xl">
+                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
                     <img
                       src="./images/cooking.png"
                       alt="Cooking"
-                      className="mt-3 w-1/12"
+                      className="mt-3 max-[640px]:mt-0 max-[640px]:w-1/5 sm:w-1/12 md:w-[15%] lg:w-1/12"
                     />
                     <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide">
+                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
                         Cooking
                       </h1>
                       <p className="text-justify">

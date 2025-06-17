@@ -115,17 +115,44 @@ export default function Resume() {
           {/* educations */}
           <div className="flex mt-14 mx-10 max-[640px]:ml-5 max-[640px]:mx-0 max-[640px]:pr-5 max-[640px]:mt-24">
             <div className="basis-1/6 flex flex-col items-center">
-              <img src="./images/book_icon.png" alt="book" className="w-1/4" />
+              <img
+                src="./images/book_icon.png"
+                alt="book"
+                className="max-[640px]:w-1/3 sm:w-1/4 md:w-1/3 lg:w-1/4"
+              />
               <div className="w-0.5 h-full mt-2 bg-white rounded-t-lg rounded-b-lg flex flex-col items-center">
                 <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-8"></div>
+                <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-44"></div>
               </div>
             </div>
             <div className="basis-5/6">
               <h1 className="font-bold text-2xl text-slate-200">Educations</h1>
+
               <div className="flex flex-col">
                 <div className="mt-8 max-[640px]:mt-4">
                   <h2 className="text-slate-200 font-semibold text-xl">
-                    Universitas Muhammadiayah Prof. Dr. Hamka
+                    SMK Muhammadiyah Cileungsi 01
+                  </h2>
+                  <h3 className="text-slate-400 font-medium text-base">
+                    High School Diploma in Teknik Mesin
+                  </h3>
+                  <h3 className="font-bold text-[#E3C775] text-sm my-2">
+                    June 2018 - 2021 May
+                  </h3>
+                  <div className="text-slate-300 font-medium text-justify">
+                    I started my vocational education at SMK by majoring in
+                    Mechanical Engineering. Here, I learned the basics of
+                    turning, cutting workpieces, and machine operation and
+                    maintenance. This experience shaped my technical mindset and
+                    skills.
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col">
+                <div className="mt-8 max-[640px]:mt-4">
+                  <h2 className="text-slate-200 font-semibold text-xl">
+                    University Muhammadiayah Prof. Dr. Hamka
                   </h2>
                   <h3 className="text-slate-400 font-medium text-base">
                     Bachelors degree, Informatics Engineering
@@ -134,11 +161,13 @@ export default function Resume() {
                     July 2021 - 2025 December
                   </h3>
                   <div className="text-slate-300 font-medium text-justify">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit recusandae vel rem in earum minus! Eaque
-                    itaque, praesentium consequuntur, veritatis corporis
-                    pariatur nemo modi perferendis cumque in odio deserunt
-                    repellat.
+                    After graduating from SMK, I decided to continue my studies
+                    in a different field, Informatics Engineering at the
+                    university level. This decision was based on a growing
+                    interest in information technology and software development.
+                    During my university years, I delved into programming, web
+                    development, and various aspects of software engineering as
+                    a foundation for a career in the digital world.
                   </div>
                 </div>
               </div>
@@ -151,7 +180,7 @@ export default function Resume() {
               <img
                 src="./images/experience.png"
                 alt="experience"
-                className="w-1/4"
+                className="max-[640px]:w-1/3 sm:w-1/4 md:w-1/3 lg:w-1/4"
               />
               <div className="w-0.5 h-full mt-2 bg-white rounded-t-lg rounded-b-lg flex flex-col items-center">
                 <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-8"></div>
@@ -164,7 +193,7 @@ export default function Resume() {
               <div className="flex flex-col">
                 <div className="mt-8 max-[640px]:mt-4">
                   <h2 className="text-slate-200 font-semibold text-xl">
-                    Intern Frontend Web Developer - PT. Candra Putra Lestari
+                    Intern Web Developer - PT. Candra Putra Lestari
                   </h2>
                   <h3 className="font-bold text-[#E3C775] text-sm mt-2 mb-1">
                     February 2024 - May 2024
@@ -235,14 +264,15 @@ export default function Resume() {
         <div className="mt-10 mx-10 max-[640px]:ml-7 max-[640px]:mx-0 max-[640px]:pr-5">
           <h1 className="text-2xl font-bold text-slate-200">My Skills</h1>
           <div className="text-slate-200 flex mt-5 justify-evenly max-[640px]:flex-col max-[640px]:gap-y-7 sm:flex-col sm:gap-y-7 md:flex-col lg:flex-row lg:gap-y-0">
-            <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500 lg:max-h-60">
+            <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500">
               <h1 className="text-xl font-semibold mb-2">Soft Skills</h1>
-              <ul className="list-disc list-inside leading-loose flex flex-col flex-wrap ml-3">
+              <ul className="list-none leading-loose flex flex-col flex-wrap ml-3">
                 <li>Teamwork</li>
                 <li>Time management</li>
                 <li>Perseverance</li>
                 <li>Empathy</li>
                 <li>Responsible</li>
+                <li>Discipline</li>
               </ul>
             </div>
             <div className="basis-1/2 rounded-xl p-3 shadow-lg shadow-slate-500">

@@ -45,7 +45,10 @@ export default function HamburgerMenu() {
         ref={clickOutsidePath}
       >
         <div className="flex flex-col justify-center items-center ">
-          <img src="/images/profile.png" className="rounded-full w-1/2" />
+          <img
+            src="/images/foto_galuh.jpg"
+            className="rounded-full max-[640px]:w-1/3  object-cover"
+          />
           <h1 className="text-2xl mt-5 mb-4 font-semibold text-slate-400">
             Galuh Panca Wirasa
           </h1>
@@ -57,7 +60,7 @@ export default function HamburgerMenu() {
         </div>
 
         <hr className="border-slate-500 border w-3/4 mx-auto mt-10" />
-        <div className="mt-5 mb-1 flex flex-col gap-y-3 items-center w-4/5 mx-auto">
+        <div className="mt-5 flex flex-col gap-y-3 items-center w-4/5 mx-auto">
           {textSideBar.map((item) => (
             <div className="flex items-center gap-5 max-w-60" key={item.id}>
               <img src={item.icon} className="w-[10%]" />

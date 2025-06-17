@@ -64,14 +64,14 @@ export default function MyProject() {
                         {item.titleProject}
                       </h1>
                       <p className="text-slate-300 font-medium mt-2 text-justify">
-                        {item.desc_project.substring(0, 100)}
+                        {item.desc_project.substring(0, 150)}. . .
                       </p>
                     </div>
                   </Link>
                 ))
               : Array.from({ length: 4 }).map((_, i) => (
                   <div
-                    className="w-2/5 h-72 rounded-lg bg-slate-500 p-4 animate-pulse"
+                    className="w-2/5 h-72 rounded-lg bg-slate-500 p-4 animate-pulse max-[640px]:w-11/12"
                     key={i}
                   >
                     <div className="bg-slate-400 h-40 w-full rounded-lg"></div>

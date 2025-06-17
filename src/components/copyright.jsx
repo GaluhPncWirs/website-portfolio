@@ -1,6 +1,6 @@
 export default function Copyright() {
   return (
-    <div className="text-slate-200 text-sm md:items-center md:w-11/12 md:mx-auto max-[640px]:mt-10 sm:smResponsive lg:mt-2">
+    <div className="text-slate-200 text-sm md:items-center md:w-11/12 md:mx-auto max-[640px]:mt-8 sm:smResponsive lg:mt-2">
       <h3 className="text-center">
         <span className="text-sm">&copy;</span> Copyright{" "}
         <span className="text-blue-400 font-semibold">
