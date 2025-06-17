@@ -45,7 +45,7 @@ export default function HamburgerMenu() {
         ref={clickOutsidePath}
       >
         <div className="flex flex-col justify-center items-center ">
-          <img src="./images/profile.png" className="rounded-full w-1/2" />
+          <img src="/images/profile.png" className="rounded-full w-1/2" />
           <h1 className="text-2xl mt-5 mb-4 font-semibold text-slate-400">
             Galuh Panca Wirasa
           </h1>

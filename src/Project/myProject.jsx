@@ -45,7 +45,7 @@ export default function MyProject() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="My Project">
-        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10 md:h-[29rem] lg:h-[31rem]">
+        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10">
           <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col">
             {dataProject.length > 0
               ? dataProject.map((item) => (
@@ -57,7 +57,7 @@ export default function MyProject() {
                     <img
                       src={item.source_image}
                       alt={item.alt}
-                      className="w-full bg-cover rounded-t-xl hover:opacity-75"
+                      className="w-full rounded-t-xl hover:opacity-75 object-cover h-64"
                     />
                     <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
                       <h1 className="text-white font-semibold text-xl">
@@ -69,7 +69,7 @@ export default function MyProject() {
                     </div>
                   </Link>
                 ))
-              : Array.from({ length: 2 }).map((_, i) => (
+              : Array.from({ length: 4 }).map((_, i) => (
                   <div
                     className="w-2/5 h-72 rounded-lg bg-slate-500 p-4 animate-pulse"
                     key={i}
