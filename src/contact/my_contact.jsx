@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import LayoutModalBox from "../layout/modalBox";
 
 export default function ContactMe() {
   const [inputFieldData, setInputFieldData] = useState({
@@ -10,6 +11,10 @@ export default function ContactMe() {
     user_email: "",
     message: "",
   });
+
+  const [handleClickSendEmail, setHandleClickSendEmail] = useState(false);
+
+  const [modalSendEmail, setModalSendEmail] = useState(false);
 
   function handleFillInput(e) {
     const { name, value } = e.target;
@@ -25,20 +30,27 @@ export default function ContactMe() {
   function sendEmail(e) {
     e.preventDefault();
     emailjs
-      .sendForm("service_522znnn", "template_f7en2h9", valueInput.current, {
-        publicKey: "XsovXgWru8IkDVyb0",
-      })
+      .sendForm(
+        import.meta.env.VITE_CREDENTIAL_SERVICES_KEYS,
+        import.meta.env.VITE_CREDENTIAL_TEMPLATE_EMAIL_KEYS,
+        valueInput.current,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
           valueInput.current.reset();
-          alert("Pesan Telah Berhasil Dikirim!");
+          setModalSendEmail(true);
         },
         (error) => {
           console.log("FAILED...", error.text);
-          alert("Terjadi kesalahan, coba lagi.");
+          setModalSendEmail(true);
         }
       );
+
+    setHandleClickSendEmail(true);
   }
 
   return (
@@ -186,6 +198,22 @@ export default function ContactMe() {
               </Link>
             </div>
           </div>
+
+          {handleClickSendEmail && (
+            <LayoutModalBox>
+              <h1 className="text-xl font-semibold ">
+                {modalSendEmail === true
+                  ? "Email Telah Berhasi Dikirim"
+                  : "Terjadi kesalahan, coba lagi."}
+              </h1>
+              <button
+                className="text-lg font-semibold bg-slate-300 px-10 rounded-lg py-0.5 hover:bg-slate-400 text-slate-800"
+                onClick={() => setHandleClickSendEmail(false)}
+              >
+                Oke
+              </button>
+            </LayoutModalBox>
+          )}
         </div>
       </MainLayout>
     </>
