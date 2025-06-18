@@ -14,7 +14,10 @@ export default function ContactMe() {
 
   const [handleClickSendEmail, setHandleClickSendEmail] = useState(false);
 
-  const [modalSendEmail, setModalSendEmail] = useState(false);
+  const [modalSendEmail, setModalSendEmail] = useState({
+    sendEmailSuccess: false,
+    sendEmailFailed: false,
+  });
 
   function handleFillInput(e) {
     const { name, value } = e.target;
@@ -29,6 +32,7 @@ export default function ContactMe() {
 
   function sendEmail(e) {
     e.preventDefault();
+    setHandleClickSendEmail(true);
     emailjs
       .sendForm(
         import.meta.env.VITE_CREDENTIAL_SERVICES_KEYS,
@@ -42,15 +46,19 @@ export default function ContactMe() {
         (result) => {
           console.log("SUCCESS!", result.text);
           valueInput.current.reset();
-          setModalSendEmail(true);
+          setModalSendEmail({
+            sendEmailSuccess: true,
+            sendEmailFailed: false,
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
-          setModalSendEmail(true);
+          setModalSendEmail({
+            sendEmailSuccess: false,
+            sendEmailFailed: true,
+          });
         }
       );
-
-    setHandleClickSendEmail(true);
   }
 
   return (
@@ -202,9 +210,17 @@ export default function ContactMe() {
           {handleClickSendEmail && (
             <LayoutModalBox>
               <h1 className="text-xl font-semibold ">
-                {modalSendEmail === true
-                  ? "Email Telah Berhasi Dikirim"
-                  : "Terjadi kesalahan, coba lagi."}
+                {modalSendEmail.sendEmailSuccess === true ? (
+                  "Email Telah Berhasi Dikirim"
+                ) : modalSendEmail.sendEmailFailed === true ? (
+                  "Terjadi kesalahan, coba lagi."
+                ) : (
+                  <img
+                    src="/images/loading.png"
+                    alt="Loading"
+                    className="animate-[spin_1s_linear_infinite] w-3/4"
+                  />
+                )}
               </h1>
               <button
                 className="text-lg font-semibold bg-slate-300 px-10 rounded-lg py-0.5 hover:bg-slate-400 text-slate-800"
