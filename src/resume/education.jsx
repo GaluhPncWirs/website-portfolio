@@ -158,7 +158,7 @@ export default function Resume() {
                     Bachelors degree, Informatics Engineering
                   </h3>
                   <h3 className="font-bold text-[#E3C775] text-sm my-2">
-                    July 2021 - 2025 December
+                    July 2021 - 2025 Agust
                   </h3>
                   <div className="text-slate-300 font-medium text-justify">
                     After graduating from SMK, I decided to continue my studies
