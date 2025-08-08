@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MainLayout from "../layout/main-layout";
 import { Helmet } from "react-helmet-async";
 
@@ -222,6 +223,11 @@ export default function Resume() {
                       </li>
                     </ul>
                   </div>
+                  <h1 className="text-blue-300 hover:underline hover:text-blue-400 mt-2">
+                    <Link to="https://ohayonippon.com/">
+                      Here Are The Results
+                    </Link>
+                  </h1>
                 </div>
               </div>
 
