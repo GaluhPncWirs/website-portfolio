@@ -267,12 +267,19 @@ export default function Resume() {
         </div>
 
         {/* skills */}
-        <div className="mt-10 mx-10 max-[640px]:ml-7 max-[640px]:mx-0 max-[640px]:pr-5">
-          <h1 className="text-2xl font-bold text-slate-200">My Skills</h1>
+        <div className="mt-10 mx-14 max-[640px]:ml-7 max-[640px]:mx-0 max-[640px]:pr-5">
+          <div className="flex items-center gap-4">
+            <img
+              src="./images/skill.png"
+              alt="skills"
+              className="max-[640px]:w-1/12 sm:w-1/12 lg:w-[5%]"
+            />
+            <h1 className="text-2xl font-bold text-slate-200">My Skills</h1>
+          </div>
           <div className="text-slate-200 flex mt-5 justify-evenly max-[640px]:flex-col max-[640px]:gap-y-7 sm:flex-col sm:gap-y-7 md:flex-col lg:flex-row lg:gap-y-0">
             <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500">
               <h1 className="text-xl font-semibold mb-2">Soft Skills</h1>
-              <ul className="list-none leading-loose flex flex-col flex-wrap ml-3">
+              <ul className="list-none leading-loose flex flex-col flex-wrap ml-3 max-[640px]:ml-0">
                 <li>Teamwork</li>
                 <li>Time management</li>
                 <li>Perseverance</li>
@@ -283,7 +290,7 @@ export default function Resume() {
             </div>
             <div className="basis-1/2 rounded-xl p-3 shadow-lg shadow-slate-500">
               <h1 className="text-xl font-semibold mb-5 ml-3">Hard Skills</h1>
-              <ul className="ml-7 flex flex-col flex-wrap max-h-64">
+              <ul className="ml-7 flex flex-col flex-wrap max-h-64 max-[640px]:ml-3">
                 {dataHardSkills.map((data) => (
                   <li
                     className="flex w-5 h-[1.25rem] gap-2 items-center mb-4"
