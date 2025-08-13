@@ -52,7 +52,7 @@ export default function DetailProject() {
                   {item.title_project}
                 </h1>
                 <p className="text-slate-300 font-medium mt-2 text-justify">
-                  {item.desc_project}
+                  {item.desc_project}{" "}
                 </p>
               </div>
             </div>
@@ -76,5 +76,3 @@ export default function DetailProject() {
     </MainLayout>
   );
 }
-
-// buat coomit aja
