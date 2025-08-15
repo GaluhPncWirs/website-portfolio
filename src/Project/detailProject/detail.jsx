@@ -51,8 +51,18 @@ export default function DetailProject() {
                 <h1 className="text-white font-semibold text-xl">
                   {item.title_project}
                 </h1>
+
                 <p className="text-slate-300 font-medium mt-2 text-justify">
                   {item.desc_project}{" "}
+                  {item.id === 2 && (
+                    <Link
+                      to="https://trilogi.ac.id/journal/ks/index.php/JISA/article/view/2201"
+                      className="text-blue-400 hover:underline"
+                      target="_blank"
+                    >
+                      To Journal.
+                    </Link>
+                  )}
                 </p>
               </div>
             </div>
