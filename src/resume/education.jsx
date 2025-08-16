@@ -185,7 +185,7 @@ export default function Resume() {
               />
               <div className="w-0.5 h-full mt-2 bg-white rounded-t-lg rounded-b-lg flex flex-col items-center">
                 <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-8"></div>
-                <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-[19rem]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#E3C775] mt-[340px]"></div>
               </div>
             </div>
 
@@ -224,7 +224,7 @@ export default function Resume() {
                     </ul>
                   </div>
                   <h1 className="text-blue-300 hover:underline hover:text-blue-400 mt-2">
-                    <Link to="https://ohayonippon.com/">
+                    <Link to="https://ohayonippon.com/" target="_blank">
                       Here Are The Results
                     </Link>
                   </h1>

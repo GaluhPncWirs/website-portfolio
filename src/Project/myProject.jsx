@@ -69,7 +69,7 @@ export default function MyProject() {
                     </div>
                   </Link>
                 ))
-              : Array.from({ length: 4 }).map((_, i) => (
+              : Array.from({ length: 3 }).map((_, i) => (
                   <div
                     className="w-2/5 h-72 rounded-lg bg-slate-500 p-4 animate-pulse max-[640px]:w-11/12"
                     key={i}
