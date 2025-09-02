@@ -39,15 +39,15 @@ export default function HamburgerMenu() {
   return (
     <div>
       <div
-        className={`z-[9999] transition-all top-16 w-full rounded-r-xl py-7 duration-300 absolute bg-gray-800 text-slate-300 ${
+        className={`z-[9999] transition-all top-20 w-full rounded-r-xl py-7 duration-300 absolute bg-gray-800 text-slate-300 ${
           isCheked ? "-translate-x-10" : "-translate-x-full"
         }`}
         ref={clickOutsidePath}
       >
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center">
           <img
             src="/images/foto_galuh.jpg"
-            className="rounded-full max-[640px]:w-1/3  object-cover"
+            className="rounded-full max-[640px]:w-1/3 object-cover"
           />
           <h1 className="text-2xl mt-5 mb-4 font-semibold text-slate-400">
             Galuh Panca Wirasa
