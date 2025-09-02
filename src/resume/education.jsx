@@ -1,94 +1,95 @@
 import { Link } from "react-router-dom";
 import MainLayout from "../layout/main-layout";
 import { Helmet } from "react-helmet-async";
+import { dataHardSkills } from "../data/data_icon";
 
 export default function Resume() {
-  const dataHardSkills = [
-    {
-      id: 1,
-      nama: "HTML",
-      imgLogos: "./images/logo/html.png",
-      altImg: "html_logo",
-    },
-    {
-      id: 2,
-      nama: "CSS",
-      imgLogos: "./images/logo/css.png",
-      altImg: "CSS_logo",
-    },
-    {
-      id: 3,
-      nama: "Javascript",
-      imgLogos: "./images/logo/js.png",
-      altImg: "Javascript_logo",
-    },
-    {
-      id: 4,
-      nama: "Tailwind CSS",
-      imgLogos: "./images/logo/tailwindcss.png",
-      altImg: "Tailwind CSS_logo",
-    },
-    {
-      id: 5,
-      nama: "Schdn-ui",
-      imgLogos: "./images/logo/schdn-ui.png",
-      altImg: "Schdn-ui_logo",
-    },
-    {
-      id: 6,
-      nama: "React JS",
-      imgLogos: "./images/logo/react-logo.png",
-      altImg: "React JS_logo",
-    },
-    {
-      id: 7,
-      nama: "Python",
-      imgLogos: "./images/logo/python.png",
-      altImg: "Python_logo",
-    },
-    {
-      id: 8,
-      nama: "Node JS",
-      imgLogos: "./images/logo/nodejs.png",
-      altImg: "NodeJs_logo",
-    },
-    {
-      id: 9,
-      nama: "Next JS",
-      imgLogos: "./images/logo/nextjs.png",
-      altImg: "Next JS_logo",
-    },
-    {
-      id: 10,
-      nama: "Typescript",
-      imgLogos: "./images/logo/typescript.png",
-      altImg: "Typescript_logo",
-    },
-    {
-      id: 11,
-      nama: "Firebase",
-      imgLogos: "./images/logo/firebase.png",
-      altImg: "Firebase_logo",
-    },
-    {
-      id: 12,
-      nama: "Supabase",
-      imgLogos: "./images/logo/supabase.png",
-      altImg: "Supabase_Logo",
-    },
-    {
-      id: 13,
-      nama: "Microsoft Excel",
-      imgLogos: "./images/logo/microsoft-excel.png",
-      altImg: "Microsoft Excel_logo",
-    },
-    {
-      id: 14,
-      nama: "Microsoft Word",
-      imgLogos: "./images/logo/microsoft-word.png",
-      altImg: "Microsoft Word_logo",
-    },
-  ];
+  // const dataHardSkills = [
+  //   {
+  //     id: 1,
+  //     nama: "HTML",
+  //     imgLogos: "./images/logo/html.png",
+  //     altImg: "html_logo",
+  //   },
+  //   {
+  //     id: 2,
+  //     nama: "CSS",
+  //     imgLogos: "./images/logo/css.png",
+  //     altImg: "CSS_logo",
+  //   },
+  //   {
+  //     id: 3,
+  //     nama: "Javascript",
+  //     imgLogos: "./images/logo/js.png",
+  //     altImg: "Javascript_logo",
+  //   },
+  //   {
+  //     id: 4,
+  //     nama: "Tailwind CSS",
+  //     imgLogos: "./images/logo/tailwindcss.png",
+  //     altImg: "Tailwind CSS_logo",
+  //   },
+  //   {
+  //     id: 5,
+  //     nama: "Schdn-ui",
+  //     imgLogos: "./images/logo/schdn-ui.png",
+  //     altImg: "Schdn-ui_logo",
+  //   },
+  //   {
+  //     id: 6,
+  //     nama: "React JS",
+  //     imgLogos: "./images/logo/react-logo.png",
+  //     altImg: "React JS_logo",
+  //   },
+  //   {
+  //     id: 7,
+  //     nama: "Python",
+  //     imgLogos: "./images/logo/python.png",
+  //     altImg: "Python_logo",
+  //   },
+  //   {
+  //     id: 8,
+  //     nama: "Node JS",
+  //     imgLogos: "./images/logo/nodejs.png",
+  //     altImg: "NodeJs_logo",
+  //   },
+  //   {
+  //     id: 9,
+  //     nama: "Next JS",
+  //     imgLogos: "./images/logo/nextjs.png",
+  //     altImg: "Next JS_logo",
+  //   },
+  //   {
+  //     id: 10,
+  //     nama: "Typescript",
+  //     imgLogos: "./images/logo/typescript.png",
+  //     altImg: "Typescript_logo",
+  //   },
+  //   {
+  //     id: 11,
+  //     nama: "Firebase",
+  //     imgLogos: "./images/logo/firebase.png",
+  //     altImg: "Firebase_logo",
+  //   },
+  //   {
+  //     id: 12,
+  //     nama: "Supabase",
+  //     imgLogos: "./images/logo/supabase.png",
+  //     altImg: "Supabase_Logo",
+  //   },
+  //   {
+  //     id: 13,
+  //     nama: "Microsoft Excel",
+  //     imgLogos: "./images/logo/microsoft-excel.png",
+  //     altImg: "Microsoft Excel_logo",
+  //   },
+  //   {
+  //     id: 14,
+  //     nama: "Microsoft Word",
+  //     imgLogos: "./images/logo/microsoft-word.png",
+  //     altImg: "Microsoft Word_logo",
+  //   },
+  // ];
   return (
     <>
       <Helmet>
@@ -114,7 +115,7 @@ export default function Resume() {
       <MainLayout propsTitle="Resume">
         <div>
           {/* educations */}
-          <div className="sm:mt-14 sm:mx-10 max-[640px]:ml-12 max-[640px]:pr-3 max-[640px]:mt-24">
+          <div className="sm:mt-14 sm:mx-10 lg:mx-20 max-[640px]:ml-12 max-[640px]:pr-3 max-[640px]:mt-24">
             <div className="flex items-center gap-x-5">
               <img
                 src="./images/book_icon.png"
@@ -157,7 +158,7 @@ export default function Resume() {
           </div>
 
           {/* experience */}
-          <div className="sm:mt-14 sm:mx-10 max-[640px]:ml-12 max-[640px]:mt-14 max-[640px]:pr-3">
+          <div className="sm:mt-14 sm:mx-10 lg:mx-20 max-[640px]:ml-12 max-[640px]:mt-14 max-[640px]:pr-3">
             <div className="flex items-center gap-x-5">
               <img
                 src="./images/experience.png"

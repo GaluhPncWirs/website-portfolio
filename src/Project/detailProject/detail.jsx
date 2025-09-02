@@ -1,72 +1,67 @@
 import { useParams } from "react-router-dom";
 import MainLayout from "../../layout/main-layout";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { supabase } from "../../lib/supabase/dataSupabase";
+import { datasProject } from "../../data/dataProject";
 
 export default function DetailProject() {
   const { id } = useParams();
-  const [detailProject, setDetailProject] = useState([]);
+  // const [detailProject, setDetailProject] = useState([]);
 
-  useEffect(() => {
-    async function getSingleDataProject() {
-      const { data, error } = await supabase
-        .from("for_Portfolio_myProject")
-        .select("*")
-        .eq("id", id)
-        .single();
+  // useEffect(() => {
+  //   async function getSingleDataProject() {
+  //     const { data, error } = await supabase
+  //       .from("for_Portfolio_myProject")
+  //       .select("*")
+  //       .eq("id", id)
+  //       .single();
 
-      if (error) {
-        console.error("Error fetching data:", error);
-        return;
-      }
-      setDetailProject([data]);
-    }
+  //     if (error) {
+  //       console.error("Error fetching data:", error);
+  //       return;
+  //     }
+  //     setDetailProject([data]);
+  //   }
 
-    getSingleDataProject();
-  }, [id]);
+  //   getSingleDataProject();
+  // }, [id]);
 
-  const selectedMyProject = detailProject.find(
-    (item) => item.id === Number(id)
-  );
+  const myProject = datasProject.find((item) => item.id === id);
 
   return (
     <MainLayout propsTitle="My Project">
       <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-3 md:mx-5 lg:mx-10">
-        {selectedMyProject ? (
-          detailProject.map((item) => (
-            <div key={item.id} className="mb-5">
-              <Link
-                className="flex items-center justify-center hover:opacity-75 transition w-11/12 mx-auto"
-                to={item.link_website}
-                target="_blank"
-              >
-                <img
-                  src={item.source_image}
-                  alt={item.alt}
-                  className="object-cover rounded-xl w-full max-h-80"
-                />
-              </Link>
-              <div className="px-6 py-5 rounded-b-lg">
-                <h1 className="text-white font-semibold text-xl">
-                  {item.title_project}
-                </h1>
+        {myProject ? (
+          <div key={myProject.id} className="mb-5">
+            <Link
+              className="flex items-center justify-center hover:opacity-75 transition w-11/12 mx-auto"
+              to={myProject.link_website}
+              target="_blank"
+            >
+              <img
+                src={myProject.source_image}
+                alt={myProject.alt}
+                className="object-cover rounded-xl w-full max-h-80"
+              />
+            </Link>
+            <div className="px-6 py-5 rounded-b-lg">
+              <h1 className="text-white font-semibold text-xl">
+                {myProject.title_project}
+              </h1>
 
-                <p className="text-slate-300 font-medium mt-2 text-justify">
-                  {item.desc_project}{" "}
-                  {item.id === 2 && (
-                    <Link
-                      to="https://trilogi.ac.id/journal/ks/index.php/JISA/article/view/2201"
-                      className="text-blue-400 hover:underline"
-                      target="_blank"
-                    >
-                      To Journal.
-                    </Link>
-                  )}
-                </p>
-              </div>
+              <p className="text-slate-300 font-medium mt-2 text-justify">
+                {myProject.desc_project}{" "}
+                {myProject.id === "project2" && (
+                  <Link
+                    to="https://trilogi.ac.id/journal/ks/index.php/JISA/article/view/2201"
+                    className="text-blue-400 hover:underline"
+                    target="_blank"
+                  >
+                    To Journal.
+                  </Link>
+                )}
+              </p>
             </div>
-          ))
+          </div>
         ) : (
           <div className="h-[27rem] rounded-lg w-11/12 mx-auto p-7 animate-pulse mb-5">
             <div className="bg-slate-500 h-56 rounded-lg w-11/12 mx-auto mb-7"></div>

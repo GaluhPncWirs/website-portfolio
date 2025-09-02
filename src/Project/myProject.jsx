@@ -1,27 +1,9 @@
 import { Link } from "react-router-dom";
 import MainLayout from "../layout/main-layout";
-import { useState, useEffect } from "react";
-import { supabase } from "../lib/supabase/dataSupabase";
 import { Helmet } from "react-helmet-async";
+import { datasProject } from "../data/dataProject";
 
 export default function MyProject() {
-  const [dataProject, setDataProject] = useState([]);
-
-  useEffect(() => {
-    async function getDataProject() {
-      const { data, error } = await supabase
-        .from("for_Portfolio_myProject")
-        .select("*");
-
-      if (error) {
-        console.error("Error fetching data:", error);
-        return;
-      }
-      setDataProject(data);
-    }
-    getDataProject();
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -47,7 +29,28 @@ export default function MyProject() {
       <MainLayout propsTitle="My Project">
         <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10">
           <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col">
-            {dataProject.length > 0
+            {datasProject.map((item) => (
+              <Link
+                className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
+                to={`/Project/detailProject/${item.id}`}
+                key={item.id}
+              >
+                <img
+                  src={item.source_image}
+                  alt={item.alt}
+                  className="w-full rounded-t-xl hover:opacity-75 object-cover h-64"
+                />
+                <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
+                  <h1 className="text-white font-semibold text-xl">
+                    {item.title_project}
+                  </h1>
+                  <p className="text-slate-300 font-medium mt-2 text-justify">
+                    {item.desc_project.substring(0, 150)}. . .
+                  </p>
+                </div>
+              </Link>
+            ))}
+            {/* {dataProject.length > 0
               ? dataProject.map((item) => (
                   <Link
                     className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
@@ -77,7 +80,7 @@ export default function MyProject() {
                     <div className="bg-slate-400 h-40 w-full rounded-lg"></div>
                     <div className="bg-slate-400 h-20 mt-3 rounded-lg"></div>
                   </div>
-                ))}
+                ))} */}
           </div>
         </div>
       </MainLayout>

@@ -1,5 +1,5 @@
-import Copyright from "../components/copyright";
-import { textSideBar } from "../dataMapping/data";
+import Copyright from "../copyright";
+import { textSideBar } from "../../data/data_icon";
 
 export default function SideBar() {
   return (
