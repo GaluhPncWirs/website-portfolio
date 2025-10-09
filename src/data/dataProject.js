@@ -11,7 +11,7 @@ export const datasProject = [
   {
     id: "project2",
     title_project:
-      "Creating an information system to determine the consumption of packaged sugary drinks",
+      "Information system to determine the consumption of packaged sugary drinks",
     desc_project:
       "A web-based application to help determine the safe limits of consumption of packaged sweet drinks based on the user's daily sugar intake. This is my final thesis project. The system is equipped with an easy-to-understand visual display. This project has also undergone usability evaluation to ensure ease of use for the general public. The application was built using Next.js, TailwindCSS, and TypeScript, and stores data using Firebase. The research findings have been published in an academic journal and are accessible in the JISA(Jurnal Informatika dan Sains)",
     link_website: "https://penghitung-bataskonsumsi-minumankemasan.vercel.app/",
@@ -27,5 +27,14 @@ export const datasProject = [
     link_website: "https://github.com/GaluhPncWirs/capstone-project-for-ML",
     source_image: "/images/project/project_ocr.jpg",
     alt: "Project OCR-Based Nutritional Prediction System",
+  },
+  {
+    id: "project4",
+    title_project: "Exam Online - Online Examination System",
+    desc_project:
+      "Building a website based online exam application designed to simplify the learning evaluation process. This system provides two types of exams, namely multiple choice and essay, with question management features, question marking, and exam result storage. This application was developed using the Next.js framework, TypeScript, TailwindCSS & shadcn ui, and Supabase database. From a technical standpoint, the system has been implemented using a component based architecture and React Hooks, and applies middleware for page access security. The application is also fully responsive, ensuring an optimal user experience across various devices. To maintain exam integrity, the system is equipped with security features such as copy-paste prevention on questions, restrictions on moving or exiting the exam page, and restrictions on re-access after the exam has started. With a combination of technology and robust security features, this system provides an efficient and reliable solution for conducting online exams.",
+    link_website: "https://ujian-online-gray.vercel.app/",
+    source_image: "/images/project/project_ujianOnline.jpeg",
+    alt: "Project Online Examination System",
   },
 ];

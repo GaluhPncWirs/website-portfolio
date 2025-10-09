@@ -38,49 +38,18 @@ export default function MyProject() {
                 <img
                   src={item.source_image}
                   alt={item.alt}
-                  className="w-full rounded-t-xl hover:opacity-75 object-cover h-64"
+                  className="w-full hover:opacity-75 object-cover h-52"
                 />
                 <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
                   <h1 className="text-white font-semibold text-xl">
                     {item.title_project}
                   </h1>
                   <p className="text-slate-300 font-medium mt-2 text-justify">
-                    {item.desc_project.substring(0, 150)}. . .
+                    {item.desc_project.substring(0, 150)} . . .
                   </p>
                 </div>
               </Link>
             ))}
-            {/* {dataProject.length > 0
-              ? dataProject.map((item) => (
-                  <Link
-                    className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
-                    to={`/Project/detailProject/${item.id}`}
-                    key={item.id}
-                  >
-                    <img
-                      src={item.source_image}
-                      alt={item.alt}
-                      className="w-full rounded-t-xl hover:opacity-75 object-cover h-64"
-                    />
-                    <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
-                      <h1 className="text-white font-semibold text-xl">
-                        {item.titleProject}
-                      </h1>
-                      <p className="text-slate-300 font-medium mt-2 text-justify">
-                        {item.desc_project.substring(0, 150)}. . .
-                      </p>
-                    </div>
-                  </Link>
-                ))
-              : Array.from({ length: 3 }).map((_, i) => (
-                  <div
-                    className="w-2/5 h-72 rounded-lg bg-slate-500 p-4 animate-pulse max-[640px]:w-11/12"
-                    key={i}
-                  >
-                    <div className="bg-slate-400 h-40 w-full rounded-lg"></div>
-                    <div className="bg-slate-400 h-20 mt-3 rounded-lg"></div>
-                  </div>
-                ))} */}
           </div>
         </div>
       </MainLayout>

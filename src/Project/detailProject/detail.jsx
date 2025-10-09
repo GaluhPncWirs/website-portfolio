@@ -59,6 +59,33 @@ export default function DetailProject() {
                     To Journal.
                   </Link>
                 )}
+                {myProject.id === "project4" && (
+                  <div className="mt-3">
+                    <h1>
+                      To try out the system, here is the email and password:
+                    </h1>
+                    <div className="flex mt-4 items-center flex-wrap gap-5">
+                      <div>
+                        <h1 className="font-semibold text-xl mb-1">
+                          Account Student
+                        </h1>
+                        <ul>
+                          <li>Email : 123@gmail.com</li>
+                          <li>Password : 12345</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h1 className="font-semibold text-xl mb-1">
+                          Account Teacher
+                        </h1>
+                        <ul>
+                          <li>Email : rohmanAjah345@gmail.com</li>
+                          <li>Password : anakgaul123</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </p>
             </div>
           </div>
