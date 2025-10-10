@@ -43,8 +43,4 @@
     transform: rotate(-45deg);
     translate: -1px -1px;
   }
-
-  .smResponsive{
-    @apply max-w-48 absolute bottom-3 right-5 md:static
-  }
 }

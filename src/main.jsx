@@ -36,11 +36,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
-      <div className="flex sm:flex-col md:flex-row font-quickSand">
-        <SideBar />
-        <div className="flex w-full justify-end p-3 bg-slate-800">
-          <RouterProvider router={router} />
+      <div className="flex md:justify-between md:flex-row sm:flex-col p-3.5 bg-slate-800 font-quickSand">
+        <div>
+          <SideBar />
         </div>
+        <RouterProvider router={router} />
       </div>
     </HelmetProvider>
   </StrictMode>

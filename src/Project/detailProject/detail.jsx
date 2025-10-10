@@ -5,26 +5,6 @@ import { datasProject } from "../../data/dataProject";
 
 export default function DetailProject() {
   const { id } = useParams();
-  // const [detailProject, setDetailProject] = useState([]);
-
-  // useEffect(() => {
-  //   async function getSingleDataProject() {
-  //     const { data, error } = await supabase
-  //       .from("for_Portfolio_myProject")
-  //       .select("*")
-  //       .eq("id", id)
-  //       .single();
-
-  //     if (error) {
-  //       console.error("Error fetching data:", error);
-  //       return;
-  //     }
-  //     setDetailProject([data]);
-  //   }
-
-  //   getSingleDataProject();
-  // }, [id]);
-
   const myProject = datasProject.find((item) => item.id === id);
 
   return (
