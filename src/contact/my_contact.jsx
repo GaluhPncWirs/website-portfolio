@@ -11,13 +11,12 @@ export default function ContactMe() {
     user_email: "",
     message: "",
   });
-
   const [handleClickSendEmail, setHandleClickSendEmail] = useState(false);
-
   const [modalSendEmail, setModalSendEmail] = useState({
     sendEmailSuccess: false,
     sendEmailFailed: false,
   });
+  const valueInput = useRef();
 
   function handleFillInput(e) {
     const { name, value } = e.target;
@@ -27,8 +26,6 @@ export default function ContactMe() {
   function formIsFilled() {
     return Object.values(inputFieldData).every((str) => str !== "");
   }
-
-  const valueInput = useRef();
 
   function sendEmail(e) {
     e.preventDefault();
@@ -84,19 +81,7 @@ export default function ContactMe() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="Contact">
-        <div className="mt-10 text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10">
-          {/* <div>
-            <h1 className="font-bold text-2xl mb-5">Location</h1>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.957053941108!2d106.95862307434643!3d-6.399535693591068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699540600a786b%3A0xf238a808d2e40179!2spenjahit%20galuh!5e0!3m2!1sid!2sid!4v1737379001599!5m2!1sid!2sid"
-              width="600"
-              height="400"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full rounded-xl"
-            ></iframe>
-          </div> */}
+        <div className="text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10 ">
           <div className="mt-14">
             <h1 className="font-bold text-2xl mb-10 text-center">
               Contact Form
@@ -161,8 +146,8 @@ export default function ContactMe() {
             </form>
           </div>
 
-          <div className="flex justify-evenly mt-[43px] items-center flex-col gap-y-7">
-            <h1 className="font-bold text-2xl text-center">Find Me On</h1>
+          <div className="flex justify-evenly mt-12 items-center flex-col gap-y-7">
+            <h1 className="font-bold text-2xl">Find Me On</h1>
             <div className="flex justify-around items-center w-10/12">
               <Link
                 className="flex justify-center"

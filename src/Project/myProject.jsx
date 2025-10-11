@@ -27,8 +27,8 @@ export default function MyProject() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="My Project">
-        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 md:mx-0 lg:mx-10">
-          <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col">
+        <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-12 lg:mx-0">
+          <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col sm:flex-col lg:flex-row">
             {datasProject.map((item) => (
               <Link
                 className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
@@ -38,7 +38,7 @@ export default function MyProject() {
                 <img
                   src={item.source_image}
                   alt={item.alt}
-                  className="w-full hover:opacity-75 object-cover h-52"
+                  className="w-full hover:opacity-75 object-cover h-52 rounded-t-lg"
                 />
                 <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
                   <h1 className="text-white font-semibold text-xl">
