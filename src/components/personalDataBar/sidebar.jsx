@@ -9,7 +9,8 @@ export default function SideBar() {
           <div className="flex flex-col justify-center items-center">
             <img
               src="/images/foto_galuh.jpg"
-              className="rounded-full md:w-2/5 sm:w-3/5 object-cover"
+              className="rounded-full size-36 object-cover"
+              loading="eager"
             />
             <h1 className="font-semibold text-slate-400 sm:my-2 sm:text-xl md:text-xl xl:text-2xl">
               Galuh Panca Wirasa
@@ -24,10 +25,10 @@ export default function SideBar() {
           <div className="flex flex-col md:items-center sm:justify-around sm:gap-2 md:gap-5 md:justify-center lg:gap-4 xl:gap-5">
             {textSideBar.map((item) => (
               <div
-                className="flex items-center lg:max-w-56 sm:max-w-52 sm:gap-x-3 xl:min-w-64 xl:gap-x-4 2xl:min-w-72"
+                className="flex items-center sm:gap-x-3 xl:gap-x-4 sm:max-w-52 md:min-w-56 xl:min-w-64 2xl:min-w-72"
                 key={item.id}
               >
-                <img src={item.icon} className="w-[10%]" />
+                <img src={item.icon} className="size-6" loading="eager" />
                 <div>
                   <h1 className="text-slate-400 font-semibold xl:text-lg 2xl:text-xl">
                     {item.nameAttr}

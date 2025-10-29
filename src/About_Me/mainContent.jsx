@@ -1,7 +1,6 @@
-// import Client from "../components/client";
-// import Testimoni from "../components/tesimonial";
 import { Helmet } from "react-helmet-async";
 import MainLayout from "../layout/main-layout";
+import LayoutWhatCanIDo from "../layout/whatCanIDo";
 
 export default function MainContent() {
   return (
@@ -57,87 +56,63 @@ export default function MainContent() {
             </div>
             <div className="mt-10 max-[640px]:mt-6 sm:mt-6 md:mt-7">
               <h1 className="font-semibold text-slate-200 text-2xl">
-                What Can I Do ?{/* What I`m Doing */}
+                What Can I Do ?
               </h1>
               <div className="flex items-center flex-wrap mt-6 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign sm:overflow-y-auto sm:max-h-80 sm:scrollBarDesign lg:max-h-80">
-                <div className="w-3/4 bg-slate-600 rounded-xl">
-                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
-                    <img
-                      src="./images/icon-webDev.png"
-                      alt="Web Dev"
-                      className="mt-3 w-1/5 max-[640px]:mt-0"
-                    />
-                    <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
-                        Web Development
-                      </h1>
-                      <p className="text-justify">
-                        I develop websites with modern technologies such as
-                        React and Next.js, including frontend, backend, API
-                        integration, and deployment.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-3/4 bg-slate-600 rounded-xl">
-                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
-                    <img
-                      src="./images/webDesign.png"
-                      alt="Web Design"
-                      className="mt-3 w-1/5 max-[640px]:mt-0"
-                    />
-                    <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
-                        Web Design
-                      </h1>
-                      <p className="text-justify">
-                        I designed an attractive and functional website
-                        interface with a focus on UI/UX, using Figma to create
-                        prototypes and wireframes that fit user needs and brand
-                        identity.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-3/4 bg-slate-600 rounded-xl">
-                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
-                    <img
-                      src="./images/aiChatting.png"
-                      alt="Promt AI"
-                      className="mt-3 w-1/5 max-[640px]:mt-0"
-                    />
-                    <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
-                        Promt AI
-                      </h1>
-                      <p className="text-justify">
-                        I was able to construct effective AI prompts to generate
-                        contextual responses, aiding content creation, data
-                        analysis, and decision-making efficiently.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-3/4 bg-slate-600 rounded-xl">
-                  <div className="flex items-start p-5 gap-5 max-[640px]:flex-col max-[640px]:items-center max-[640px]:gap-3">
-                    <img
-                      src="./images/cooking.png"
-                      alt="Cooking"
-                      className="mt-3 max-[640px]:mt-0 max-[640px]:w-1/5 sm:w-1/12 md:w-[15%] lg:w-1/12"
-                    />
-                    <div className="flex flex-col justify-center text-slate-200">
-                      <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
-                        Cooking
-                      </h1>
-                      <p className="text-justify">
-                        Cooking is a hobby that I&apos;m passionate about, it
-                        teaches precision, time management and creativity, while
-                        also building discipline and patience that will serve me
-                        well in other areas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <LayoutWhatCanIDo
+                  imgSrc="./images/icon-webDev.png"
+                  imgAlt="Web Dev"
+                >
+                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                    Web Development
+                  </h1>
+                  <p className="text-justify">
+                    I build user-friendly and high-performance web applications
+                    using React or Next.js, specializing in frontend
+                    development, UI/UX implementation, and API integration.
+                  </p>
+                </LayoutWhatCanIDo>
+                <LayoutWhatCanIDo
+                  imgSrc="./images/webDesign.png"
+                  imgAlt="Web Design"
+                >
+                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                    Web Design
+                  </h1>
+                  <p className="text-justify">
+                    I designed an attractive and functional website interface
+                    with a focus on UI/UX, using Figma to create prototypes and
+                    wireframes that fit user needs and brand identity.
+                  </p>
+                </LayoutWhatCanIDo>
+                <LayoutWhatCanIDo
+                  imgSrc="./images/aiChatting.png"
+                  imgAlt="Promt AI"
+                >
+                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                    Promt AI
+                  </h1>
+                  <p className="text-justify">
+                    I was able to construct effective AI prompts to generate
+                    contextual responses, aiding content creation, data
+                    analysis, and decision-making efficiently.
+                  </p>
+                </LayoutWhatCanIDo>
+
+                <LayoutWhatCanIDo
+                  imgSrc="./images/cooking.png"
+                  imgAlt="Cooking"
+                >
+                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                    Cooking
+                  </h1>
+                  <p className="text-justify">
+                    Cooking is a hobby that I&apos;m passionate about, it
+                    teaches precision, time management and creativity, while
+                    also building discipline and patience that will serve me
+                    well in other areas.
+                  </p>
+                </LayoutWhatCanIDo>
               </div>
             </div>
             {/* <div className="mt-10 max-[640px]:mt-6">
