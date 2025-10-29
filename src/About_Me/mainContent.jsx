@@ -30,7 +30,7 @@ export default function MainContent() {
             <div className="text-justify flex flex-col gap-3 text-slate-200">
               <p>
                 I am a Web Developer experienced in building modern, responsive,
-                and (UI/UX) oriented user interfaces. With expertise in
+                and (UI/UX) oriented user interfaces. with expertise in
                 Javascript and TypeScript programming languages, as well as
                 frameworks like React.js, Tailwind CSS, and Next.js, I help
                 create fast, functional, and visually appealing web
@@ -93,9 +93,9 @@ export default function MainContent() {
                     Promt AI
                   </h1>
                   <p className="text-justify">
-                    I was able to construct effective AI prompts to generate
-                    contextual responses, aiding content creation, data
-                    analysis, and decision-making efficiently.
+                    I&apos;m skilled in creating effective AI prompts to
+                    optimize my workflow, boost productivity, and support
+                    smarter development decisions.
                   </p>
                 </LayoutWhatCanIDo>
 
@@ -107,10 +107,9 @@ export default function MainContent() {
                     Cooking
                   </h1>
                   <p className="text-justify">
-                    Cooking is a hobby that I&apos;m passionate about, it
-                    teaches precision, time management and creativity, while
-                    also building discipline and patience that will serve me
-                    well in other areas.
+                    Cooking is one of my passions. This activity hones my time
+                    management and creativity skills, while also fostering
+                    discipline that impacts various aspects of my life.
                   </p>
                 </LayoutWhatCanIDo>
               </div>

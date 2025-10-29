@@ -6,7 +6,7 @@ export default function LayoutWhatCanIDo(props) {
         <img
           src={imgSrc}
           alt={imgAlt}
-          className="mt-3 w-1/5 max-[640px]:mt-0"
+          className="mt-3 size-11 max-[640px]:mt-0"
         />
         <div className="flex flex-col justify-center text-slate-200">
           {children}

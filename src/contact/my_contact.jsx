@@ -83,9 +83,7 @@ export default function ContactMe() {
       <MainLayout propsTitle="Contact">
         <div className="text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10 ">
           <div className="mt-14">
-            <h1 className="font-bold text-2xl mb-10 text-center">
-              Contact Form
-            </h1>
+            <h1 className="font-bold text-2xl mb-8">Contact Form</h1>
             <form ref={valueInput} onSubmit={sendEmail}>
               <div className="flex flex-wrap justify-around max-[640px]:flex-col max-[640px]:gap-y-4">
                 <div className="basis-5/12">
@@ -137,7 +135,7 @@ export default function ContactMe() {
                 </div>
               </div>
               <button
-                className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-5 disabled:cursor-not-allowed"
+                className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-7 disabled:cursor-not-allowed"
                 type="submit"
                 disabled={!formIsFilled()}
               >
@@ -146,9 +144,9 @@ export default function ContactMe() {
             </form>
           </div>
 
-          <div className="flex justify-evenly mt-12 items-center flex-col gap-y-7">
-            <h1 className="font-bold text-2xl">Find Me On</h1>
-            <div className="flex justify-around items-center w-10/12">
+          <div className="mt-10">
+            <h1 className="font-bold text-2xl mb-7">Find Me On</h1>
+            <div className="flex justify-around items-center mx-auto w-10/12 max-[640px]:w-full">
               <Link
                 className="flex justify-center"
                 to="https://web.facebook.com/galuh.panca.79"
@@ -156,7 +154,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/icon-facebook.png"
-                  className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
+                  className="size-10 grayscale hover:grayscale-0 cursor-pointer"
                 />
               </Link>
               <Link
@@ -166,7 +164,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/icon-instagram.png"
-                  className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
+                  className="size-10 grayscale hover:grayscale-0 cursor-pointer"
                 />
               </Link>
               <Link
@@ -176,7 +174,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/icon-linkedin.png"
-                  className="w-10/12 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/4"
+                  className="size-10 grayscale hover:grayscale-0 cursor-pointer"
                 />
               </Link>
               <Link
@@ -186,7 +184,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/github-mark-white.png"
-                  className="w-4/6 grayscale hover:grayscale-0 cursor-pointer max-[640px]:w-3/5"
+                  className="size-8 grayscale hover:grayscale-0 cursor-pointer"
                 />
               </Link>
             </div>
