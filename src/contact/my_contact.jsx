@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import LayoutModalBox from "../layout/modalBox";
+import { useEffect } from "react";
 
 export default function ContactMe() {
   const [inputFieldData, setInputFieldData] = useState({
@@ -16,7 +17,37 @@ export default function ContactMe() {
     sendEmailSuccess: false,
     sendEmailFailed: false,
   });
-  const valueInput = useRef();
+  const valueInput = useRef(null);
+  const [handleConfirm, setHandleConfirm] = useState(false);
+  const clickedOutsidePath = useRef(null);
+  const clickedOutsideModalBox = useRef(null);
+
+  useEffect(() => {
+    function handleClickedOutsideClosed(event) {
+      if (
+        clickedOutsidePath.current &&
+        !clickedOutsidePath.current.contains(event.target) &&
+        clickedOutsideModalBox.current &&
+        !clickedOutsideModalBox.current.contains(event.target)
+      ) {
+        setHandleConfirm(true);
+      }
+    }
+
+    window.addEventListener("click", handleClickedOutsideClosed);
+
+    return () => {
+      window.removeEventListener("click", handleClickedOutsideClosed);
+    };
+  }, []);
+
+  console.log(handleConfirm);
+
+  useEffect(() => {
+    if (handleConfirm) {
+      setHandleConfirm(false);
+    }
+  }, [handleConfirm]);
 
   function handleFillInput(e) {
     const { name, value } = e.target;
@@ -27,8 +58,7 @@ export default function ContactMe() {
     return Object.values(inputFieldData).every((str) => str !== "");
   }
 
-  function sendEmail(e) {
-    e.preventDefault();
+  function sendEmail() {
     setHandleClickSendEmail(true);
     emailjs
       .sendForm(
@@ -47,6 +77,7 @@ export default function ContactMe() {
             sendEmailSuccess: true,
             sendEmailFailed: false,
           });
+          setHandleConfirm(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -54,6 +85,7 @@ export default function ContactMe() {
             sendEmailSuccess: false,
             sendEmailFailed: true,
           });
+          setHandleConfirm(false);
         }
       );
   }
@@ -84,7 +116,7 @@ export default function ContactMe() {
         <div className="text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10 ">
           <div className="mt-14">
             <h1 className="font-bold text-2xl mb-8">Contact Form</h1>
-            <form ref={valueInput} onSubmit={sendEmail}>
+            <form ref={valueInput}>
               <div className="flex flex-wrap justify-around max-[640px]:flex-col max-[640px]:gap-y-4">
                 <div className="basis-5/12">
                   <label
@@ -134,14 +166,14 @@ export default function ContactMe() {
                   />
                 </div>
               </div>
-              <button
-                className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-7 disabled:cursor-not-allowed"
-                type="submit"
-                disabled={!formIsFilled()}
-              >
-                Send
-              </button>
             </form>
+            <button
+              className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-7 disabled:cursor-not-allowed"
+              disabled={!formIsFilled()}
+              onClick={() => setHandleConfirm(true)}
+            >
+              Send
+            </button>
           </div>
 
           <div className="mt-10">
@@ -190,8 +222,37 @@ export default function ContactMe() {
             </div>
           </div>
 
+          {handleConfirm && (
+            <LayoutModalBox
+              clickedOutsidePath={clickedOutsidePath}
+              clickedOutsideModalBox={clickedOutsideModalBox}
+            >
+              <div className="text-slate-200 w-10/12 mx-auto ">
+                <h1 className="text-xl font-semibold mb-2">Konfirmasi</h1>
+                <p>Apakah Anda Ingin Kirim Pesan ini ?</p>
+                <div className="flex justify-end gap-x-5 mt-5">
+                  <button
+                    className="px-5 py-1 rounded-md bg-slate-300 text-slate-800 font-bold hover:bg-slate-400"
+                    onClick={() => setHandleConfirm(false)}
+                  >
+                    Tidak
+                  </button>
+                  <button
+                    className="border-2 border-slate-200 px-5 py-1 rounded-md font-bold hover:bg-slate-400 hover:text-slate-800"
+                    onClick={sendEmail}
+                  >
+                    Ya
+                  </button>
+                </div>
+              </div>
+            </LayoutModalBox>
+          )}
+
           {handleClickSendEmail && (
-            <LayoutModalBox>
+            <LayoutModalBox
+              clickedOutsidePath={clickedOutsidePath}
+              clickedOutsideModalBox={clickedOutsideModalBox}
+            >
               <h1 className="text-xl font-semibold ">
                 {modalSendEmail.sendEmailSuccess === true ? (
                   "Email Telah Berhasi Dikirim"
@@ -206,7 +267,7 @@ export default function ContactMe() {
                 )}
               </h1>
               <button
-                className="text-lg font-semibold bg-slate-300 px-10 rounded-lg py-0.5 hover:bg-slate-400 text-slate-800"
+                className="text-lg font-semibold bg-slate-500 px-10 rounded-lg py-1 hover:bg-slate-600 text-slate-200"
                 onClick={() => setHandleClickSendEmail(false)}
               >
                 Oke
