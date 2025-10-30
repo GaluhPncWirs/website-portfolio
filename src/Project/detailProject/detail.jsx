@@ -59,8 +59,8 @@ export default function DetailProject() {
                           Account Teacher
                         </h1>
                         <ul>
-                          <li>Email : rohmanAjah345@gmail.com</li>
-                          <li>Password : anakgaul123</li>
+                          <li>Email : guruKu123@gmail.com</li>
+                          <li>Password : myTeacher456</li>
                         </ul>
                       </div>
                     </div>

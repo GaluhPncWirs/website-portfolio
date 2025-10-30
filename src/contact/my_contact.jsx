@@ -20,34 +20,26 @@ export default function ContactMe() {
   const valueInput = useRef(null);
   const [handleConfirm, setHandleConfirm] = useState(false);
   const clickedOutsidePath = useRef(null);
-  const clickedOutsideModalBox = useRef(null);
 
   useEffect(() => {
+    if (!clickedOutsidePath) return;
     function handleClickedOutsideClosed(event) {
       if (
         clickedOutsidePath.current &&
-        !clickedOutsidePath.current.contains(event.target) &&
-        clickedOutsideModalBox.current &&
-        !clickedOutsideModalBox.current.contains(event.target)
+        !clickedOutsidePath.current.contains(event.target)
       ) {
-        setHandleConfirm(true);
+        setHandleConfirm(false);
       }
     }
 
-    window.addEventListener("click", handleClickedOutsideClosed);
+    window.addEventListener("mousedown", handleClickedOutsideClosed);
+    window.addEventListener("touchstart", handleClickedOutsideClosed);
 
     return () => {
-      window.removeEventListener("click", handleClickedOutsideClosed);
+      window.removeEventListener("mousedown", handleClickedOutsideClosed);
+      window.removeEventListener("touchstart", handleClickedOutsideClosed);
     };
   }, []);
-
-  console.log(handleConfirm);
-
-  useEffect(() => {
-    if (handleConfirm) {
-      setHandleConfirm(false);
-    }
-  }, [handleConfirm]);
 
   function handleFillInput(e) {
     const { name, value } = e.target;
@@ -77,7 +69,7 @@ export default function ContactMe() {
             sendEmailSuccess: true,
             sendEmailFailed: false,
           });
-          setHandleConfirm(false);
+          setHandleClickSendEmail(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -85,7 +77,7 @@ export default function ContactMe() {
             sendEmailSuccess: false,
             sendEmailFailed: true,
           });
-          setHandleConfirm(false);
+          setHandleClickSendEmail(false);
         }
       );
   }
@@ -223,55 +215,49 @@ export default function ContactMe() {
           </div>
 
           {handleConfirm && (
-            <LayoutModalBox
-              clickedOutsidePath={clickedOutsidePath}
-              clickedOutsideModalBox={clickedOutsideModalBox}
-            >
-              <div className="text-slate-200 w-10/12 mx-auto ">
-                <h1 className="text-xl font-semibold mb-2">Konfirmasi</h1>
-                <p>Apakah Anda Ingin Kirim Pesan ini ?</p>
-                <div className="flex justify-end gap-x-5 mt-5">
+            <LayoutModalBox clickedOutsidePath={clickedOutsidePath}>
+              {handleClickSendEmail === true ? (
+                <div className="flex flex-col justify-center items-center">
+                  <div className="text-xl font-semibold mb-3">
+                    {modalSendEmail.sendEmailSuccess === true ? (
+                      <span>Email Telah Berhasi Dikirim</span>
+                    ) : modalSendEmail.sendEmailFailed === true ? (
+                      <span>Terjadi kesalahan, Coba Lagi</span>
+                    ) : (
+                      <img
+                        src="/images/loading.png"
+                        alt="Loading"
+                        className="animate-[spin_1s_linear_infinite] size-16 mx-auto"
+                      />
+                    )}
+                  </div>
                   <button
-                    className="px-5 py-1 rounded-md bg-slate-300 text-slate-800 font-bold hover:bg-slate-400"
-                    onClick={() => setHandleConfirm(false)}
+                    className="text-lg font-semibold bg-slate-500 px-7 rounded-lg py-1 hover:bg-slate-600 text-slate-200"
+                    onClick={() => setHandleClickSendEmail(false)}
                   >
-                    Tidak
-                  </button>
-                  <button
-                    className="border-2 border-slate-200 px-5 py-1 rounded-md font-bold hover:bg-slate-400 hover:text-slate-800"
-                    onClick={sendEmail}
-                  >
-                    Ya
+                    Oke
                   </button>
                 </div>
-              </div>
-            </LayoutModalBox>
-          )}
-
-          {handleClickSendEmail && (
-            <LayoutModalBox
-              clickedOutsidePath={clickedOutsidePath}
-              clickedOutsideModalBox={clickedOutsideModalBox}
-            >
-              <h1 className="text-xl font-semibold ">
-                {modalSendEmail.sendEmailSuccess === true ? (
-                  "Email Telah Berhasi Dikirim"
-                ) : modalSendEmail.sendEmailFailed === true ? (
-                  "Terjadi kesalahan, coba lagi."
-                ) : (
-                  <img
-                    src="/images/loading.png"
-                    alt="Loading"
-                    className="animate-[spin_1s_linear_infinite] w-3/4"
-                  />
-                )}
-              </h1>
-              <button
-                className="text-lg font-semibold bg-slate-500 px-10 rounded-lg py-1 hover:bg-slate-600 text-slate-200"
-                onClick={() => setHandleClickSendEmail(false)}
-              >
-                Oke
-              </button>
+              ) : (
+                <div className="text-slate-200 w-10/12 mx-auto">
+                  <h1 className="text-xl font-semibold mb-2">Konfirmasi</h1>
+                  <p>Apakah Anda Ingin Kirim Pesan ini ?</p>
+                  <div className="flex justify-end gap-x-5 mt-5">
+                    <button
+                      className="px-5 py-1 rounded-md border border-slate-200 font-bold hover:bg-slate-500"
+                      onClick={() => setHandleConfirm(false)}
+                    >
+                      Tidak
+                    </button>
+                    <button
+                      className="px-5 py-1 rounded-md font-bold bg-slate-300 text-slate-800 hover:bg-slate-500 hover:text-slate-200"
+                      onClick={sendEmail}
+                    >
+                      Ya
+                    </button>
+                  </div>
+                </div>
+              )}
             </LayoutModalBox>
           )}
         </div>
