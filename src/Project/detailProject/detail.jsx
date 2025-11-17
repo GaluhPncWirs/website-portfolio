@@ -9,7 +9,7 @@ export default function DetailProject() {
 
   return (
     <MainLayout propsTitle="My Project">
-      <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-3 md:mx-5 lg:mx-10">
+      <div className="max-[640px]:mt-24 max-[640px]:ml-5 sm:mt-16 sm:mx-3 md:mx-5 lg:mx-10">
         {myProject ? (
           <div key={myProject.id} className="mb-5">
             <Link
@@ -41,9 +41,7 @@ export default function DetailProject() {
                 )}
                 {myProject.id === "project4" && (
                   <div className="mt-3">
-                    <h1>
-                      To try out the system, here is the email and password:
-                    </h1>
+                    <h1>To try out the system, here is email and password:</h1>
                     <div className="flex mt-4 items-center flex-wrap gap-5">
                       <div>
                         <h1 className="font-semibold text-xl mb-1">
