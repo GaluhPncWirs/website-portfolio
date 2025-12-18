@@ -36,6 +36,7 @@ export default function Resume() {
                 src="./images/book_icon.png"
                 alt="Book"
                 className="size-10"
+                loading="eager"
               />
               <h1 className="font-bold text-2xl text-slate-200">Educations</h1>
             </div>
@@ -70,6 +71,7 @@ export default function Resume() {
                 src="./images/experience.png"
                 alt="experience"
                 className="size-10"
+                loading="eager"
               />
               <h1 className="font-bold text-2xl text-slate-200">Experience</h1>
             </div>
@@ -147,7 +149,12 @@ export default function Resume() {
         {/* skills */}
         <div className="mt-12 sm:mx-14 max-[640px]:ml-6 max-[640px]:pr-5">
           <div className="flex items-center gap-4">
-            <img src="./images/skill.png" alt="skills" className="size-10" />
+            <img
+              src="./images/skill.png"
+              alt="skills"
+              className="size-10"
+              loading="lazy"
+            />
             <h1 className="text-2xl font-bold text-slate-200">My Skills</h1>
           </div>
           <div className="text-slate-200 flex mt-5 justify-evenly max-[640px]:flex-col max-[640px]:gap-y-7 sm:flex-col sm:gap-y-7 md:flex-col lg:flex-row lg:gap-y-0">
@@ -159,6 +166,7 @@ export default function Resume() {
                     src="/images/softSkill/teamwork.png"
                     alt="Teamwork"
                     className="size-7"
+                    loading="lazy"
                   />
                   <span>Teamwork</span>
                 </li>
@@ -167,6 +175,7 @@ export default function Resume() {
                     src="/images/softSkill/time-management.png"
                     alt="Time Management"
                     className="size-7"
+                    loading="lazy"
                   />
                   <span>Time Management</span>
                 </li>
@@ -175,6 +184,7 @@ export default function Resume() {
                     src="/images/softSkill/perseverance.png"
                     alt="Perseverance"
                     className="size-7"
+                    loading="lazy"
                   />
                   <span>Perseverance</span>
                 </li>
@@ -183,6 +193,7 @@ export default function Resume() {
                     src="/images/softSkill/empathy.png"
                     alt="Empathy"
                     className="size-7"
+                    loading="lazy"
                   />
                   <span>Empathy</span>
                 </li>
@@ -191,6 +202,7 @@ export default function Resume() {
                     src="/images/softSkill/responsibility.png"
                     alt="Responsible"
                     className="size-7"
+                    loading="lazy"
                   />
                   <span>Responsible</span>
                 </li>
@@ -199,6 +211,7 @@ export default function Resume() {
                     src="/images/softSkill/discipline.png"
                     alt="Discipline"
                     className="size-7"
+                    loading="lazy"
                   />
                   <span>Discipline</span>
                 </li>
@@ -213,6 +226,7 @@ export default function Resume() {
                       src={data.imgLogos}
                       alt={data.altImg}
                       className="size-5"
+                      loading="lazy"
                     />
                     <span>{data.nama}</span>
                   </li>

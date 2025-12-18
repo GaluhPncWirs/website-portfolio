@@ -21,6 +21,7 @@ export default function DetailProject() {
                 src={myProject.source_image}
                 alt={myProject.alt}
                 className="object-cover rounded-xl w-full max-h-80"
+                loading="eager"
               />
             </Link>
             <div className="px-6 py-5 rounded-b-lg">

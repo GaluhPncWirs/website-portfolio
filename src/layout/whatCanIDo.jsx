@@ -7,6 +7,7 @@ export default function LayoutWhatCanIDo(props) {
           src={imgSrc}
           alt={imgAlt}
           className="mt-3 size-11 max-[640px]:mt-0"
+          loading="eager"
         />
         <div className="flex flex-col justify-center text-slate-200">
           {children}

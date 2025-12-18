@@ -179,6 +179,7 @@ export default function ContactMe() {
                 <img
                   src="/images/icon-facebook.png"
                   className="size-10 grayscale hover:grayscale-0 cursor-pointer"
+                  loading="eager"
                 />
               </Link>
               <Link
@@ -189,6 +190,7 @@ export default function ContactMe() {
                 <img
                   src="/images/icon-instagram.png"
                   className="size-10 grayscale hover:grayscale-0 cursor-pointer"
+                  loading="eager"
                 />
               </Link>
               <Link
@@ -199,6 +201,7 @@ export default function ContactMe() {
                 <img
                   src="/images/icon-linkedin.png"
                   className="size-10 grayscale hover:grayscale-0 cursor-pointer"
+                  loading="eager"
                 />
               </Link>
               <Link
@@ -209,6 +212,7 @@ export default function ContactMe() {
                 <img
                   src="/images/github-mark-white.png"
                   className="size-8 grayscale hover:grayscale-0 cursor-pointer"
+                  loading="eager"
                 />
               </Link>
             </div>

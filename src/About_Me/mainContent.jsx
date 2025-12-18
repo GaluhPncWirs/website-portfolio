@@ -32,7 +32,7 @@ export default function MainContent() {
                 I am a Web Developer experienced in building modern, responsive,
                 and (UI/UX) oriented user interfaces. with expertise in
                 Javascript and TypeScript programming languages, as well as
-                frameworks like React.js, Tailwind CSS, and Next.js, I help
+                frameworks like React.js, Next.js, and Tailwind CSS. I help
                 create fast, functional, and visually appealing web
                 applications.
               </p>

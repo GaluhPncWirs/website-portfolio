@@ -39,6 +39,7 @@ export default function MyProject() {
                   src={item.source_image}
                   alt={item.alt}
                   className="w-full hover:opacity-75 object-cover h-52 rounded-t-lg"
+                  loading="eager"
                 />
                 <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
                   <h1 className="text-white font-semibold text-xl">
