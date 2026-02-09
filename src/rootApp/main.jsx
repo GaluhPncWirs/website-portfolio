@@ -18,7 +18,7 @@ import LayoutMyProjects from "../Project/layout.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: () => redirect("/AboutMe"),
+    loader: () => redirect("/AboutMe"),
   },
   {
     path: "/AboutMe",
