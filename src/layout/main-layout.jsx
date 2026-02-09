@@ -1,5 +1,5 @@
-import HamburgerMenu from "../components/hamburgerMenu";
-import Navbar from "../components/navbar";
+import HamburgerMenu from "../components/global/hamburgerMenu/content";
+import Navbar from "../components/global/navbar/content";
 
 export default function MainLayout({ propsTitle, children }) {
   return (

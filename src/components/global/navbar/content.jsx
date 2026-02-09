@@ -5,16 +5,16 @@ export default function Navbar() {
     <div className="rounded-bl-xl rounded-tr-xl shadow-lg shadow-slate-500 max-[640px]:basis-10/12 sm:basis-3/5 md:basis-[63%] xl:basis-1/2">
       <ul className="flex justify-evenly h-14 items-center font-semibold text-slate-100 max-[640px]:text-base max-[640px]:px-3 sm:text-base lg:text-lg">
         <li className="hover:text-slate-300">
-          <Link to={"/"}>About</Link>
+          <Link to={"/AboutMe"}>About</Link>
         </li>
         <li className="hover:text-slate-300">
-          <Link to={"/resume"}>Resume</Link>
+          <Link to={"/Resume"}>Resume</Link>
         </li>
         <li className="hover:text-slate-300">
-          <Link to={"/Project"}>Project</Link>
+          <Link to={"/Projects"}>Project</Link>
         </li>
         <li className="hover:text-slate-300">
-          <Link to={"/contact"}>Contact</Link>
+          <Link to={"/Contact"}>Contact</Link>
         </li>
       </ul>
     </div>

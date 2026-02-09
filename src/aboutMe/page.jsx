@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import MainLayout from "../layout/main-layout";
 import LayoutWhatCanIDo from "../layout/whatCanIDo";
 
-export default function MainContent() {
+export default function AboutMe() {
   return (
     <>
       <Helmet>

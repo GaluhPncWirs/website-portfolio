@@ -1,9 +1,9 @@
-import Copyright from "../copyright";
-import { textSideBar } from "../../data/data_icon";
+import Copyright from "../copyright/content";
+import { textSideBar } from "../../../data/data_icon";
 
 export default function SideBar() {
   return (
-    <div className="max-[640px]:hidden sm:block md:fixed md:h-[96%] md:w-1/3 lg:w-1/4">
+    <div className="hidden sm:block md:fixed md:h-[96%] md:w-1/3 lg:w-1/4">
       <div className="bg-gray-700 rounded-xl sm:p-3 md:h-full md:p-0 md:flex md:flex-col md:justify-evenly">
         <div className="sm:flex sm:justify-around md:flex-col items-center gap-3">
           <div className="flex flex-col justify-center items-center">
@@ -30,10 +30,10 @@ export default function SideBar() {
               >
                 <img src={item.icon} className="size-6" loading="eager" />
                 <div>
-                  <h1 className="text-slate-400 font-semibold max-[640px]:text-sm sm:text-base xl:text-lg 2xl:text-xl">
+                  <h1 className="text-slate-400 font-semibold text-sm sm:text-base xl:text-lg 2xl:text-xl">
                     {item.nameAttr}
                   </h1>
-                  <p className="text-slate-300 font-medium max-[640px]:text-sm sm:text-sm xl:text-base 2xl:text-lg">
+                  <p className="text-slate-300 font-medium text-sm sm:text-sm xl:text-base 2xl:text-lg">
                     {item.attribute}
                   </p>
                 </div>

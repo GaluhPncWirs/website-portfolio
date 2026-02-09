@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
-import Copyright from "./copyright";
-import { textSideBar } from "../data/data_icon";
+import Copyright from "../copyright/content";
+import { textSideBar } from "../../../data/data_icon";
 
 export default function HamburgerMenu() {
   const [isCheked, setIsCheked] = useState(false);
