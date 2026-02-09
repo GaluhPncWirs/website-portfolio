@@ -3,21 +3,21 @@ import { datasProject } from "../../data/dataProject";
 
 export default function Projects() {
   return (
-    <div className="mt-16 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-12 lg:mx-0">
-      <div className="flex items-center justify-evenly flex-wrap gap-y-10 max-[640px]:flex-col sm:flex-col lg:flex-row">
+    <div className="mt-24 sm:mt-14">
+      <div className="grid place-items-center grid-cols-1 gap-y-10 lg:grid-cols-2">
         {datasProject.map((item) => (
           <Link
-            className="basis-2/5 hover:scale-105 transition-all cursor-pointer"
+            className="w-10/12 hover:scale-105 transition-all cursor-pointer"
             to={`/Projects/detailProject/${item.id}`}
             key={item.id}
           >
             <img
               src={item.source_image}
               alt={item.alt}
-              className="w-full hover:opacity-75 object-cover h-52 rounded-t-lg"
+              className="w-full hover:opacity-75 object-cover h-52 rounded-t-md"
               loading="eager"
             />
-            <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
+            <div className="bg-slate-600 px-6 py-5 rounded-b-md">
               <h1 className="text-white font-semibold text-xl">
                 {item.title_project.substring(0, 45)} . . .
               </h1>

@@ -7,22 +7,22 @@ export default function DetailProject() {
   const myProject = datasProject.find((item) => item.id === id);
 
   return (
-    <div className="max-[640px]:mt-24 max-[640px]:ml-5 sm:mt-16 sm:mx-3 md:mx-5 lg:mx-10">
+    <div className="mt-24 sm:mt-14">
       {myProject ? (
-        <div key={myProject.id} className="mb-5">
+        <div key={myProject.id} className="mb-5 w-10/12 sm:w-11/12 mx-auto">
           <Link
-            className="flex items-center justify-center hover:opacity-75 transition w-11/12 mx-auto"
+            className="hover:opacity-75 transition-all"
             to={myProject.link_website}
             target="_blank"
           >
             <img
               src={myProject.source_image}
               alt={myProject.alt}
-              className="object-cover rounded-xl w-full max-h-80"
+              className="object-cover rounded-xl"
               loading="eager"
             />
           </Link>
-          <div className="px-6 py-5 rounded-b-lg">
+          <div className="py-5 rounded-b-lg">
             <h1 className="text-white font-semibold text-xl">
               {myProject.title_project}
             </h1>
@@ -65,6 +65,12 @@ export default function DetailProject() {
               )}
             </p>
           </div>
+          <Link
+            className="bg-slate-500 py-1.5 px-6 rounded-lg hover:bg-slate-600 text-white"
+            to="/Projects"
+          >
+            Back
+          </Link>
         </div>
       ) : (
         <div className="h-[27rem] rounded-lg w-11/12 mx-auto p-7 animate-pulse mb-5">
@@ -75,12 +81,6 @@ export default function DetailProject() {
           </div>
         </div>
       )}
-      <Link
-        className="bg-slate-500 py-1.5 px-6 ml-5 rounded-lg hover:bg-slate-600 text-white"
-        to="/Projects"
-      >
-        Back
-      </Link>
     </div>
   );
 }

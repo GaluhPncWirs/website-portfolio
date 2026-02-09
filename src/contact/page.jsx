@@ -1,9 +1,9 @@
-import MainLayout from "../layout/main-layout";
+import MainLayout from "../layout/mainLayout/content";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import LayoutModalBox from "../layout/modalBox";
+import LayoutModalBox from "../layout/modalBox/content";
 import { useEffect } from "react";
 
 export default function ContactMe() {
@@ -105,12 +105,12 @@ export default function ContactMe() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="Contact">
-        <div className="text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10">
+        <div className="text-slate-200 mt-24 ml-7 sm:mt-14">
           <div className="mt-14">
-            <h1 className="font-bold text-2xl mb-8">Contact Form</h1>
+            <h1 className="font-bold text-2xl mb-5">Contact Form</h1>
             <form ref={valueInput} className="flex flex-wrap gap-5">
               <div className="flex flex-col sm:flex-row gap-5 w-full">
-                <div className="w-1/2">
+                <div className="w-full sm:w-1/2">
                   <label
                     htmlFor=""
                     className="font-semibold text-lg mb-2 block"
@@ -126,7 +126,7 @@ export default function ContactMe() {
                     required
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-full sm:w-1/2">
                   <label
                     htmlFor=""
                     className="font-semibold text-lg mb-2 block"
@@ -167,7 +167,7 @@ export default function ContactMe() {
 
           <div className="mt-10">
             <h1 className="font-bold text-2xl mb-7">Find Me On</h1>
-            <div className="flex justify-around items-center mx-auto w-10/12 max-[640px]:w-full">
+            <div className="flex justify-around items-center">
               <Link
                 className="flex justify-center"
                 to="https://web.facebook.com/galuh.panca.79"

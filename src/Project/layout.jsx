@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import MainLayout from "../layout/main-layout";
+import MainLayout from "../layout/mainLayout/content";
 
 export default function LayoutMyProjects() {
   return (

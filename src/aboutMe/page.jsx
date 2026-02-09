@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import MainLayout from "../layout/main-layout";
-import LayoutWhatCanIDo from "../layout/whatCanIDo";
+import MainLayout from "../layout/mainLayout/content";
+import LayoutWhatCanIDo from "../layout/whatCanIDo/content";
 
 export default function AboutMe() {
   return (
@@ -26,7 +26,7 @@ export default function AboutMe() {
       </Helmet>
       <MainLayout propsTitle="About Me">
         <div className="flex flex-col items-center">
-          <div className="max-[640px]:max-w-full max-[640px]:pr-5 mt-10 max-[640px]:ml-11 sm:mx-5 sm:max-w-3xl xl:max-w-4xl">
+          <div className="max-w-full pr-3 mt-10 ml-7 sm:pr-0 sm:ml-0">
             <div className="text-justify flex flex-col gap-3 text-slate-200">
               <p>
                 I am a Web Developer experienced in building modern, responsive,
@@ -54,16 +54,16 @@ export default function AboutMe() {
                 that has been provided.
               </p>
             </div>
-            <div className="mt-10 max-[640px]:mt-6 sm:mt-6 md:mt-7">
-              <h1 className="font-semibold text-slate-200 text-2xl">
+            <div className="mt-6">
+              <h1 className="font-semibold text-slate-200 text-2xl mb-5">
                 What Can I Do ?
               </h1>
-              <div className="flex items-center flex-wrap mt-6 gap-5 justify-center max-[640px]:overflow-y-auto max-[640px]:max-h-80 max-[640px]:scrollBarDesign sm:overflow-y-auto sm:max-h-80 sm:scrollBarDesign lg:max-h-80">
+              <div className="flex items-center flex-wrap gap-5 justify-center overflow-y-auto max-h-80 scrollBarDesign">
                 <LayoutWhatCanIDo
                   imgSrc="./images/icon-webDev.png"
                   imgAlt="Web Dev"
                 >
-                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                  <h1 className="font-bold text-lg tracking-wide mb-1">
                     Web Development
                   </h1>
                   <p className="text-justify">
@@ -76,7 +76,7 @@ export default function AboutMe() {
                   imgSrc="./images/webDesign.png"
                   imgAlt="Web Design"
                 >
-                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                  <h1 className="font-bold text-lg tracking-wide mb-1">
                     Web Design
                   </h1>
                   <p className="text-justify">
@@ -89,7 +89,7 @@ export default function AboutMe() {
                   imgSrc="./images/aiChatting.png"
                   imgAlt="Promt AI"
                 >
-                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                  <h1 className="font-bold text-lg tracking-wide mb-1">
                     Promt AI
                   </h1>
                   <p className="text-justify">
@@ -103,7 +103,7 @@ export default function AboutMe() {
                   imgSrc="./images/cooking.png"
                   imgAlt="Cooking"
                 >
-                  <h1 className="font-bold text-lg tracking-wide max-[640px]:text-center max-[640px]:mb-2">
+                  <h1 className="font-bold text-lg tracking-wide mb-1">
                     Cooking
                   </h1>
                   <p className="text-justify">
