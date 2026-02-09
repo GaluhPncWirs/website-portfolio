@@ -59,7 +59,7 @@ export default function ContactMe() {
         valueInput.current,
         {
           publicKey: import.meta.env.VITE_PUBLIC_KEY,
-        }
+        },
       )
       .then(
         (result) => {
@@ -78,7 +78,7 @@ export default function ContactMe() {
             sendEmailFailed: true,
           });
           setHandleClickSendEmail(false);
-        }
+        },
       );
   }
 
@@ -105,12 +105,12 @@ export default function ContactMe() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="Contact">
-        <div className="text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10 ">
+        <div className="text-slate-200 max-[640px]:mt-24 max-[640px]:ml-11 max-[640px]:mx-0 max-[640px]:pr-5 sm:mx-10">
           <div className="mt-14">
             <h1 className="font-bold text-2xl mb-8">Contact Form</h1>
-            <form ref={valueInput}>
-              <div className="flex flex-wrap justify-around max-[640px]:flex-col max-[640px]:gap-y-4">
-                <div className="basis-5/12">
+            <form ref={valueInput} className="flex flex-wrap gap-5">
+              <div className="flex flex-col sm:flex-row gap-5 w-full">
+                <div className="w-1/2">
                   <label
                     htmlFor=""
                     className="font-semibold text-lg mb-2 block"
@@ -126,7 +126,7 @@ export default function ContactMe() {
                     required
                   />
                 </div>
-                <div className="basis-5/12">
+                <div className="w-1/2">
                   <label
                     htmlFor=""
                     className="font-semibold text-lg mb-2 block"
@@ -142,21 +142,18 @@ export default function ContactMe() {
                     required
                   />
                 </div>
-                <div className="basis-2/3 mt-5 max-[640px]:mt-0">
-                  <label
-                    htmlFor=""
-                    className="font-semibold text-lg mb-2 block"
-                  >
-                    Your Message
-                  </label>
-                  <textarea
-                    name="message"
-                    className="w-full h-32 rounded-md p-3 text-slate-200 font-medium bg-slate-600"
-                    placeholder="Message"
-                    onChange={handleFillInput}
-                    required
-                  />
-                </div>
+              </div>
+              <div className="w-full">
+                <label htmlFor="" className="font-semibold text-lg mb-2 block">
+                  Your Message
+                </label>
+                <textarea
+                  name="message"
+                  className="w-full h-32 rounded-md p-3 text-slate-200 font-medium bg-slate-600"
+                  placeholder="Message"
+                  onChange={handleFillInput}
+                  required
+                />
               </div>
             </form>
             <button

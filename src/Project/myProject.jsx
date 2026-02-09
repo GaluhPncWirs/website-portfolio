@@ -43,7 +43,7 @@ export default function MyProject() {
                 />
                 <div className="bg-slate-600 px-6 py-5 rounded-b-lg">
                   <h1 className="text-white font-semibold text-xl">
-                    {item.title_project}
+                    {item.title_project.substring(0, 45)} . . .
                   </h1>
                   <p className="text-slate-300 font-medium mt-2 text-justify">
                     {item.desc_project.substring(0, 150)} . . .
