@@ -22,7 +22,7 @@ export default function ContactMe() {
   const clickedOutsidePath = useRef(null);
 
   useEffect(() => {
-    if (!clickedOutsidePath) return;
+    if (!handleConfirm) return;
     function handleClickedOutsideClosed(event) {
       if (
         clickedOutsidePath.current &&
@@ -39,47 +39,43 @@ export default function ContactMe() {
       window.removeEventListener("mousedown", handleClickedOutsideClosed);
       window.removeEventListener("touchstart", handleClickedOutsideClosed);
     };
-  }, []);
+  }, [handleConfirm]);
 
   function handleFillInput(e) {
     const { name, value } = e.target;
     return setInputFieldData({ ...inputFieldData, [name]: value });
   }
 
-  function formIsFilled() {
-    return Object.values(inputFieldData).every((str) => str !== "");
-  }
+  const formIsFilled = Object.values(inputFieldData).every((str) => str !== "");
 
   function sendEmail() {
-    setHandleClickSendEmail(true);
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_CREDENTIAL_SERVICES_KEYS,
-        import.meta.env.VITE_CREDENTIAL_TEMPLATE_EMAIL_KEYS,
-        valueInput.current,
-        {
-          publicKey: import.meta.env.VITE_PUBLIC_KEY,
-        },
-      )
-      .then(
-        (result) => {
+    try {
+      setHandleClickSendEmail(true);
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_CREDENTIAL_SERVICES_KEYS,
+          import.meta.env.VITE_CREDENTIAL_TEMPLATE_EMAIL_KEYS,
+          valueInput.current,
+          {
+            publicKey: import.meta.env.VITE_PUBLIC_KEY,
+          },
+        )
+        .then((result) => {
           console.log("SUCCESS!", result.text);
           valueInput.current.reset();
           setModalSendEmail({
             sendEmailSuccess: true,
             sendEmailFailed: false,
           });
-          setHandleClickSendEmail(false);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          setModalSendEmail({
-            sendEmailSuccess: false,
-            sendEmailFailed: true,
-          });
-          setHandleClickSendEmail(false);
-        },
-      );
+        });
+    } catch (err) {
+      console.error("error kirim email", err);
+      setModalSendEmail({
+        sendEmailSuccess: false,
+        sendEmailFailed: true,
+      });
+      setHandleClickSendEmail(false);
+    }
   }
 
   return (
@@ -105,14 +101,14 @@ export default function ContactMe() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="Contact">
-        <div className="text-slate-200 mt-24 ml-7 sm:mt-14">
+        <div className="text-slate-200 mt-24 ml-7 sm:mt-14 xl:h-screen">
           <div className="mt-14">
             <h1 className="font-bold text-2xl mb-5">Contact Form</h1>
-            <form ref={valueInput} className="flex flex-wrap gap-5">
+            <form ref={valueInput} className="flex flex-wrap gap-7">
               <div className="flex flex-col sm:flex-row gap-5 w-full">
                 <div className="w-full sm:w-1/2">
                   <label
-                    htmlFor=""
+                    htmlFor="user_name"
                     className="font-semibold text-lg mb-2 block"
                   >
                     Full Name
@@ -122,6 +118,7 @@ export default function ContactMe() {
                     className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
                     placeholder="Jhon Doe"
                     name="user_name"
+                    id="user_name"
                     onChange={handleFillInput}
                     required
                   />
@@ -138,17 +135,22 @@ export default function ContactMe() {
                     className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
                     placeholder="jhonDoe544@gmail.com"
                     name="user_email"
+                    id="user_email"
                     onChange={handleFillInput}
                     required
                   />
                 </div>
               </div>
               <div className="w-full">
-                <label htmlFor="" className="font-semibold text-lg mb-2 block">
+                <label
+                  htmlFor="message"
+                  className="font-semibold text-lg mb-2 block"
+                >
                   Your Message
                 </label>
                 <textarea
                   name="message"
+                  id="message"
                   className="w-full h-32 rounded-md p-3 text-slate-200 font-medium bg-slate-600"
                   placeholder="Message"
                   onChange={handleFillInput}
@@ -158,8 +160,8 @@ export default function ContactMe() {
             </form>
             <button
               className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-7 disabled:cursor-not-allowed"
-              disabled={!formIsFilled()}
-              onClick={() => setHandleConfirm(true)}
+              disabled={!formIsFilled}
+              onClick={() => setHandleConfirm((prev) => !prev)}
             >
               Send
             </button>
@@ -217,48 +219,53 @@ export default function ContactMe() {
 
           {handleConfirm && (
             <LayoutModalBox clickedOutsidePath={clickedOutsidePath}>
-              {handleClickSendEmail === true ? (
-                <div className="flex flex-col justify-center items-center">
-                  <div className="text-xl font-semibold mb-3">
-                    {modalSendEmail.sendEmailSuccess === true ? (
-                      <span>Email Telah Berhasi Dikirim</span>
-                    ) : modalSendEmail.sendEmailFailed === true ? (
-                      <span>Terjadi kesalahan, Coba Lagi</span>
-                    ) : (
-                      <img
-                        src="/images/loading.png"
-                        alt="Loading"
-                        className="animate-[spin_1s_linear_infinite] size-16 mx-auto"
-                      />
-                    )}
-                  </div>
+              <div className="text-slate-200 w-10/12 mx-auto">
+                <h1 className="text-xl font-semibold mb-2">Konfirmasi</h1>
+                <p>Apakah Anda Ingin Kirim Pesan ini ?</p>
+                <div className="flex justify-end gap-x-5 mt-5">
                   <button
-                    className="text-lg font-semibold bg-slate-500 px-7 rounded-lg py-1 hover:bg-slate-600 text-slate-200"
-                    onClick={() => setHandleClickSendEmail(false)}
+                    className="px-5 py-1 rounded-md border border-slate-200 font-bold hover:bg-slate-500"
+                    onClick={() => setHandleConfirm(false)}
                   >
-                    Oke
+                    Tidak
+                  </button>
+                  <button
+                    className="px-5 py-1 rounded-md font-bold bg-slate-300 text-slate-800 hover:bg-slate-500 hover:text-slate-200"
+                    onClick={sendEmail}
+                  >
+                    Ya
                   </button>
                 </div>
-              ) : (
-                <div className="text-slate-200 w-10/12 mx-auto">
-                  <h1 className="text-xl font-semibold mb-2">Konfirmasi</h1>
-                  <p>Apakah Anda Ingin Kirim Pesan ini ?</p>
-                  <div className="flex justify-end gap-x-5 mt-5">
-                    <button
-                      className="px-5 py-1 rounded-md border border-slate-200 font-bold hover:bg-slate-500"
-                      onClick={() => setHandleConfirm(false)}
-                    >
-                      Tidak
-                    </button>
-                    <button
-                      className="px-5 py-1 rounded-md font-bold bg-slate-300 text-slate-800 hover:bg-slate-500 hover:text-slate-200"
-                      onClick={sendEmail}
-                    >
-                      Ya
-                    </button>
-                  </div>
+              </div>
+            </LayoutModalBox>
+          )}
+
+          {handleClickSendEmail && (
+            <LayoutModalBox clickedOutsidePath={null}>
+              <div className="flex flex-col justify-center items-center">
+                <div className="text-xl font-semibold mb-5">
+                  {modalSendEmail.sendEmailSuccess ? (
+                    <span>Email Telah Berhasi Dikirim</span>
+                  ) : modalSendEmail.sendEmailFailed ? (
+                    <span>Terjadi kesalahan, Coba Lagi</span>
+                  ) : (
+                    <img
+                      src="/images/loading.png"
+                      alt="Loading"
+                      className="animate-[spin_1s_linear_infinite] size-16 mx-auto"
+                    />
+                  )}
                 </div>
-              )}
+                {!modalSendEmail.sendEmailSuccess ||
+                  (!modalSendEmail.sendEmailFailed && (
+                    <button
+                      className="text-lg font-semibold bg-slate-500 px-7 rounded-lg py-1 hover:bg-slate-600 text-slate-200"
+                      onClick={() => setHandleClickSendEmail(false)}
+                    >
+                      Oke
+                    </button>
+                  ))}
+              </div>
             </LayoutModalBox>
           )}
         </div>

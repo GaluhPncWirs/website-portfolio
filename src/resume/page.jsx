@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import MainLayout from "../layout/mainLayout/content";
 import { Helmet } from "react-helmet-async";
 import { dataHardSkills } from "../data/data_icon";
@@ -64,7 +63,7 @@ export default function Resume() {
         </div>
 
         {/* experience */}
-        <div className="ml-6 mt-24 sm:ml-0 sm:mt-14">
+        <div className="ml-6 mt-14 sm:ml-0 sm:mt-14">
           <div className="flex items-center gap-x-5">
             <img
               src="./images/experience.png"
@@ -105,11 +104,11 @@ export default function Resume() {
                 </li>
               </ul>
             </div>
-            <h1 className="text-blue-300 hover:underline hover:text-blue-400 mt-2">
+            {/* <h1 className="text-blue-300 hover:underline hover:text-blue-400 mt-2">
               <Link to="https://ohayonippon.com/" target="_blank">
                 Here Are The Results
               </Link>
-            </h1>
+            </h1> */}
           </LayoutTimeLine>
           {/* end experience next */}
 

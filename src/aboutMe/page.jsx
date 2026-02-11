@@ -58,7 +58,7 @@ export default function AboutMe() {
               <h1 className="font-semibold text-slate-200 text-2xl mb-5">
                 What Can I Do ?
               </h1>
-              <div className="flex items-center flex-wrap gap-5 justify-center overflow-y-auto max-h-80 scrollBarDesign">
+              <div className="flex items-center flex-wrap gap-5 justify-center overflow-y-auto max-h-96 scrollBarDesign">
                 <LayoutWhatCanIDo
                   imgSrc="./images/icon-webDev.png"
                   imgAlt="Web Dev"
