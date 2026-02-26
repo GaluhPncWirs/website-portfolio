@@ -37,4 +37,13 @@ export const datasProject = [
     source_image: "/images/project/project_ujianOnline.jpeg",
     alt: "Project Online Examination System",
   },
+  {
+    id: "project5",
+    title_project: "Let`s Play PS2 - PlayStation 2 Downloader Web App",
+    desc_project:
+      "Building a web-based PlayStation 2 game download platform designed to provide users with an easy and efficient way to find, browse, and download game content. The system offers a structured game catalog with search and filtering features, detailed game information pages, and an integrated download workflow to enhance usability. The application was developed using React, Tailwind CSS, Zustand, and Firebase for its database. From a technical standpoint, the application implements a component-based architecture with modern React patterns and centralized state management to ensure ease of maintenance and performance. The interface is fully responsive, providing a consistent user experience across desktop and mobile devices. With a focus on performance optimization and clean UI/UX design, the platform provides a reliable and scalable solution for managing and distributing PS2 game resources.",
+    link_website: "https://website-game-ps-2.vercel.app/HomePage",
+    source_image: "/images/project/project_downloaderGamePS2.jpeg",
+    alt: "Project PlayStation 2 Downloader Web App",
+  },
 ];
