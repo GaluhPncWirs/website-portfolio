@@ -6,19 +6,15 @@ import { textSideBar } from "../../../data/data_icon";
 
 export default function HamburgerMenu() {
   const [isCheked, setIsCheked] = useState(false);
-  const [sliderContent, setSliderContent] = useState(false);
   const clickOutsidePath = useRef(null);
-  const clickOutsideOnHamburgerMenu = useRef(null);
 
   useEffect(() => {
     function handleOutsideHamburgerMenu(event) {
       if (
         clickOutsidePath.current &&
-        !clickOutsidePath.current.contains(event.target) &&
-        clickOutsideOnHamburgerMenu.current &&
-        !clickOutsideOnHamburgerMenu.current.contains(event.target)
+        !clickOutsidePath.current.contains(event.target)
       ) {
-        setSliderContent(true);
+        setIsCheked(false);
       }
     }
 
@@ -29,20 +25,12 @@ export default function HamburgerMenu() {
     };
   }, []);
 
-  useEffect(() => {
-    if (sliderContent) {
-      setIsCheked(false);
-      setSliderContent(false);
-    }
-  }, [sliderContent]);
-
   return (
-    <div>
+    <div ref={clickOutsidePath}>
       <div
         className={`z-[9999] transition-all top-20 w-full rounded-r-xl py-7 duration-300 absolute bg-gray-800 text-slate-300 ${
           isCheked ? "-translate-x-10" : "-translate-x-full"
         }`}
-        ref={clickOutsidePath}
       >
         <div className="flex flex-col justify-center items-center">
           <img
@@ -80,11 +68,7 @@ export default function HamburgerMenu() {
           type="checkbox"
           className="size-5 absolute z-20 cursor-pointer opacity-0"
           checked={isCheked}
-          ref={clickOutsideOnHamburgerMenu}
-          onChange={() => {
-            setIsCheked((prev) => !prev);
-            setSliderContent(false);
-          }}
+          onChange={() => setIsCheked((prev) => !prev)}
         />
         <span className="block w-6 h-1 bg-white rounded-md transition-all"></span>
         <span className="block w-6 h-1 bg-white rounded-md transition-all"></span>

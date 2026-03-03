@@ -1,7 +1,7 @@
 export default function LayoutWhatCanIDo(props) {
   const { children, imgSrc, imgAlt } = props;
   return (
-    <div className="w-3/4 bg-slate-600 rounded-lg">
+    <div className="w-10/12 md:w-3/4 bg-slate-600 rounded-lg">
       <div className="flex p-5 gap-3 flex-col items-center sm:flex-row sm:items-start sm:gap-5">
         <img
           src={imgSrc}

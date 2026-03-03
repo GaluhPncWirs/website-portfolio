@@ -116,7 +116,7 @@ export default function ContactMe() {
                   <input
                     type="text"
                     className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
-                    placeholder="Jhon Doe"
+                    placeholder="Your Name"
                     name="user_name"
                     id="user_name"
                     onChange={handleFillInput}
@@ -125,7 +125,7 @@ export default function ContactMe() {
                 </div>
                 <div className="w-full sm:w-1/2">
                   <label
-                    htmlFor=""
+                    htmlFor="user_email"
                     className="font-semibold text-lg mb-2 block"
                   >
                     Email Address
@@ -133,7 +133,7 @@ export default function ContactMe() {
                   <input
                     type="email"
                     className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
-                    placeholder="jhonDoe544@gmail.com"
+                    placeholder="yourEmail@gmail.com"
                     name="user_email"
                     id="user_email"
                     onChange={handleFillInput}
