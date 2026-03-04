@@ -1,7 +1,7 @@
-import MainLayout from "../layout/mainLayout/content";
+import MainLayout from "../../layout/mainLayout/content";
 import { Helmet } from "react-helmet-async";
-import { dataHardSkills } from "../data/data_icon";
-import LayoutTimeLine from "../layout/timeLine/content";
+import { dataHardSkills } from "../../data/data_icon";
+import LayoutTimeLine from "../../layout/timeLine/content";
 
 export default function Resume() {
   return (

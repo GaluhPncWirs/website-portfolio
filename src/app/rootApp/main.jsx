@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import SideBar from "../components/global/sideBar/content.jsx";
+import SideBar from "../../components/global/sideBar/content.jsx";
 import Resume from "../resume/page.jsx";
 import ContactMe from "../contact/page.jsx";
 import Projects from "../Project/Projects/page.jsx";

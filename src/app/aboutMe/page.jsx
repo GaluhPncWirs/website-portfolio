@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import MainLayout from "../layout/mainLayout/content";
-import LayoutWhatCanIDo from "../layout/whatCanIDo/content";
+import MainLayout from "../../layout/mainLayout/content";
+import LayoutWhatCanIDo from "../../layout/whatCanIDo/content";
 
 export default function AboutMe() {
   return (

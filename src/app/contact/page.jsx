@@ -1,9 +1,9 @@
-import MainLayout from "../layout/mainLayout/content";
+import MainLayout from "../../layout/mainLayout/content";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import LayoutModalBox from "../layout/modalBox/content";
+import LayoutModalBox from "../../layout/modalBox/content";
 import { useEffect } from "react";
 
 export default function ContactMe() {

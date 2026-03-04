@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { datasProject } from "../../data/dataProject";
+import { datasProject } from "../../../data/dataProject";
 
 export default function Projects() {
   return (
