@@ -46,7 +46,7 @@ export const dataHardSkills = [
   },
   {
     id: 4,
-    nama: "Tailwind CSS",
+    nama: "TailwindCSS",
     imgLogos: "./images/logo/tailwindcss.png",
     altImg: "Tailwind CSS_logo",
   },

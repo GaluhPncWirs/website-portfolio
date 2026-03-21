@@ -14,6 +14,7 @@ import DetailProject from "../Project/detailProject/page.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import AboutMe from "../aboutMe/page.jsx";
 import LayoutMyProjects from "../Project/layout.jsx";
+import ConvetToPDF from "../ConvetToPDF/content.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,12 +47,16 @@ const router = createBrowserRouter([
     path: "/Contact",
     element: <ContactMe />,
   },
+  {
+    path: "/ConvertToPDF",
+    element: <ConvetToPDF />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
-      <div className="flex md:justify-between md:flex-row sm:flex-col p-3.5 bg-slate-800 font-quickSand">
+      <div className="flex md:justify-between md:flex-row sm:flex-col p-3.5 bg-slate-800 font-quickSand print:flex-col print:bg-white">
         <div>
           <SideBar />
         </div>

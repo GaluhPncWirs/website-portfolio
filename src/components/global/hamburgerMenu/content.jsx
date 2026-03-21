@@ -26,7 +26,7 @@ export default function HamburgerMenu() {
   }, []);
 
   return (
-    <div ref={clickOutsidePath}>
+    <div ref={clickOutsidePath} className="print:hidden">
       <div
         className={`z-[9999] transition-all top-20 w-full rounded-r-xl py-7 duration-300 absolute bg-gray-800 text-slate-300 ${
           isCheked ? "-translate-x-10" : "-translate-x-full"
