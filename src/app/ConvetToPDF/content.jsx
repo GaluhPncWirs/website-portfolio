@@ -2,15 +2,14 @@ import { dataHardSkills } from "../../data/data_icon";
 import LayoutTimeLine from "../../layout/timeLine/content";
 import LayoutWhatCanIDo from "../../layout/whatCanIDo/content";
 import { datasProject } from "../../data/dataProject";
-import { Link } from "react-router-dom";
 
 export default function ConvetToPDF() {
   return (
-    <div className="print:bg-white print:w-full print:mt-0 print:pb-0 print:rounded-none">
+    <div className="print:bg-white print:w-full print:rounded-none">
       {/* About */}
       <section>
         {/* Header Bagian: Sembunyikan Menu, Tampilkan Judul Saja */}
-        <div className="print:static print:mb-3 print:w-40">
+        <div className="print:static print:mb-5 print:w-36">
           <h1 className="print:font-bold print:text-black print:text-3xl print:border-b-2 print:border-blue-600 print:pb-2">
             About Me
           </h1>
@@ -41,12 +40,12 @@ export default function ConvetToPDF() {
           </div>
 
           <div className="print:mt-5">
-            <h1 className="print:font-semibold print:mb-5 print:text-black print:text-xl print:pb-2">
+            <h1 className="print:font-semibold print:mb-3 print:text-black print:text-xl print:pb-2">
               What Can I Do ?
             </h1>
 
             {/* GRID OPTIMIZATION: Di PDF kita hilangkan scroll dan paksa tampil semua */}
-            <div className="print:max-h-none print:grid print:grid-cols-2 print:gap-y-8">
+            <div className="print:max-h-none print:grid print:grid-cols-2 print:gap-y-6">
               <LayoutWhatCanIDo
                 imgSrc="./images/icon-webDev.png"
                 imgAlt="Web Dev"
@@ -92,18 +91,18 @@ export default function ConvetToPDF() {
       </section>
 
       {/* Resume */}
-      <section>
-        <div className="print:static print:mb-3 print:w-32 print:mt-7">
+      <section className="print:break-inside-avoid">
+        <div className="print:static print:mb-5 print:w-32 print:mt-7">
           <h1 className="print:font-bold print:text-black print:text-3xl print:border-b-2 print:border-blue-600 print:pb-2">
             Resume
           </h1>
         </div>
 
         {/* Konten Utama: Pastikan lebar penuh dan margin pas di kertas */}
-        <div className="print:w-full print:mx-0">
+        <div className="print:w-full">
           {/* Educations Section */}
-          <div className="print:break-inside-avoid">
-            <div className="print:flex print:items-center print:gap-x-4 print:mb-1.5 print:ml-1.5">
+          <div>
+            <div className="print:flex print:items-center print:gap-x-4 print:ml-2.5">
               <img
                 src="./images/book_icon.png"
                 alt="Book"
@@ -136,9 +135,8 @@ export default function ConvetToPDF() {
           </div>
 
           {/* Experience Section */}
-
           <div className="print:break-inside-avoid print:mt-8">
-            <div className="print:flex items-center print:gap-x-4 print:mb-1.5 print:ml-1.5">
+            <div className="print:flex items-center print:gap-x-4 print:ml-2.5">
               <img
                 src="./images/experience.png"
                 alt="experience"
@@ -167,8 +165,13 @@ export default function ConvetToPDF() {
                     Tailwind CSS.
                   </li>
                   <li>
-                    Increased user satisfaction by 40% through enhanced UI/UX
-                    design.
+                    Integrated an efficient online registration feature,
+                    increasing user friendly in the registration process.
+                  </li>
+                  <li>
+                    Designed a responsive website that increased registrations
+                    by 30% and user satisfaction by 40% within the first three
+                    months.
                   </li>
                 </ul>
               </div>
@@ -235,9 +238,9 @@ export default function ConvetToPDF() {
       </section>
 
       {/* Project */}
-      <section>
+      <section className="print:break-inside-avoid">
         {/* Header Bagian: Sembunyikan Menu, Tampilkan Judul Saja */}
-        <div className="print:mb-3 print:w-28 print:mt-8">
+        <div className="print:mb-5 print:w-28 print:mt-8">
           <h1 className="print:font-bold print:text-black print:text-3xl print:border-b-2 print:border-blue-600 print:pb-2">
             Project
           </h1>
@@ -245,10 +248,7 @@ export default function ConvetToPDF() {
 
         {/* Konten Utama: Pastikan lebar penuh dan margin pas di kertas */}
         <div className="print:w-full print:mt-5">
-          <div
-            className="print:grid 
-                  print:grid-cols-1 print:gap-y-6 print:place-items-start"
-          >
+          <div className="print:grid print:grid-cols-1 print:gap-6 print:place-items-start">
             {datasProject.map((item) => (
               <div
                 className="
@@ -261,23 +261,17 @@ export default function ConvetToPDF() {
                     src={item.source_image}
                     alt={item.alt}
                     className="
-                       print:h-52 print:w-full print:object-cover"
+                       print:h-44 print:w-full print:object-cover print:border print:border-slate-200"
                     loading="eager"
                   />
 
-                  <div
-                    className="
-                          print:bg-white print:px-4 print:py-2 print:flex-1"
-                  >
-                    <h1 className="print:font-semibold print:print:text-lg">
+                  <div className="print:bg-white print:px-4 print:py-2 print:flex-1">
+                    <h1 className="print:font-semibold print:text-lg">
                       {item.title_project}
                       {/* Menampilkan indikator link khusus di PDF */}
-                      <Link
-                        to={item.link_website}
-                        className="print:text-blue-600 print:text-xs print:ml-2 print:font-normal print:italic"
-                      >
-                        (View Detail on Website)
-                      </Link>
+                      <span className="print:text-blue-600 print:text-xs print:ml-2 print:font-normal print:italic">
+                        (View Detail on Website) {item.link_website}
+                      </span>
                     </h1>
 
                     <p
