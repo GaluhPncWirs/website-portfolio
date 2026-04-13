@@ -50,13 +50,9 @@ export default function Resume() {
               July 2021 - 2025 Agust
             </h3>
             <p className="text-slate-300 font-medium text-justify">
-              After graduating from SMK, I decided to continue my studies in a
-              different field, Informatics Engineering at the university level.
-              This decision was based on a growing interest in information
-              technology and software development. During my university years, I
-              delved into programming, web development, and various aspects of
-              software engineering as a foundation for a career in the digital
-              world.
+              During my college years, I focused on programming, web
+              development, and various aspects of software engineering as a
+              foundation for a career in the digital field.
             </p>
           </LayoutTimeLine>
           {/* end educations next */}
