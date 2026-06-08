@@ -27,7 +27,7 @@ export default function AboutMe() {
       <MainLayout propsTitle="About Me">
         <div className="flex flex-col items-center">
           <div className="max-w-full pr-3 mt-10 ml-7 sm:pr-0 sm:ml-0">
-            <div className="text-justify flex flex-col gap-3 text-slate-200">
+            <div className="flex flex-col gap-3 text-justify text-slate-200">
               <p>
                 I am a Web Developer experienced in building modern, responsive,
                 and (UI/UX) oriented user interfaces. with expertise in
@@ -55,15 +55,15 @@ export default function AboutMe() {
               </p>
             </div>
             <div className="mt-6">
-              <h1 className="font-semibold text-slate-200 text-2xl mb-5">
+              <h1 className="mb-5 text-2xl font-semibold text-slate-200">
                 What Can I Do ?
               </h1>
-              <div className="flex items-center flex-wrap gap-5 justify-center overflow-y-auto max-h-96 scrollBarDesign">
+              <div className="flex flex-wrap items-center justify-center gap-5 overflow-y-auto max-h-96 scrollBarDesign">
                 <LayoutWhatCanIDo
                   imgSrc="./images/icon-webDev.png"
                   imgAlt="Web Dev"
                 >
-                  <h1 className="font-bold text-lg tracking-wide mb-1">
+                  <h1 className="mb-1 text-lg font-bold tracking-wide">
                     Web Development
                   </h1>
                   <p className="text-justify">
@@ -76,7 +76,7 @@ export default function AboutMe() {
                   imgSrc="./images/webDesign.png"
                   imgAlt="Web Design"
                 >
-                  <h1 className="font-bold text-lg tracking-wide mb-1">
+                  <h1 className="mb-1 text-lg font-bold tracking-wide">
                     Web Design
                   </h1>
                   <p className="text-justify">
@@ -89,7 +89,7 @@ export default function AboutMe() {
                   imgSrc="./images/aiChatting.png"
                   imgAlt="Promt AI"
                 >
-                  <h1 className="font-bold text-lg tracking-wide mb-1">
+                  <h1 className="mb-1 text-lg font-bold tracking-wide">
                     Promt AI
                   </h1>
                   <p className="text-justify">
@@ -103,7 +103,7 @@ export default function AboutMe() {
                   imgSrc="./images/cooking.png"
                   imgAlt="Cooking"
                 >
-                  <h1 className="font-bold text-lg tracking-wide mb-1">
+                  <h1 className="mb-1 text-lg font-bold tracking-wide">
                     Cooking
                   </h1>
                   <p className="text-justify">

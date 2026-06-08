@@ -56,7 +56,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
-      <div className="flex md:justify-between md:flex-row sm:flex-col p-3.5 bg-slate-800 font-quickSand print:flex-col print:bg-white">
+      <div className="flex md:justify-between md:flex-row sm:flex-col p-3.5 min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 font-quickSand print:flex-col print:bg-white">
         <div>
           <SideBar />
         </div>
