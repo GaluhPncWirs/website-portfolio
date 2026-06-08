@@ -101,75 +101,72 @@ export default function ContactMe() {
         <meta property="og:type" content="website" />
       </Helmet>
       <MainLayout propsTitle="Contact">
-        <div className="text-slate-200 mt-24 ml-7 sm:mt-14 xl:h-screen">
-          <div className="mt-14">
-            <h1 className="font-bold text-2xl mb-5">Contact Form</h1>
-            <form ref={valueInput} className="flex flex-wrap gap-7">
-              <div className="flex flex-col sm:flex-row gap-5 w-full">
-                <div className="w-full sm:w-1/2">
-                  <label
-                    htmlFor="user_name"
-                    className="font-semibold text-lg mb-2 block"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
-                    placeholder="Your Name"
-                    name="user_name"
-                    id="user_name"
-                    onChange={handleFillInput}
-                    required
-                  />
-                </div>
-                <div className="w-full sm:w-1/2">
-                  <label
-                    htmlFor="user_email"
-                    className="font-semibold text-lg mb-2 block"
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full rounded-md h-10 px-3 text-slate-200 font-medium bg-slate-600"
-                    placeholder="yourEmail@gmail.com"
-                    name="user_email"
-                    id="user_email"
-                    onChange={handleFillInput}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="w-full">
+        <div className="mt-24 text-slate-200 ml-7 sm:mt-14 xl:h-screen">
+          <form ref={valueInput} className="flex flex-wrap gap-7">
+            <div className="flex flex-col w-full gap-5 sm:flex-row">
+              <div className="w-full sm:w-1/2">
                 <label
-                  htmlFor="message"
-                  className="font-semibold text-lg mb-2 block"
+                  htmlFor="user_name"
+                  className="block mb-2 text-lg font-semibold"
                 >
-                  Your Message
+                  Full Name
                 </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  className="w-full h-32 rounded-md p-3 text-slate-200 font-medium bg-slate-600"
-                  placeholder="Message"
+                <input
+                  type="text"
+                  className="w-full h-10 px-3 font-medium rounded-md text-slate-200 bg-slate-600"
+                  placeholder="Your Name"
+                  name="user_name"
+                  id="user_name"
                   onChange={handleFillInput}
                   required
                 />
               </div>
-            </form>
-            <button
-              className="text-lg font-bold bg-slate-500 rounded-md mt-5 hover:bg-slate-600 py-1 px-7 disabled:cursor-not-allowed"
-              disabled={!formIsFilled}
-              onClick={() => setHandleConfirm((prev) => !prev)}
-            >
-              Send
-            </button>
-          </div>
+              <div className="w-full sm:w-1/2">
+                <label
+                  htmlFor="user_email"
+                  className="block mb-2 text-lg font-semibold"
+                >
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  className="w-full h-10 px-3 font-medium rounded-md text-slate-200 bg-slate-600"
+                  placeholder="yourEmail@gmail.com"
+                  name="user_email"
+                  id="user_email"
+                  onChange={handleFillInput}
+                  required
+                />
+              </div>
+            </div>
+            <div className="w-full">
+              <label
+                htmlFor="message"
+                className="block mb-2 text-lg font-semibold"
+              >
+                Your Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                className="w-full h-32 p-3 font-medium rounded-md text-slate-200 bg-slate-600"
+                placeholder="Message"
+                onChange={handleFillInput}
+                required
+              />
+            </div>
+          </form>
+          <button
+            className="py-1 mt-5 text-lg font-bold rounded-md bg-slate-500 hover:bg-slate-600 px-7 disabled:cursor-not-allowed"
+            disabled={!formIsFilled}
+            onClick={() => setHandleConfirm((prev) => !prev)}
+          >
+            Send
+          </button>
 
           <div className="mt-10">
-            <h1 className="font-bold text-2xl mb-7">Find Me On</h1>
-            <div className="flex justify-around items-center">
+            <h1 className="text-2xl font-bold mb-7">Find Me On</h1>
+            <div className="flex items-center justify-around">
               <Link
                 className="flex justify-center"
                 to="https://web.facebook.com/galuh.panca.79"
@@ -177,7 +174,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/icon-facebook.png"
-                  className="size-10 grayscale hover:grayscale-0 cursor-pointer"
+                  className="cursor-pointer size-10 grayscale hover:grayscale-0"
                   loading="eager"
                 />
               </Link>
@@ -188,7 +185,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/icon-instagram.png"
-                  className="size-10 grayscale hover:grayscale-0 cursor-pointer"
+                  className="cursor-pointer size-10 grayscale hover:grayscale-0"
                   loading="eager"
                 />
               </Link>
@@ -199,7 +196,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/icon-linkedin.png"
-                  className="size-10 grayscale hover:grayscale-0 cursor-pointer"
+                  className="cursor-pointer size-10 grayscale hover:grayscale-0"
                   loading="eager"
                 />
               </Link>
@@ -210,7 +207,7 @@ export default function ContactMe() {
               >
                 <img
                   src="/images/github-mark-white.png"
-                  className="size-8 grayscale hover:grayscale-0 cursor-pointer"
+                  className="cursor-pointer size-8 grayscale hover:grayscale-0"
                   loading="eager"
                 />
               </Link>
@@ -219,18 +216,18 @@ export default function ContactMe() {
 
           {handleConfirm && (
             <LayoutModalBox clickedOutsidePath={clickedOutsidePath}>
-              <div className="text-slate-200 w-10/12 mx-auto">
-                <h1 className="text-xl font-semibold mb-2">Konfirmasi</h1>
+              <div className="w-10/12 mx-auto text-slate-200">
+                <h1 className="mb-2 text-xl font-semibold">Konfirmasi</h1>
                 <p>Apakah Anda Ingin Kirim Pesan ini ?</p>
-                <div className="flex justify-end gap-x-5 mt-5">
+                <div className="flex justify-end mt-5 gap-x-5">
                   <button
-                    className="px-5 py-1 rounded-md border border-slate-200 font-bold hover:bg-slate-500"
+                    className="px-5 py-1 font-bold border rounded-md border-slate-200 hover:bg-slate-500"
                     onClick={() => setHandleConfirm(false)}
                   >
                     Tidak
                   </button>
                   <button
-                    className="px-5 py-1 rounded-md font-bold bg-slate-300 text-slate-800 hover:bg-slate-500 hover:text-slate-200"
+                    className="px-5 py-1 font-bold rounded-md bg-slate-300 text-slate-800 hover:bg-slate-500 hover:text-slate-200"
                     onClick={sendEmail}
                   >
                     Ya
@@ -242,8 +239,8 @@ export default function ContactMe() {
 
           {handleClickSendEmail && (
             <LayoutModalBox clickedOutsidePath={null}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-xl font-semibold mb-5">
+              <div className="flex flex-col items-center justify-center">
+                <div className="mb-5 text-xl font-semibold">
                   {modalSendEmail.sendEmailSuccess ? (
                     <span>Email Telah Berhasi Dikirim</span>
                   ) : modalSendEmail.sendEmailFailed ? (
@@ -259,7 +256,7 @@ export default function ContactMe() {
                 {!modalSendEmail.sendEmailSuccess ||
                   (!modalSendEmail.sendEmailFailed && (
                     <button
-                      className="text-lg font-semibold bg-slate-500 px-7 rounded-lg py-1 hover:bg-slate-600 text-slate-200"
+                      className="py-1 text-lg font-semibold rounded-lg bg-slate-500 px-7 hover:bg-slate-600 text-slate-200"
                       onClick={() => setHandleClickSendEmail(false)}
                     >
                       Oke

@@ -28,7 +28,7 @@ export default function Resume() {
       </Helmet>
       <MainLayout propsTitle="Resume">
         {/* educations */}
-        <div className="ml-6 mt-24 sm:ml-0 sm:mt-14">
+        <div className="mt-24 ml-6 sm:ml-0 sm:mt-14">
           <div className="flex items-center gap-x-4">
             <img
               src="./images/book_icon.png"
@@ -36,20 +36,20 @@ export default function Resume() {
               className="size-10"
               loading="eager"
             />
-            <h1 className="font-bold text-2xl text-slate-200">Educations</h1>
+            <h1 className="text-2xl font-bold text-slate-200">Educations</h1>
           </div>
           {/* educations next */}
           <LayoutTimeLine>
-            <h2 className="text-slate-200 font-semibold text-xl">
+            <h2 className="text-xl font-semibold text-slate-200">
               University Muhammadiayah Prof. Dr. Hamka
             </h2>
-            <h3 className="text-slate-400 font-medium text-base">
+            <h3 className="text-base font-medium text-slate-400">
               Bachelors degree, Informatics Engineering
             </h3>
             <h3 className="font-bold text-[#E3C775] text-sm my-2">
               July 2021 - 2025 Agust
             </h3>
-            <p className="text-slate-300 font-medium text-justify">
+            <p className="font-medium text-justify text-slate-300">
               During my college years, I focused on programming, web
               development, and various aspects of software engineering as a
               foundation for a career in the digital field.
@@ -67,21 +67,21 @@ export default function Resume() {
               className="size-10"
               loading="eager"
             />
-            <h1 className="font-bold text-2xl text-slate-200">Experience</h1>
+            <h1 className="text-2xl font-bold text-slate-200">Experience</h1>
           </div>
           {/* experience next */}
           <LayoutTimeLine>
-            <h2 className="text-slate-200 font-semibold text-xl">
+            <h2 className="text-xl font-semibold text-slate-200">
               Intern Web Developer - PT. Candra Putra Lestari
             </h2>
             <h3 className="font-bold text-[#E3C775] text-sm mt-2 mb-1">
               February 2024 - May 2024
             </h3>
-            <h4 className="text-base text-slate-400 mb-2 font-medium">
+            <h4 className="mb-2 text-base font-medium text-slate-400">
               South Cikarang, Bekasi, West Java
             </h4>
-            <div className="text-slate-300 font-medium">
-              <ul className="list-disc leading-relaxed flex flex-col gap-2 text-justify list-inside">
+            <div className="font-medium text-slate-300">
+              <ul className="flex flex-col gap-2 leading-relaxed text-justify list-disc list-inside">
                 <li>
                   Designed and developed an innovative company profile website
                   using Tailwind CSS, with a modern and responsive design.
@@ -100,7 +100,7 @@ export default function Resume() {
                 </li>
               </ul>
             </div>
-            {/* <h1 className="text-blue-300 hover:underline hover:text-blue-400 mt-2">
+            {/* <h1 className="mt-2 text-blue-300 hover:underline hover:text-blue-400">
               <Link to="https://ohayonippon.com/" target="_blank">
                 Here Are The Results
               </Link>
@@ -110,17 +110,17 @@ export default function Resume() {
 
           {/* experience next */}
           <LayoutTimeLine>
-            <h2 className="text-slate-200 font-semibold text-xl">
+            <h2 className="text-xl font-semibold text-slate-200">
               Volunteer Community Service Program
             </h2>
             <h3 className="font-bold text-[#E3C775] text-sm mt-2 mb-1">
               October 2023 - January 2024
             </h3>
-            <h4 className="text-base text-slate-400 mb-2 font-medium">
+            <h4 className="mb-2 text-base font-medium text-slate-400">
               Bogor, West Java
             </h4>
-            <div className="text-slate-300 font-medium">
-              <ul className="list-disc leading-relaxed flex flex-col gap-2 text-justify list-inside">
+            <div className="font-medium text-slate-300">
+              <ul className="flex flex-col gap-2 leading-relaxed text-justify list-disc list-inside">
                 <li>
                   In this program, I provide business capital assistance to
                   residents in need, especially those who are economically
@@ -150,11 +150,11 @@ export default function Resume() {
             />
             <h1 className="text-2xl font-bold text-slate-200">My Skills</h1>
           </div>
-          <div className="text-slate-200 flex mt-5 justify-evenly flex-col gap-y-7 lg:flex-row lg:gap-y-0">
-            <div className="basis-1/3 rounded-xl p-5 shadow-lg shadow-slate-500">
-              <h1 className="text-xl font-semibold mb-3">Soft Skills</h1>
-              <ul className="list-none leading-loose flex flex-col gap-y-3">
-                <li className="flex gap-x-2 items-center">
+          <div className="flex flex-col mt-5 text-slate-200 justify-evenly gap-y-7 lg:flex-row lg:gap-y-0">
+            <div className="p-5 shadow-lg basis-1/3 rounded-xl shadow-slate-500">
+              <h1 className="mb-3 text-xl font-semibold">Soft Skills</h1>
+              <ul className="flex flex-col leading-loose list-none gap-y-3">
+                <li className="flex items-center gap-x-2">
                   <img
                     src="/images/softSkill/teamwork.png"
                     alt="Teamwork"
@@ -163,7 +163,7 @@ export default function Resume() {
                   />
                   <span>Teamwork</span>
                 </li>
-                <li className="flex gap-x-2 items-center">
+                <li className="flex items-center gap-x-2">
                   <img
                     src="/images/softSkill/time-management.png"
                     alt="Time Management"
@@ -172,7 +172,7 @@ export default function Resume() {
                   />
                   <span>Time Management</span>
                 </li>
-                <li className="flex gap-x-2 items-center">
+                <li className="flex items-center gap-x-2">
                   <img
                     src="/images/softSkill/perseverance.png"
                     alt="Perseverance"
@@ -181,7 +181,7 @@ export default function Resume() {
                   />
                   <span>Perseverance</span>
                 </li>
-                <li className="flex gap-x-2 items-center">
+                <li className="flex items-center gap-x-2">
                   <img
                     src="/images/softSkill/empathy.png"
                     alt="Empathy"
@@ -190,7 +190,7 @@ export default function Resume() {
                   />
                   <span>Empathy</span>
                 </li>
-                <li className="flex gap-x-2 items-center">
+                <li className="flex items-center gap-x-2">
                   <img
                     src="/images/softSkill/responsibility.png"
                     alt="Responsible"
@@ -199,7 +199,7 @@ export default function Resume() {
                   />
                   <span>Responsible</span>
                 </li>
-                <li className="flex gap-x-2 items-center">
+                <li className="flex items-center gap-x-2">
                   <img
                     src="/images/softSkill/discipline.png"
                     alt="Discipline"
@@ -210,11 +210,11 @@ export default function Resume() {
                 </li>
               </ul>
             </div>
-            <div className="basis-1/2 rounded-xl p-5 shadow-lg shadow-slate-500">
-              <h1 className="text-xl font-semibold mb-4">Hard Skills</h1>
+            <div className="p-5 shadow-lg basis-1/2 rounded-xl shadow-slate-500">
+              <h1 className="mb-4 text-xl font-semibold">Hard Skills</h1>
               <ul className="grid grid-cols-2 gap-y-3">
                 {dataHardSkills.map((data) => (
-                  <li className="flex gap-2 items-center" key={data.id}>
+                  <li className="flex items-center gap-2" key={data.id}>
                     <img
                       src={data.imgLogos}
                       alt={data.altImg}

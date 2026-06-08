@@ -9,9 +9,9 @@ export default function DetailProject() {
   return (
     <div className="mt-24 sm:mt-14">
       {myProject ? (
-        <div key={myProject.id} className="mb-5 w-10/12 sm:w-11/12 mx-auto">
+        <div key={myProject.id}>
           <Link
-            className="hover:opacity-75 transition-all"
+            className="transition-all hover:opacity-75"
             to={myProject.link_website}
             target="_blank"
           >
@@ -23,11 +23,11 @@ export default function DetailProject() {
             />
           </Link>
           <div className="py-5 rounded-b-lg">
-            <h1 className="text-white font-semibold text-xl">
+            <h1 className="text-xl font-semibold text-white">
               {myProject.title_project}
             </h1>
 
-            <p className="text-slate-300 font-medium mt-2 text-justify">
+            <p className="mt-2 font-medium text-justify text-slate-300">
               {myProject.desc_project}{" "}
               {myProject.id === "project2" && (
                 <Link
@@ -41,9 +41,9 @@ export default function DetailProject() {
               {myProject.id === "project4" && (
                 <div className="mt-3">
                   <h1>To try out the system, here is email and password:</h1>
-                  <div className="flex mt-4 items-center flex-wrap gap-5">
+                  <div className="flex flex-wrap items-center gap-5 mt-4">
                     <div>
-                      <h1 className="font-semibold text-xl mb-1">
+                      <h1 className="mb-1 text-xl font-semibold">
                         Account Student
                       </h1>
                       <ul>
@@ -52,7 +52,7 @@ export default function DetailProject() {
                       </ul>
                     </div>
                     <div>
-                      <h1 className="font-semibold text-xl mb-1">
+                      <h1 className="mb-1 text-xl font-semibold">
                         Account Teacher
                       </h1>
                       <ul>
@@ -74,10 +74,10 @@ export default function DetailProject() {
         </div>
       ) : (
         <div className="h-[27rem] rounded-lg w-11/12 mx-auto p-7 animate-pulse mb-5">
-          <div className="bg-slate-500 h-56 rounded-lg w-11/12 mx-auto mb-7"></div>
-          <div className="bg-slate-500 h-32 rounded-lg w-11/12 mx-auto flex justify-evenly flex-col">
-            <h1 className="bg-slate-400 h-5 w-1/4 rounded-lg ml-7"></h1>
-            <p className="bg-slate-400 h-16 w-11/12 rounded-lg mx-auto"></p>
+          <div className="w-11/12 h-56 mx-auto rounded-lg bg-slate-500 mb-7"></div>
+          <div className="flex flex-col w-11/12 h-32 mx-auto rounded-lg bg-slate-500 justify-evenly">
+            <h1 className="w-1/4 h-5 rounded-lg bg-slate-400 ml-7"></h1>
+            <p className="w-11/12 h-16 mx-auto rounded-lg bg-slate-400"></p>
           </div>
         </div>
       )}
