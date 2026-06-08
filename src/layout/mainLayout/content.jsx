@@ -32,13 +32,13 @@ export default function MainLayout({ propsTitle, children }) {
         </div>
         <Navbar />
       </div>
-      <div
-        className="fixed flex items-center justify-center text-white rounded-full shadow-lg cursor-pointer size-14 bg-slate-600 right-16 animate-bounce bottom-10 shadow-slate-500"
+      <button
+        className="fixed z-50 flex items-center justify-center text-white rounded-full shadow-lg cursor-pointer size-14 bg-slate-600 right-16 animate-bounce bottom-10 shadow-slate-500"
         onClick={handleDownloadPortfolioToPDF}
       >
         <img src="/images/download.png" alt="Download" className="size-7" />
-      </div>
-      <div className="w-11/12 mx-auto">{children}</div>
+      </button>
+      <div className="px-5 md:px-10 lg:px-14">{children}</div>
     </div>
   );
 }

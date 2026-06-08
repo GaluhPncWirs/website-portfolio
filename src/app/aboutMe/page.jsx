@@ -26,8 +26,8 @@ export default function AboutMe() {
       </Helmet>
       <MainLayout propsTitle="About Me">
         <div className="flex flex-col items-center">
-          <div className="max-w-full pr-3 mt-10 ml-7 sm:pr-0 sm:ml-0">
-            <div className="flex flex-col gap-3 text-justify text-slate-200">
+          <div className="pr-3 mt-10 ml-7 sm:pr-0 sm:ml-0">
+            <section className="flex flex-col gap-3 text-justify text-slate-200">
               <p>
                 I am a Web Developer experienced in building modern, responsive,
                 and (UI/UX) oriented user interfaces. with expertise in
@@ -53,12 +53,12 @@ export default function AboutMe() {
                 development and technology. Feel free to contact me via email!
                 that has been provided.
               </p>
-            </div>
-            <div className="mt-6">
-              <h1 className="mb-5 text-2xl font-semibold text-slate-200">
+            </section>
+            <section className="mt-6">
+              <h1 className="mb-3 text-2xl font-semibold text-slate-200">
                 What Can I Do ?
               </h1>
-              <div className="flex flex-wrap items-center justify-center gap-5 overflow-y-auto max-h-96 scrollBarDesign">
+              <div className="grid grid-cols-1 gap-5 p-5 overflow-y-auto max-h-96 scrollBarDesign">
                 <LayoutWhatCanIDo
                   imgSrc="./images/icon-webDev.png"
                   imgAlt="Web Dev"
@@ -113,7 +113,7 @@ export default function AboutMe() {
                   </p>
                 </LayoutWhatCanIDo>
               </div>
-            </div>
+            </section>
             {/* <div className="mt-10 max-[640px]:mt-6">
             <Testimoni />
           </div> */}

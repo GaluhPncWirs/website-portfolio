@@ -1,8 +1,8 @@
 export default function LayoutWhatCanIDo(props) {
   const { children, imgSrc, imgAlt } = props;
   return (
-    <div className="w-10/12 md:w-3/4 bg-slate-600 rounded-lg print:bg-white print:border print:border-slate-200 print:rounded-lg print:break-inside-avoid">
-      <div className="flex p-5 gap-3 flex-col items-center sm:flex-row sm:items-start sm:gap-5">
+    <div className="p-6 transition duration-300 border group rounded-2xl bg-slate-800/50 backdrop-blur border-white/20 hover:-translate-y-2 hover:border-white print:bg-white print:border print:border-slate-200 print:rounded-lg print:break-inside-avoid">
+      <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
         <img
           src={imgSrc}
           alt={imgAlt}
