@@ -2,6 +2,7 @@ import MainLayout from "../../layout/mainLayout/content";
 import { Helmet } from "react-helmet-async";
 import { dataHardSkills } from "../../data/data_icon";
 import LayoutTimeLine from "../../layout/timeLine/content";
+import { Link } from "react-router-dom";
 
 export default function Resume() {
   return (
@@ -72,39 +73,55 @@ export default function Resume() {
           {/* experience next */}
           <LayoutTimeLine>
             <h2 className="text-xl font-semibold text-slate-200">
-              Intern Web Developer - PT. Candra Putra Lestari
+              Freelance Fullstack Web Developer - LPK Samasamajinzai
             </h2>
-            <h3 className="font-bold text-[#E3C775] text-sm mt-2 mb-1">
-              February 2024 - May 2024
+            <h3 className="font-bold text-[#E3C775] text-sm">
+              May 2026 - Current
             </h3>
-            <h4 className="mb-2 text-base font-medium text-slate-400">
-              South Cikarang, Bekasi, West Java
+            <h4 className="text-base font-medium text-slate-400">
+              Padasuka, kec.cimenyan, kab bandung
             </h4>
             <div className="font-medium text-slate-300">
               <ul className="flex flex-col gap-2 leading-relaxed text-justify list-disc list-inside">
                 <li>
-                  Designed and developed an innovative company profile website
-                  using Tailwind CSS, with a modern and responsive design.
+                  Developed a responsive company profile website using Next.js,
+                  TypeScript, and Tailwind CSS.
                 </li>
                 <li>
-                  Integrated an efficient and easy-to-use online registration
-                  feature, increasing user-friendliness in the registration
-                  process.
+                  Built a multi-step online registration system for applicants.
                 </li>
                 <li>
-                  Designed a fully responsive website, compatible with various
-                  devices, increasing online registration by 30% in the first
-                  three months. Successfully increased user satisfaction by 40%
-                  through aesthetically pleasing interface design and enhanced
-                  user experience.
+                  Implemented Firebase Firestore for CRUD operations and
+                  Firebase Storage for image management.
+                </li>
+                <li>
+                  Developed an admin dashboard to manage registrations,
+                  programs, and FAQs.
+                </li>
+                <li>
+                  Implemented JWT authentication with Role-Based Access Control
+                  (RBAC).
+                </li>
+                <li>
+                  Applied React Hook Form and Zod for robust form validation.
+                </li>
+                <li>
+                  Optimized performance using SSR, ISR, useMemo, and efficient
+                  Firestore queries.
+                </li>
+                <li>
+                  Added Indonesian-Japanese multilingual support with Next-Intl.
                 </li>
               </ul>
             </div>
-            {/* <h1 className="mt-2 text-blue-300 hover:underline hover:text-blue-400">
-              <Link to="https://ohayonippon.com/" target="_blank">
-                Here Are The Results
+            <span className="inline-block w-full text-blue-300 hover:underline hover:text-blue-400 text-end">
+              <Link
+                to="https://company-profile-lpk-suenami.vercel.app/id/beranda"
+                target="_blank"
+              >
+                Here are the example
               </Link>
-            </h1> */}
+            </span>
           </LayoutTimeLine>
           {/* end experience next */}
 

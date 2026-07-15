@@ -1,15 +1,6 @@
 export const datasProject = [
   {
     id: "project1",
-    title_project: "Redesign Company Profile Website - LPK Ohayo Nippon",
-    desc_project:
-      "Remake of the corporate profile website for LPK Ohayo Nippon, redesigned to introduce internship or work programs in Japan, with a more modern look and user experience. This latest version provides comprehensive information about the institution, the programs offered, and includes an online registration feature for prospective participants. Rebuilt with a user-friendly design to strengthen trust among partners and potential participants. The website was developed using Next.js, TailwindCSS, TypeScript, and Firebase technologies.",
-    link_website: "https://company-profile-lpk-ohayo-nippon.vercel.app/",
-    source_image: "/images/project/project_LPK_ohayonippon.jpeg",
-    alt: "Project Website Company Profile",
-  },
-  {
-    id: "project2",
     title_project:
       "Information system to determine the consumption of packaged sugary drinks",
     desc_project:
@@ -20,16 +11,7 @@ export const datasProject = [
     alt: "Project Information System to determine the consumption of bottled beverages",
   },
   {
-    id: "project3",
-    title_project: "Nutrigoood - OCR-Based Nutritional Prediction System",
-    desc_project:
-      "Designing a nutritional analysis system called Nutrigoood, which is based on OCR (Optical Character Recognition) to extract information from food or beverage labels. This system is capable of recognizing text such as ingredient composition, sugar content, calories, and other nutritional information from product label images. After the data is extracted, the system analyzes and predicts nutritional values based on a machine learning model that has been developed, providing users with insights into the balance of their consumption. This application is designed to support a healthy lifestyle by leveraging image processing technology and nutritional analysis. This project is a capstone project from the Independent Study program, one of which is through Bangkit Academy. In its implementation, the project was collaboratively carried out by six team members with different learning paths, such as Machine Learning, Cloud Computing, and Mobile Development.",
-    link_website: "https://github.com/GaluhPncWirs/capstone-project-for-ML",
-    source_image: "/images/project/project_ocr.jpg",
-    alt: "Project OCR-Based Nutritional Prediction System",
-  },
-  {
-    id: "project4",
+    id: "project2",
     title_project: "Exam Online - Online Examination System",
     desc_project:
       "Building a website based online exam application designed to simplify the learning evaluation process. This system provides two types of exams, namely multiple choice and essay, with question management features, question marking, and exam result storage. This application was developed using the Next.js framework, TypeScript, TailwindCSS, shadcn ui, zustand and Supabase database. From a technical standpoint, the system has been implemented using a component based architecture and React Hooks, and applies middleware for page access security. The application is also fully responsive, ensuring an optimal user experience across various devices. To maintain exam integrity, the system is equipped with security features such as copy-paste prevention on questions, restrictions on moving or exiting the exam page, and restrictions on re-access after the exam has started. With a combination of technology and robust security features, this system provides an efficient and reliable solution for conducting online exams.",
@@ -38,12 +20,21 @@ export const datasProject = [
     alt: "Project Online Examination System",
   },
   {
-    id: "project5",
+    id: "project3",
     title_project: "Let`s Play PS2 - PlayStation 2 Downloader Web App",
     desc_project:
       "Building a web-based PlayStation 2 game download platform designed to provide users with an easy and efficient way to find, browse, and download game content. The system offers a structured game catalog with search and filtering features, detailed game information pages, and an integrated download workflow to enhance usability. The application was developed using React, Tailwind CSS, Zustand, and Firebase for its database. From a technical standpoint, the application implements a component-based architecture with modern React patterns and centralized state management to ensure ease of maintenance and performance. The interface is fully responsive, providing a consistent user experience across desktop and mobile devices. With a focus on performance optimization and clean UI/UX design, the platform provides a reliable and scalable solution for managing and distributing PS2 game resources.",
     link_website: "https://website-game-ps-2.vercel.app/HomePage",
     source_image: "/images/project/project_downloaderGamePS2.jpeg",
     alt: "Project PlayStation 2 Downloader Web App",
+  },
+  {
+    id: "project4",
+    title_project: "Nutrigoood - OCR-Based Nutritional Prediction System",
+    desc_project:
+      "Designing a nutritional analysis system called Nutrigoood, which is based on OCR (Optical Character Recognition) to extract information from food or beverage labels. This system is capable of recognizing text such as ingredient composition, sugar content, calories, and other nutritional information from product label images. After the data is extracted, the system analyzes and predicts nutritional values based on a machine learning model that has been developed, providing users with insights into the balance of their consumption. This application is designed to support a healthy lifestyle by leveraging image processing technology and nutritional analysis. This project is a capstone project from the Independent Study program, one of which is through Bangkit Academy. In its implementation, the project was collaboratively carried out by six team members with different learning paths, such as Machine Learning, Cloud Computing, and Mobile Development.",
+    link_website: "https://github.com/GaluhPncWirs/capstone-project-for-ML",
+    source_image: "/images/project/project_ocr.jpg",
+    alt: "Project OCR-Based Nutritional Prediction System",
   },
 ];

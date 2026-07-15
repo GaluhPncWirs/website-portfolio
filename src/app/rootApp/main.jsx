@@ -56,11 +56,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
-      <div className="flex md:justify-between md:flex-row sm:flex-col p-3.5 min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 font-quickSand print:flex-col print:bg-white">
-        <div>
+      <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 font-quickSand">
+        <div className="flex md:justify-between md:flex-row sm:flex-col mx-auto max-w-7xl p-3.5 min-h-screen print:flex-col print:bg-white">
           <SideBar />
+          <RouterProvider router={router} />
         </div>
-        <RouterProvider router={router} />
       </div>
     </HelmetProvider>
   </StrictMode>,

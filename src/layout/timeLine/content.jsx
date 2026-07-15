@@ -7,7 +7,7 @@ export default function LayoutTimeLine({ children }) {
         </div>
       </div>
       <div className="basis-5/6">
-        <div className="mt-6 sm:mt-8 print:mt-6">{children}</div>
+        <div className="mt-6 space-y-2 sm:mt-8 print:mt-6">{children}</div>
       </div>
     </div>
   );

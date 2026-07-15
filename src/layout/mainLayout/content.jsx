@@ -20,7 +20,7 @@ export default function MainLayout({ propsTitle, children }) {
     };
   }
   return (
-    <div className="max-w-7xl rounded-3xl bg-slate-900/80 backdrop-blur-xl border border-white/30 shadow-2xl overflow-hidden pb-10 w-full mt-4 md:w-[64%] md:mt-0 lg:w-[73%]">
+    <div className="rounded-3xl bg-slate-900/80 backdrop-blur-xl border border-white/30 shadow-2xl overflow-hidden pb-10 w-full mt-4 md:w-[64%] md:mt-0 lg:w-[73%]">
       <div className="relative flex justify-end mb-10 sm:mb-0">
         <div className="flex items-center justify-center basis-2/12 sm:hidden">
           <HamburgerMenu />
