@@ -29,7 +29,7 @@ export default function DetailProject() {
 
             <p className="mt-2 font-medium text-justify text-slate-300">
               {myProject.desc_project}{" "}
-              {myProject.id === "project2" && (
+              {myProject.id === "project1" && (
                 <Link
                   to="https://trilogi.ac.id/journal/ks/index.php/JISA/article/view/2201"
                   className="text-blue-400 hover:underline"
@@ -38,7 +38,7 @@ export default function DetailProject() {
                   To Journal.
                 </Link>
               )}
-              {myProject.id === "project4" && (
+              {myProject.id === "project2" && (
                 <div className="mt-3">
                   <h1>To try out the system, here is email and password:</h1>
                   <div className="flex flex-wrap items-center gap-5 mt-4">
