@@ -47,8 +47,8 @@ export default function DetailProject() {
                         Account Student
                       </h1>
                       <ul>
-                        <li>Email : 123@gmail.com</li>
-                        <li>Password : 12345</li>
+                        <li>Email : pelajar@gmail.com</li>
+                        <li>Password : testPelajar123</li>
                       </ul>
                     </div>
                     <div>
