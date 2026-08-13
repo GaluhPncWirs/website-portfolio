@@ -7,7 +7,7 @@ export const datasProject = [
       "A web-based application to help determine the safe limits of consumption of packaged sweet drinks based on the user's daily sugar intake. This is my final thesis project. The system is equipped with an easy-to-understand visual display. This project has also undergone usability evaluation to ensure ease of use for the general public. The application was built using Next.js, TailwindCSS, and TypeScript, and stores data using Firebase. The research findings have been published in an academic journal and are accessible in the JISA(Jurnal Informatika dan Sains)",
     link_website: "https://penghitung-bataskonsumsi-minumankemasan.vercel.app/",
     source_image:
-      "/images/project/project_penghitung_bataskonsumsi_minuman.png",
+      "/images/project/project_penghitung_batas_konsumsi_minuman.jpeg",
     alt: "Project Information System to determine the consumption of bottled beverages",
   },
   {
